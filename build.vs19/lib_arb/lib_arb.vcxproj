@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0.25914.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>lib_arb</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{280C2018-DF8C-4690-A902-A03D5F53C826}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="..\..\build.vc\arb_release_lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="..\..\build.vc\arb_debug_lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="..\..\build.vc\arb_release_lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+    <Import Project="..\..\build.vc\arb_debug_lib.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.21006.1</_ProjectFileVersion>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">lib_arb</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">lib_arb</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">lib_arb</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">lib_arb</TargetName>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <ClCompile>
+    <Optimization>Full</Optimization>
+    <IntrinsicFunctions>true</IntrinsicFunctions>
+    <AdditionalIncludeDirectories>..\..\;..\..\build.vc;..\..\..\mpir\lib\$(IntDir);..\..\..\mpfr\lib\$(IntDir);..\..\..;..\..\..\pthreads\lib\$(IntDir);</AdditionalIncludeDirectories>
+    <PreprocessorDefinitions>NDEBUG;WIN32;_LIB;HAVE_CONFIG_H;PTW32_STATIC_LIB;ARB_REENTRANT=0;HAVE_TLS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+
+  <PostBuildEvent>
+      <Command>..\..\build.vc\postbuild $(IntDir) LIB 19
+      </Command>
+  </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <ClCompile>
+    <Optimization>Disabled</Optimization>
+    <IntrinsicFunctions>true</IntrinsicFunctions>
+    <AdditionalIncludeDirectories>..\..\;..\..\build.vc;..\..\..\mpir\lib\$(IntDir);..\..\..\mpfr\lib\$(IntDir);..\..\..;..\..\..\pthreads\lib\$(IntDir);</AdditionalIncludeDirectories>
+    <PreprocessorDefinitions>_DEBUG;WIN32;_LIB;HAVE_CONFIG_H;PTW32_STATIC_LIB;ARB_REENTRANT=0;HAVE_TLS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+
+  <PostBuildEvent>
+      <Command>..\..\build.vc\postbuild $(IntDir) LIB 19
+      </Command>
+  </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <ClCompile>
+    <Optimization>Full</Optimization>
+    <IntrinsicFunctions>true</IntrinsicFunctions>
+    <AdditionalIncludeDirectories>..\..\;..\..\build.vc;..\..\..\mpir\lib\$(IntDir);..\..\..\mpfr\lib\$(IntDir);..\..\..;..\..\..\pthreads\lib\$(IntDir);</AdditionalIncludeDirectories>
+    <PreprocessorDefinitions>NDEBUG;WIN32;_LIB;HAVE_CONFIG_H;PTW32_STATIC_LIB;ARB_REENTRANT=0;HAVE_TLS=1;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+
+  <PostBuildEvent>
+      <Command>..\..\build.vc\postbuild $(IntDir) LIB 19
+      </Command>
+  </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <ClCompile>
+    <Optimization>Disabled</Optimization>
+    <IntrinsicFunctions>true</IntrinsicFunctions>
+    <AdditionalIncludeDirectories>..\..\;..\..\build.vc;..\..\..\mpir\lib\$(IntDir);..\..\..\mpfr\lib\$(IntDir);..\..\..;..\..\..\pthreads\lib\$(IntDir);</AdditionalIncludeDirectories>
+    <PreprocessorDefinitions>_DEBUG;WIN32;_LIB;HAVE_CONFIG_H;PTW32_STATIC_LIB;ARB_REENTRANT=0;HAVE_TLS=1;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+
+  <PostBuildEvent>
+      <Command>..\..\build.vc\postbuild $(IntDir) LIB 19
+      </Command>
+  </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ImportGroup>
+    <Import Condition="exists('$(MPIR_Props_External)')" Project="$(MPIR_Props_External)" />
+  </ImportGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\acb.h" />
+    <ClInclude Include="..\..\acb_calc.h" />
+    <ClInclude Include="..\..\acb_dft.h" />
+    <ClInclude Include="..\..\acb_dirichlet.h" />
+    <ClInclude Include="..\..\acb_elliptic.h" />
+    <ClInclude Include="..\..\acb_hypgeom.h" />
+    <ClInclude Include="..\..\acb_mat.h" />
+    <ClInclude Include="..\..\acb_modular.h" />
+    <ClInclude Include="..\..\acb_poly.h" />
+    <ClInclude Include="..\..\arb.h" />
+    <ClInclude Include="..\..\arb_calc.h" />
+    <ClInclude Include="..\..\arb_fmpz_poly.h" />
+    <ClInclude Include="..\..\arb_hypgeom.h" />
+    <ClInclude Include="..\..\arb_mat.h" />
+    <ClInclude Include="..\..\arb_poly.h" />
+    <ClInclude Include="..\..\arf.h" />
+    <ClInclude Include="..\..\bernoulli.h" />
+    <ClInclude Include="..\..\bool_mat.h" />
+    <ClInclude Include="..\..\build.vc\config.h" />
+    <ClInclude Include="..\..\build.vc\getopt.h" />
+    <ClInclude Include="..\..\build.vc\gettimeofday.h" />
+    <ClInclude Include="..\..\build.vc\unistd.h" />
+    <ClInclude Include="..\..\dirichlet.h" />
+    <ClInclude Include="..\..\dlog.h" />
+    <ClInclude Include="..\..\fmpr.h" />
+    <ClInclude Include="..\..\fmpz_extras.h" />
+    <ClInclude Include="..\..\hypgeom.h" />
+    <ClInclude Include="..\..\mag.h" />
+    <ClInclude Include="..\..\partitions.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\acb\acos.c" />
+    <ClCompile Include="..\..\acb\acosh.c" />
+    <ClCompile Include="..\..\acb\addmul.c" />
+    <ClCompile Include="..\..\acb\agm.c" />
+    <ClCompile Include="..\..\acb\agm1.c" />
+    <ClCompile Include="..\..\acb\approx_dot.c" />
+    <ClCompile Include="..\..\acb\arg.c" />
+    <ClCompile Include="..\..\acb\asin.c" />
+    <ClCompile Include="..\..\acb\asinh.c" />
+    <ClCompile Include="..\..\acb\atan.c" />
+    <ClCompile Include="..\..\acb\atanh.c" />
+    <ClCompile Include="..\..\acb\barnes_g.c" />
+    <ClCompile Include="..\..\acb\bernoulli_poly_ui.c" />
+    <ClCompile Include="..\..\acb\chebyshev_t2_ui.c" />
+    <ClCompile Include="..\..\acb\chebyshev_t_ui.c" />
+    <ClCompile Include="..\..\acb\chebyshev_u2_ui.c" />
+    <ClCompile Include="..\..\acb\chebyshev_u_ui.c" />
+    <ClCompile Include="..\..\acb\clear.c" />
+    <ClCompile Include="..\..\acb\contains_int.c" />
+    <ClCompile Include="..\..\acb\cos.c" />
+    <ClCompile Include="..\..\acb\cos_pi.c" />
+    <ClCompile Include="..\..\acb\cot.c" />
+    <ClCompile Include="..\..\acb\cot_pi.c" />
+    <ClCompile Include="..\..\acb\csch.c" />
+    <ClCompile Include="..\..\acb\csgn.c" />
+    <ClCompile Include="..\..\acb\cube.c" />
+    <ClCompile Include="..\..\acb\digamma.c" />
+    <ClCompile Include="..\..\acb\div.c" />
+    <ClCompile Include="..\..\acb\dot.c" />
+    <ClCompile Include="..\..\acb\dot_precise.c" />
+    <ClCompile Include="..\..\acb\dot_simple.c" />
+    <ClCompile Include="..\..\acb\exp.c" />
+    <ClCompile Include="..\..\acb\exp_invexp.c" />
+    <ClCompile Include="..\..\acb\exp_pi_i.c" />
+    <ClCompile Include="..\..\acb\expm1.c" />
+    <ClCompile Include="..\..\acb\fprintd.c" />
+    <ClCompile Include="..\..\acb\fprintn.c" />
+    <ClCompile Include="..\..\acb\gamma.c" />
+    <ClCompile Include="..\..\acb\get_abs_lbound_arf.c" />
+    <ClCompile Include="..\..\acb\get_abs_ubound_arf.c" />
+    <ClCompile Include="..\..\acb\get_mag.c" />
+    <ClCompile Include="..\..\acb\get_mag_lower.c" />
+    <ClCompile Include="..\..\acb\get_rad_ubound_arf.c" />
+    <ClCompile Include="..\..\acb\get_unique_fmpz.c" />
+    <ClCompile Include="..\..\acb\inlines.c" />
+    <ClCompile Include="..\..\acb\inv.c" />
+    <ClCompile Include="..\..\acb\lambertw.c" />
+    <ClCompile Include="..\..\acb\lambertw_asymp.c" />
+    <ClCompile Include="..\..\acb\lambertw_bound_deriv.c" />
+    <ClCompile Include="..\..\acb\lambertw_check_branch.c" />
+    <ClCompile Include="..\..\acb\log.c" />
+    <ClCompile Include="..\..\acb\log1p.c" />
+    <ClCompile Include="..\..\acb\log_sin_pi.c" />
+    <ClCompile Include="..\..\acb\mul.c" />
+    <ClCompile Include="..\..\acb\mul_naive.c" />
+    <ClCompile Include="..\..\acb\polygamma.c" />
+    <ClCompile Include="..\..\acb\polylog.c" />
+    <ClCompile Include="..\..\acb\pow.c" />
+    <ClCompile Include="..\..\acb\quadratic_roots_fmpz.c" />
+    <ClCompile Include="..\..\acb\randtest.c" />
+    <ClCompile Include="..\..\acb\real_abs.c" />
+    <ClCompile Include="..\..\acb\real_ceil.c" />
+    <ClCompile Include="..\..\acb\real_floor.c" />
+    <ClCompile Include="..\..\acb\real_heaviside.c" />
+    <ClCompile Include="..\..\acb\real_max.c" />
+    <ClCompile Include="..\..\acb\real_min.c" />
+    <ClCompile Include="..\..\acb\real_sgn.c" />
+    <ClCompile Include="..\..\acb\real_sqrtpos.c" />
+    <ClCompile Include="..\..\acb\rel_error_bits.c" />
+    <ClCompile Include="..\..\acb\rising2_ui.c" />
+    <ClCompile Include="..\..\acb\rising2_ui_bs.c" />
+    <ClCompile Include="..\..\acb\rising2_ui_rs.c" />
+    <ClCompile Include="..\..\acb\rising_ui.c" />
+    <ClCompile Include="..\..\acb\rising_ui_bs.c" />
+    <ClCompile Include="..\..\acb\rising_ui_get_mag.c" />
+    <ClCompile Include="..\..\acb\rising_ui_rec.c" />
+    <ClCompile Include="..\..\acb\rising_ui_rs.c" />
+    <ClCompile Include="..\..\acb\root_ui.c" />
+    <ClCompile Include="..\..\acb\rsqrt.c" />
+    <ClCompile Include="..\..\acb\sech.c" />
+    <ClCompile Include="..\..\acb\sgn.c" />
+    <ClCompile Include="..\..\acb\sin.c" />
+    <ClCompile Include="..\..\acb\sin_cos.c" />
+    <ClCompile Include="..\..\acb\sin_cos_pi.c" />
+    <ClCompile Include="..\..\acb\sin_pi.c" />
+    <ClCompile Include="..\..\acb\sinc.c" />
+    <ClCompile Include="..\..\acb\sinc_pi.c" />
+    <ClCompile Include="..\..\acb\sqrt.c" />
+    <ClCompile Include="..\..\acb\submul.c" />
+    <ClCompile Include="..\..\acb\tan.c" />
+    <ClCompile Include="..\..\acb\tan_pi.c" />
+    <ClCompile Include="..\..\acb\unit_root.c" />
+    <ClCompile Include="..\..\acb\vec_clear.c" />
+    <ClCompile Include="..\..\acb\vec_init.c" />
+    <ClCompile Include="..\..\acb\vec_set_powers.c" />
+    <ClCompile Include="..\..\acb\vec_sort_pretty.c" />
+    <ClCompile Include="..\..\acb\vec_unit_roots.c" />
+    <ClCompile Include="..\..\acb\zeta.c" />
+    <ClCompile Include="..\..\acb_calc\cauchy_bound.c" />
+    <ClCompile Include="..\..\acb_calc\integrate.c" />
+    <ClCompile Include="..\..\acb_calc\integrate_gl_auto_deg.c" />
+    <ClCompile Include="..\..\acb_calc\integrate_opt_init.c" />
+    <ClCompile Include="..\..\acb_calc\integrate_taylor.c" />
+    <ClCompile Include="..\..\acb_dft\bluestein.c" />
+    <ClCompile Include="..\..\acb_dft\convol.c" />
+    <ClCompile Include="..\..\acb_dft\convol_dft.c" />
+    <ClCompile Include="..\..\acb_dft\convol_mullow.c" />
+    <ClCompile Include="..\..\acb_dft\convol_naive.c" />
+    <ClCompile Include="..\..\acb_dft\convol_rad2.c" />
+    <ClCompile Include="..\..\acb_dft\crt.c" />
+    <ClCompile Include="..\..\acb_dft\cyc.c" />
+    <ClCompile Include="..\..\acb_dft\naive.c" />
+    <ClCompile Include="..\..\acb_dft\precomp.c" />
+    <ClCompile Include="..\..\acb_dft\prod.c" />
+    <ClCompile Include="..\..\acb_dft\rad2.c" />
+    <ClCompile Include="..\..\acb_dft\step.c" />
+    <ClCompile Include="..\..\acb_dirichlet\arb_quadratic_powers.c" />
+    <ClCompile Include="..\..\acb_dirichlet\backlund_s.c" />
+    <ClCompile Include="..\..\acb_dirichlet\backlund_s_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\backlund_s_gram.c" />
+    <ClCompile Include="..\..\acb_dirichlet\chi.c" />
+    <ClCompile Include="..\..\acb_dirichlet\chi_vec.c" />
+    <ClCompile Include="..\..\acb_dirichlet\dft.c" />
+    <ClCompile Include="..\..\acb_dirichlet\eta.c" />
+    <ClCompile Include="..\..\acb_dirichlet\euler_product_real_ui.c" />
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum.c" />
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_factor.c" />
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_naive.c" />
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_order2.c" />
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_theta.c" />
+    <ClCompile Include="..\..\acb_dirichlet\gram_point.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hardy_theta.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hardy_theta_series.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hardy_z.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hardy_z_series.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hardy_z_zero.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_choose_param.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_clear.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_eval.c" />
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_init.c" />
+    <ClCompile Include="..\..\acb_dirichlet\isolate_hardy_z_zero.c" />
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum.c" />
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum_factor.c" />
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum_gauss.c" />
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum_naive.c" />
+    <ClCompile Include="..\..\acb_dirichlet\l.c" />
+    <ClCompile Include="..\..\acb_dirichlet\l_euler_product.c" />
+    <ClCompile Include="..\..\acb_dirichlet\l_hurwitz.c" />
+    <ClCompile Include="..\..\acb_dirichlet\l_jet.c" />
+    <ClCompile Include="..\..\acb_dirichlet\l_series.c" />
+    <ClCompile Include="..\..\acb_dirichlet\l_vec_hurwitz.c" />
+    <ClCompile Include="..\..\acb_dirichlet\pairing.c" />
+    <ClCompile Include="..\..\acb_dirichlet\pairing_conrey.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_beta.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_c_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_i_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_32.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A11.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A5.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A7.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A9.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_B1.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_B2.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_local_hardy_z_zeros.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_multieval.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_ws_interpolation.c" />
+    <ClCompile Include="..\..\acb_dirichlet\powsum_sieved.c" />
+    <ClCompile Include="..\..\acb_dirichlet\powsum_smooth.c" />
+    <ClCompile Include="..\..\acb_dirichlet\powsum_term.c" />
+    <ClCompile Include="..\..\acb_dirichlet\qseries_arb.c" />
+    <ClCompile Include="..\..\acb_dirichlet\qseries_arb_powers.c" />
+    <ClCompile Include="..\..\acb_dirichlet\root.c" />
+    <ClCompile Include="..\..\acb_dirichlet\root_number.c" />
+    <ClCompile Include="..\..\acb_dirichlet\roots_clear.c" />
+    <ClCompile Include="..\..\acb_dirichlet\roots_init.c" />
+    <ClCompile Include="..\..\acb_dirichlet\si_poly_evaluate.c" />
+    <ClCompile Include="..\..\acb_dirichlet\stieltjes.c" />
+    <ClCompile Include="..\..\acb_dirichlet\theta_arb.c" />
+    <ClCompile Include="..\..\acb_dirichlet\theta_length.c" />
+    <ClCompile Include="..\..\acb_dirichlet\turing_method_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\ui_theta_arb.c" />
+    <ClCompile Include="..\..\acb_dirichlet\vec_mellin_arb.c" />
+    <ClCompile Include="..\..\acb_dirichlet\xi.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_jet.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_jet_rs.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_d_coeffs.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_f_coeffs.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_r.c" />
+    <ClCompile Include="..\..\acb_dirichlet\zeta_zeros.c" />
+    <ClCompile Include="..\..\acb_elliptic\e.c" />
+    <ClCompile Include="..\..\acb_elliptic\e_inc.c" />
+    <ClCompile Include="..\..\acb_elliptic\f.c" />
+    <ClCompile Include="..\..\acb_elliptic\inv_p.c" />
+    <ClCompile Include="..\..\acb_elliptic\invariants.c" />
+    <ClCompile Include="..\..\acb_elliptic\k.c" />
+    <ClCompile Include="..\..\acb_elliptic\k_jet.c" />
+    <ClCompile Include="..\..\acb_elliptic\k_series.c" />
+    <ClCompile Include="..\..\acb_elliptic\p.c" />
+    <ClCompile Include="..\..\acb_elliptic\p_jet.c" />
+    <ClCompile Include="..\..\acb_elliptic\p_series.c" />
+    <ClCompile Include="..\..\acb_elliptic\pi.c" />
+    <ClCompile Include="..\..\acb_elliptic\rc1.c" />
+    <ClCompile Include="..\..\acb_elliptic\rf.c" />
+    <ClCompile Include="..\..\acb_elliptic\rg.c" />
+    <ClCompile Include="..\..\acb_elliptic\rj.c" />
+    <ClCompile Include="..\..\acb_elliptic\roots.c" />
+    <ClCompile Include="..\..\acb_elliptic\zeta.c" />
+    <ClCompile Include="..\..\acb_hypgeom\0f1.c" />
+    <ClCompile Include="..\..\acb_hypgeom\2f1.c" />
+    <ClCompile Include="..\..\acb_hypgeom\2f1_choose.c" />
+    <ClCompile Include="..\..\acb_hypgeom\2f1_continuation.c" />
+    <ClCompile Include="..\..\acb_hypgeom\2f1_corner.c" />
+    <ClCompile Include="..\..\acb_hypgeom\2f1_direct.c" />
+    <ClCompile Include="..\..\acb_hypgeom\2f1_series_direct.c" />
+    <ClCompile Include="..\..\acb_hypgeom\2f1_transform.c" />
+    <ClCompile Include="..\..\acb_hypgeom\airy.c" />
+    <ClCompile Include="..\..\acb_hypgeom\airy_asymp.c" />
+    <ClCompile Include="..\..\acb_hypgeom\airy_bound.c" />
+    <ClCompile Include="..\..\acb_hypgeom\airy_direct.c" />
+    <ClCompile Include="..\..\acb_hypgeom\airy_jet.c" />
+    <ClCompile Include="..\..\acb_hypgeom\airy_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\bessel_i.c" />
+    <ClCompile Include="..\..\acb_hypgeom\bessel_j.c" />
+    <ClCompile Include="..\..\acb_hypgeom\bessel_k.c" />
+    <ClCompile Include="..\..\acb_hypgeom\bessel_y.c" />
+    <ClCompile Include="..\..\acb_hypgeom\beta_lower.c" />
+    <ClCompile Include="..\..\acb_hypgeom\beta_lower_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\chebyshev_t.c" />
+    <ClCompile Include="..\..\acb_hypgeom\chebyshev_u.c" />
+    <ClCompile Include="..\..\acb_hypgeom\chi.c" />
+    <ClCompile Include="..\..\acb_hypgeom\chi_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\ci.c" />
+    <ClCompile Include="..\..\acb_hypgeom\ci_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\coulomb.c" />
+    <ClCompile Include="..\..\acb_hypgeom\coulomb_jet.c" />
+    <ClCompile Include="..\..\acb_hypgeom\coulomb_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\dilog.c" />
+    <ClCompile Include="..\..\acb_hypgeom\dilog_bernoulli.c" />
+    <ClCompile Include="..\..\acb_hypgeom\dilog_bitburst.c" />
+    <ClCompile Include="..\..\acb_hypgeom\dilog_continuation.c" />
+    <ClCompile Include="..\..\acb_hypgeom\dilog_transform.c" />
+    <ClCompile Include="..\..\acb_hypgeom\dilog_zero.c" />
+    <ClCompile Include="..\..\acb_hypgeom\dilog_zero_taylor.c" />
+    <ClCompile Include="..\..\acb_hypgeom\ei.c" />
+    <ClCompile Include="..\..\acb_hypgeom\ei_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\erf.c" />
+    <ClCompile Include="..\..\acb_hypgeom\erf_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\erfc.c" />
+    <ClCompile Include="..\..\acb_hypgeom\erfc_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\erfi.c" />
+    <ClCompile Include="..\..\acb_hypgeom\erfi_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\expint.c" />
+    <ClCompile Include="..\..\acb_hypgeom\fresnel.c" />
+    <ClCompile Include="..\..\acb_hypgeom\fresnel_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\gamma_lower.c" />
+    <ClCompile Include="..\..\acb_hypgeom\gamma_lower_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\gamma_upper.c" />
+    <ClCompile Include="..\..\acb_hypgeom\gamma_upper_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\gegenbauer_c.c" />
+    <ClCompile Include="..\..\acb_hypgeom\hermite_h.c" />
+    <ClCompile Include="..\..\acb_hypgeom\jacobi_p.c" />
+    <ClCompile Include="..\..\acb_hypgeom\laguerre_l.c" />
+    <ClCompile Include="..\..\acb_hypgeom\legendre_p.c" />
+    <ClCompile Include="..\..\acb_hypgeom\legendre_p_uiui_rec.c" />
+    <ClCompile Include="..\..\acb_hypgeom\legendre_q.c" />
+    <ClCompile Include="..\..\acb_hypgeom\li.c" />
+    <ClCompile Include="..\..\acb_hypgeom\li_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\m.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_bound_factor.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_choose_n.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_direct.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_direct.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum_bs.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum_forward.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum_rs.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_bs.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_fme.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_forward.c" />
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_rs.c" />
+    <ClCompile Include="..\..\acb_hypgeom\shi.c" />
+    <ClCompile Include="..\..\acb_hypgeom\shi_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\si.c" />
+    <ClCompile Include="..\..\acb_hypgeom\si_series.c" />
+    <ClCompile Include="..\..\acb_hypgeom\spherical_y.c" />
+    <ClCompile Include="..\..\acb_hypgeom\u.c" />
+    <ClCompile Include="..\..\acb_hypgeom\u_asymp.c" />
+    <ClCompile Include="..\..\acb_hypgeom\u_use_asymp.c" />
+    <ClCompile Include="..\..\acb_mat\add.c" />
+    <ClCompile Include="..\..\acb_mat\approx_eig_qr.c" />
+    <ClCompile Include="..\..\acb_mat\approx_inv.c" />
+    <ClCompile Include="..\..\acb_mat\approx_lu.c" />
+    <ClCompile Include="..\..\acb_mat\approx_mul.c" />
+    <ClCompile Include="..\..\acb_mat\approx_solve.c" />
+    <ClCompile Include="..\..\acb_mat\approx_solve_lu_precomp.c" />
+    <ClCompile Include="..\..\acb_mat\approx_solve_tril.c" />
+    <ClCompile Include="..\..\acb_mat\approx_solve_triu.c" />
+    <ClCompile Include="..\..\acb_mat\bound_frobenius_norm.c" />
+    <ClCompile Include="..\..\acb_mat\bound_inf_norm.c" />
+    <ClCompile Include="..\..\acb_mat\charpoly.c" />
+    <ClCompile Include="..\..\acb_mat\clear.c" />
+    <ClCompile Include="..\..\acb_mat\companion.c" />
+    <ClCompile Include="..\..\acb_mat\conjugate.c" />
+    <ClCompile Include="..\..\acb_mat\contains.c" />
+    <ClCompile Include="..\..\acb_mat\contains_fmpq_mat.c" />
+    <ClCompile Include="..\..\acb_mat\contains_fmpz_mat.c" />
+    <ClCompile Include="..\..\acb_mat\det.c" />
+    <ClCompile Include="..\..\acb_mat\det_lu.c" />
+    <ClCompile Include="..\..\acb_mat\det_precond.c" />
+    <ClCompile Include="..\..\acb_mat\dft.c" />
+    <ClCompile Include="..\..\acb_mat\diag_prod.c" />
+    <ClCompile Include="..\..\acb_mat\eig_enclosure_rump.c" />
+    <ClCompile Include="..\..\acb_mat\eig_global_enclosure.c" />
+    <ClCompile Include="..\..\acb_mat\eig_multiple.c" />
+    <ClCompile Include="..\..\acb_mat\eig_multiple_rump.c" />
+    <ClCompile Include="..\..\acb_mat\eig_simple.c" />
+    <ClCompile Include="..\..\acb_mat\eig_simple_rump.c" />
+    <ClCompile Include="..\..\acb_mat\eig_simple_vdhoeven_mourrain.c" />
+    <ClCompile Include="..\..\acb_mat\eq.c" />
+    <ClCompile Include="..\..\acb_mat\equal.c" />
+    <ClCompile Include="..\..\acb_mat\exp.c" />
+    <ClCompile Include="..\..\acb_mat\exp_taylor_sum.c" />
+    <ClCompile Include="..\..\acb_mat\find_pivot_partial.c" />
+    <ClCompile Include="..\..\acb_mat\fprintd.c" />
+    <ClCompile Include="..\..\acb_mat\frobenius_norm.c" />
+    <ClCompile Include="..\..\acb_mat\indeterminate.c" />
+    <ClCompile Include="..\..\acb_mat\init.c" />
+    <ClCompile Include="..\..\acb_mat\inlines.c" />
+    <ClCompile Include="..\..\acb_mat\inv.c" />
+    <ClCompile Include="..\..\acb_mat\is_exact.c" />
+    <ClCompile Include="..\..\acb_mat\is_finite.c" />
+    <ClCompile Include="..\..\acb_mat\is_real.c" />
+    <ClCompile Include="..\..\acb_mat\is_tril.c" />
+    <ClCompile Include="..\..\acb_mat\is_triu.c" />
+    <ClCompile Include="..\..\acb_mat\is_zero.c" />
+    <ClCompile Include="..\..\acb_mat\lu.c" />
+    <ClCompile Include="..\..\acb_mat\lu_classical.c" />
+    <ClCompile Include="..\..\acb_mat\lu_recursive.c" />
+    <ClCompile Include="..\..\acb_mat\mul.c" />
+    <ClCompile Include="..\..\acb_mat\mul_classical.c" />
+    <ClCompile Include="..\..\acb_mat\mul_entrywise.c" />
+    <ClCompile Include="..\..\acb_mat\mul_reorder.c" />
+    <ClCompile Include="..\..\acb_mat\mul_threaded.c" />
+    <ClCompile Include="..\..\acb_mat\ne.c" />
+    <ClCompile Include="..\..\acb_mat\neg.c" />
+    <ClCompile Include="..\..\acb_mat\one.c" />
+    <ClCompile Include="..\..\acb_mat\ones.c" />
+    <ClCompile Include="..\..\acb_mat\overlaps.c" />
+    <ClCompile Include="..\..\acb_mat\pow_ui.c" />
+    <ClCompile Include="..\..\acb_mat\randtest.c" />
+    <ClCompile Include="..\..\acb_mat\randtest_eig.c" />
+    <ClCompile Include="..\..\acb_mat\set.c" />
+    <ClCompile Include="..\..\acb_mat\set_arb_mat.c" />
+    <ClCompile Include="..\..\acb_mat\set_fmpq_mat.c" />
+    <ClCompile Include="..\..\acb_mat\set_fmpz_mat.c" />
+    <ClCompile Include="..\..\acb_mat\set_round_arb_mat.c" />
+    <ClCompile Include="..\..\acb_mat\set_round_fmpz_mat.c" />
+    <ClCompile Include="..\..\acb_mat\solve.c" />
+    <ClCompile Include="..\..\acb_mat\solve_lu.c" />
+    <ClCompile Include="..\..\acb_mat\solve_lu_precomp.c" />
+    <ClCompile Include="..\..\acb_mat\solve_precond.c" />
+    <ClCompile Include="..\..\acb_mat\solve_tril.c" />
+    <ClCompile Include="..\..\acb_mat\solve_triu.c" />
+    <ClCompile Include="..\..\acb_mat\sqr.c" />
+    <ClCompile Include="..\..\acb_mat\sqr_classical.c" />
+    <ClCompile Include="..\..\acb_mat\sub.c" />
+    <ClCompile Include="..\..\acb_mat\trace.c" />
+    <ClCompile Include="..\..\acb_mat\transpose.c" />
+    <ClCompile Include="..\..\acb_mat\window_init.c" />
+    <ClCompile Include="..\..\acb_mat\zero.c" />
+    <ClCompile Include="..\..\acb_modular\addseq.c" />
+    <ClCompile Include="..\..\acb_modular\delta.c" />
+    <ClCompile Include="..\..\acb_modular\eisenstein.c" />
+    <ClCompile Include="..\..\acb_modular\elliptic_e.c" />
+    <ClCompile Include="..\..\acb_modular\elliptic_k.c" />
+    <ClCompile Include="..\..\acb_modular\elliptic_k_cpx.c" />
+    <ClCompile Include="..\..\acb_modular\elliptic_p.c" />
+    <ClCompile Include="..\..\acb_modular\elliptic_p_zpx.c" />
+    <ClCompile Include="..\..\acb_modular\epsilon_arg.c" />
+    <ClCompile Include="..\..\acb_modular\eta.c" />
+    <ClCompile Include="..\..\acb_modular\eta_sum.c" />
+    <ClCompile Include="..\..\acb_modular\fill_addseq.c" />
+    <ClCompile Include="..\..\acb_modular\fundamental_domain_approx.c" />
+    <ClCompile Include="..\..\acb_modular\fundamental_domain_approx_arf.c" />
+    <ClCompile Include="..\..\acb_modular\fundamental_domain_approx_d.c" />
+    <ClCompile Include="..\..\acb_modular\hilbert_class_poly.c" />
+    <ClCompile Include="..\..\acb_modular\is_in_fundamental_domain.c" />
+    <ClCompile Include="..\..\acb_modular\j.c" />
+    <ClCompile Include="..\..\acb_modular\lambda.c" />
+    <ClCompile Include="..\..\acb_modular\psl2z_inv.c" />
+    <ClCompile Include="..\..\acb_modular\psl2z_is_correct.c" />
+    <ClCompile Include="..\..\acb_modular\psl2z_is_one.c" />
+    <ClCompile Include="..\..\acb_modular\psl2z_mul.c" />
+    <ClCompile Include="..\..\acb_modular\psl2z_randtest.c" />
+    <ClCompile Include="..\..\acb_modular\theta.c" />
+    <ClCompile Include="..\..\acb_modular\theta_const_sum.c" />
+    <ClCompile Include="..\..\acb_modular\theta_const_sum_basecase.c" />
+    <ClCompile Include="..\..\acb_modular\theta_const_sum_rs.c" />
+    <ClCompile Include="..\..\acb_modular\theta_jet.c" />
+    <ClCompile Include="..\..\acb_modular\theta_jet_notransform.c" />
+    <ClCompile Include="..\..\acb_modular\theta_series.c" />
+    <ClCompile Include="..\..\acb_modular\theta_sum.c" />
+    <ClCompile Include="..\..\acb_modular\theta_transform.c" />
+    <ClCompile Include="..\..\acb_modular\transform.c" />
+    <ClCompile Include="..\..\acb_poly\add.c" />
+    <ClCompile Include="..\..\acb_poly\add_series.c" />
+    <ClCompile Include="..\..\acb_poly\add_si.c" />
+    <ClCompile Include="..\..\acb_poly\agm1_series.c" />
+    <ClCompile Include="..\..\acb_poly\atan_series.c" />
+    <ClCompile Include="..\..\acb_poly\binomial_transform.c" />
+    <ClCompile Include="..\..\acb_poly\binomial_transform_basecase.c" />
+    <ClCompile Include="..\..\acb_poly\binomial_transform_convolution.c" />
+    <ClCompile Include="..\..\acb_poly\borel_transform.c" />
+    <ClCompile Include="..\..\acb_poly\clear.c" />
+    <ClCompile Include="..\..\acb_poly\compose.c" />
+    <ClCompile Include="..\..\acb_poly\compose_divconquer.c" />
+    <ClCompile Include="..\..\acb_poly\compose_horner.c" />
+    <ClCompile Include="..\..\acb_poly\compose_series.c" />
+    <ClCompile Include="..\..\acb_poly\compose_series_brent_kung.c" />
+    <ClCompile Include="..\..\acb_poly\compose_series_horner.c" />
+    <ClCompile Include="..\..\acb_poly\contains.c" />
+    <ClCompile Include="..\..\acb_poly\contains_fmpq_poly.c" />
+    <ClCompile Include="..\..\acb_poly\contains_fmpz_poly.c" />
+    <ClCompile Include="..\..\acb_poly\cos_pi_series.c" />
+    <ClCompile Include="..\..\acb_poly\cos_series.c" />
+    <ClCompile Include="..\..\acb_poly\cosh_series.c" />
+    <ClCompile Include="..\..\acb_poly\cot_pi_series.c" />
+    <ClCompile Include="..\..\acb_poly\derivative.c" />
+    <ClCompile Include="..\..\acb_poly\digamma_series.c" />
+    <ClCompile Include="..\..\acb_poly\div_root.c" />
+    <ClCompile Include="..\..\acb_poly\div_series.c" />
+    <ClCompile Include="..\..\acb_poly\divrem.c" />
+    <ClCompile Include="..\..\acb_poly\elliptic_k_series.c" />
+    <ClCompile Include="..\..\acb_poly\elliptic_p_series.c" />
+    <ClCompile Include="..\..\acb_poly\equal.c" />
+    <ClCompile Include="..\..\acb_poly\erf_series.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate2.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate2_horner.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate2_rectangular.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate_horner.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate_rectangular.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate_vec_fast.c" />
+    <ClCompile Include="..\..\acb_poly\evaluate_vec_iter.c" />
+    <ClCompile Include="..\..\acb_poly\exp_pi_i_series.c" />
+    <ClCompile Include="..\..\acb_poly\exp_series.c" />
+    <ClCompile Include="..\..\acb_poly\exp_series_basecase.c" />
+    <ClCompile Include="..\..\acb_poly\find_roots.c" />
+    <ClCompile Include="..\..\acb_poly\fit_length.c" />
+    <ClCompile Include="..\..\acb_poly\fprintd.c" />
+    <ClCompile Include="..\..\acb_poly\gamma_series.c" />
+    <ClCompile Include="..\..\acb_poly\get_coeff_acb.c" />
+    <ClCompile Include="..\..\acb_poly\get_unique_fmpz_poly.c" />
+    <ClCompile Include="..\..\acb_poly\init.c" />
+    <ClCompile Include="..\..\acb_poly\inlines.c" />
+    <ClCompile Include="..\..\acb_poly\integral.c" />
+    <ClCompile Include="..\..\acb_poly\interpolate_barycentric.c" />
+    <ClCompile Include="..\..\acb_poly\interpolate_fast.c" />
+    <ClCompile Include="..\..\acb_poly\interpolate_newton.c" />
+    <ClCompile Include="..\..\acb_poly\inv_borel_transform.c" />
+    <ClCompile Include="..\..\acb_poly\inv_series.c" />
+    <ClCompile Include="..\..\acb_poly\lambertw_series.c" />
+    <ClCompile Include="..\..\acb_poly\lgamma_series.c" />
+    <ClCompile Include="..\..\acb_poly\log1p_series.c" />
+    <ClCompile Include="..\..\acb_poly\log_series.c" />
+    <ClCompile Include="..\..\acb_poly\majorant.c" />
+    <ClCompile Include="..\..\acb_poly\mul.c" />
+    <ClCompile Include="..\..\acb_poly\mullow.c" />
+    <ClCompile Include="..\..\acb_poly\mullow_classical.c" />
+    <ClCompile Include="..\..\acb_poly\mullow_transpose.c" />
+    <ClCompile Include="..\..\acb_poly\mullow_transpose_gauss.c" />
+    <ClCompile Include="..\..\acb_poly\normalise.c" />
+    <ClCompile Include="..\..\acb_poly\overlaps.c" />
+    <ClCompile Include="..\..\acb_poly\polylog_series.c" />
+    <ClCompile Include="..\..\acb_poly\pow_acb_series.c" />
+    <ClCompile Include="..\..\acb_poly\pow_series.c" />
+    <ClCompile Include="..\..\acb_poly\pow_ui.c" />
+    <ClCompile Include="..\..\acb_poly\pow_ui_trunc_binexp.c" />
+    <ClCompile Include="..\..\acb_poly\powsum_one_series_sieved.c" />
+    <ClCompile Include="..\..\acb_poly\powsum_series_naive.c" />
+    <ClCompile Include="..\..\acb_poly\powsum_series_naive_threaded.c" />
+    <ClCompile Include="..\..\acb_poly\product_roots.c" />
+    <ClCompile Include="..\..\acb_poly\randtest.c" />
+    <ClCompile Include="..\..\acb_poly\refine_roots_durand_kerner.c" />
+    <ClCompile Include="..\..\acb_poly\reverse.c" />
+    <ClCompile Include="..\..\acb_poly\revert_series.c" />
+    <ClCompile Include="..\..\acb_poly\revert_series_lagrange.c" />
+    <ClCompile Include="..\..\acb_poly\revert_series_lagrange_fast.c" />
+    <ClCompile Include="..\..\acb_poly\revert_series_newton.c" />
+    <ClCompile Include="..\..\acb_poly\rgamma_series.c" />
+    <ClCompile Include="..\..\acb_poly\rising_ui_series.c" />
+    <ClCompile Include="..\..\acb_poly\root_bound_fujiwara.c" />
+    <ClCompile Include="..\..\acb_poly\root_inclusion.c" />
+    <ClCompile Include="..\..\acb_poly\rsqrt_series.c" />
+    <ClCompile Include="..\..\acb_poly\set.c" />
+    <ClCompile Include="..\..\acb_poly\set2_arb_poly.c" />
+    <ClCompile Include="..\..\acb_poly\set2_fmpq_poly.c" />
+    <ClCompile Include="..\..\acb_poly\set2_fmpz_poly.c" />
+    <ClCompile Include="..\..\acb_poly\set_coeff_acb.c" />
+    <ClCompile Include="..\..\acb_poly\set_coeff_si.c" />
+    <ClCompile Include="..\..\acb_poly\set_fmpz_poly.c" />
+    <ClCompile Include="..\..\acb_poly\set_length.c" />
+    <ClCompile Include="..\..\acb_poly\set_round.c" />
+    <ClCompile Include="..\..\acb_poly\set_si.c" />
+    <ClCompile Include="..\..\acb_poly\set_trunc.c" />
+    <ClCompile Include="..\..\acb_poly\set_trunc_round.c" />
+    <ClCompile Include="..\..\acb_poly\shift_left.c" />
+    <ClCompile Include="..\..\acb_poly\shift_right.c" />
+    <ClCompile Include="..\..\acb_poly\sin_cos_pi_series.c" />
+    <ClCompile Include="..\..\acb_poly\sin_cos_series.c" />
+    <ClCompile Include="..\..\acb_poly\sin_cos_series_basecase.c" />
+    <ClCompile Include="..\..\acb_poly\sin_cos_series_tangent.c" />
+    <ClCompile Include="..\..\acb_poly\sin_pi_series.c" />
+    <ClCompile Include="..\..\acb_poly\sin_series.c" />
+    <ClCompile Include="..\..\acb_poly\sinc_series.c" />
+    <ClCompile Include="..\..\acb_poly\sinh_cosh_series.c" />
+    <ClCompile Include="..\..\acb_poly\sinh_cosh_series_basecase.c" />
+    <ClCompile Include="..\..\acb_poly\sinh_cosh_series_exponential.c" />
+    <ClCompile Include="..\..\acb_poly\sinh_series.c" />
+    <ClCompile Include="..\..\acb_poly\sqrt_series.c" />
+    <ClCompile Include="..\..\acb_poly\sub.c" />
+    <ClCompile Include="..\..\acb_poly\sub_series.c" />
+    <ClCompile Include="..\..\acb_poly\tan_series.c" />
+    <ClCompile Include="..\..\acb_poly\taylor_shift.c" />
+    <ClCompile Include="..\..\acb_poly\taylor_shift_convolution.c" />
+    <ClCompile Include="..\..\acb_poly\taylor_shift_divconquer.c" />
+    <ClCompile Include="..\..\acb_poly\taylor_shift_horner.c" />
+    <ClCompile Include="..\..\acb_poly\tree.c" />
+    <ClCompile Include="..\..\acb_poly\validate_real_roots.c" />
+    <ClCompile Include="..\..\acb_poly\validate_roots.c" />
+    <ClCompile Include="..\..\acb_poly\valuation.c" />
+    <ClCompile Include="..\..\acb_poly\zeta_em_bound.c" />
+    <ClCompile Include="..\..\acb_poly\zeta_em_choose_param.c" />
+    <ClCompile Include="..\..\acb_poly\zeta_em_sum.c" />
+    <ClCompile Include="..\..\acb_poly\zeta_em_tail_bsplit.c" />
+    <ClCompile Include="..\..\acb_poly\zeta_em_tail_naive.c" />
+    <ClCompile Include="..\..\acb_poly\zeta_series.c" />
+    <ClCompile Include="..\..\arb\abs.c" />
+    <ClCompile Include="..\..\arb\acos.c" />
+    <ClCompile Include="..\..\arb\acosh.c" />
+    <ClCompile Include="..\..\arb\add.c" />
+    <ClCompile Include="..\..\arb\add_error.c" />
+    <ClCompile Include="..\..\arb\addmul.c" />
+    <ClCompile Include="..\..\arb\agm.c" />
+    <ClCompile Include="..\..\arb\approx_dot.c" />
+    <ClCompile Include="..\..\arb\asin.c" />
+    <ClCompile Include="..\..\arb\asinh.c" />
+    <ClCompile Include="..\..\arb\atan.c" />
+    <ClCompile Include="..\..\arb\atan2.c" />
+    <ClCompile Include="..\..\arb\atan_arf.c" />
+    <ClCompile Include="..\..\arb\atan_arf_bb.c" />
+    <ClCompile Include="..\..\arb\atan_sum_bs_powtab.c" />
+    <ClCompile Include="..\..\arb\atan_sum_bs_simple.c" />
+    <ClCompile Include="..\..\arb\atan_tab.c" />
+    <ClCompile Include="..\..\arb\atan_taylor_naive.c" />
+    <ClCompile Include="..\..\arb\atan_taylor_rs.c" />
+    <ClCompile Include="..\..\arb\atanh.c" />
+    <ClCompile Include="..\..\arb\bell_fmpz.c" />
+    <ClCompile Include="..\..\arb\bell_sum_bsplit.c" />
+    <ClCompile Include="..\..\arb\bell_sum_taylor.c" />
+    <ClCompile Include="..\..\arb\bernoulli_fmpz.c" />
+    <ClCompile Include="..\..\arb\bernoulli_poly_ui.c" />
+    <ClCompile Include="..\..\arb\bernoulli_ui.c" />
+    <ClCompile Include="..\..\arb\bernoulli_ui_zeta.c" />
+    <ClCompile Include="..\..\arb\bin.c" />
+    <ClCompile Include="..\..\arb\can_round_mpfr.c" />
+    <ClCompile Include="..\..\arb\ceil.c" />
+    <ClCompile Include="..\..\arb\chebyshev_t2_ui.c" />
+    <ClCompile Include="..\..\arb\chebyshev_t_ui.c" />
+    <ClCompile Include="..\..\arb\chebyshev_u2_ui.c" />
+    <ClCompile Include="..\..\arb\chebyshev_u_ui.c" />
+    <ClCompile Include="..\..\arb\clear.c" />
+    <ClCompile Include="..\..\arb\const_apery.c" />
+    <ClCompile Include="..\..\arb\const_catalan.c" />
+    <ClCompile Include="..\..\arb\const_e.c" />
+    <ClCompile Include="..\..\arb\const_euler.c" />
+    <ClCompile Include="..\..\arb\const_glaisher.c" />
+    <ClCompile Include="..\..\arb\const_khinchin.c" />
+    <ClCompile Include="..\..\arb\const_log10.c" />
+    <ClCompile Include="..\..\arb\const_log2.c" />
+    <ClCompile Include="..\..\arb\const_log_sqrt2pi.c" />
+    <ClCompile Include="..\..\arb\const_pi.c" />
+    <ClCompile Include="..\..\arb\const_sqrt_pi.c" />
+    <ClCompile Include="..\..\arb\contains.c" />
+    <ClCompile Include="..\..\arb\contains_arf.c" />
+    <ClCompile Include="..\..\arb\contains_fmpq.c" />
+    <ClCompile Include="..\..\arb\contains_fmpz.c" />
+    <ClCompile Include="..\..\arb\contains_int.c" />
+    <ClCompile Include="..\..\arb\contains_interior.c" />
+    <ClCompile Include="..\..\arb\contains_mpfr.c" />
+    <ClCompile Include="..\..\arb\contains_si.c" />
+    <ClCompile Include="..\..\arb\cot.c" />
+    <ClCompile Include="..\..\arb\cot_pi.c" />
+    <ClCompile Include="..\..\arb\coth.c" />
+    <ClCompile Include="..\..\arb\csc.c" />
+    <ClCompile Include="..\..\arb\csch.c" />
+    <ClCompile Include="..\..\arb\digamma.c" />
+    <ClCompile Include="..\..\arb\div.c" />
+    <ClCompile Include="..\..\arb\div_2expm1_ui.c" />
+    <ClCompile Include="..\..\arb\dot.c" />
+    <ClCompile Include="..\..\arb\dot_precise.c" />
+    <ClCompile Include="..\..\arb\dot_simple.c" />
+    <ClCompile Include="..\..\arb\doublefac_ui.c" />
+    <ClCompile Include="..\..\arb\dump_file.c" />
+    <ClCompile Include="..\..\arb\dump_str.c" />
+    <ClCompile Include="..\..\arb\euler_number_fmpz.c" />
+    <ClCompile Include="..\..\arb\euler_number_ui.c" />
+    <ClCompile Include="..\..\arb\exp.c" />
+    <ClCompile Include="..\..\arb\exp_arf_bb.c" />
+    <ClCompile Include="..\..\arb\exp_arf_rs_generic.c" />
+    <ClCompile Include="..\..\arb\exp_sum_bs_powtab.c" />
+    <ClCompile Include="..\..\arb\exp_sum_bs_simple.c" />
+    <ClCompile Include="..\..\arb\exp_tab.c" />
+    <ClCompile Include="..\..\arb\exp_taylor_bound.c" />
+    <ClCompile Include="..\..\arb\exp_taylor_naive.c" />
+    <ClCompile Include="..\..\arb\exp_taylor_rs.c" />
+    <ClCompile Include="..\..\arb\fac.c" />
+    <ClCompile Include="..\..\arb\fib.c" />
+    <ClCompile Include="..\..\arb\floor.c" />
+    <ClCompile Include="..\..\arb\fprint.c" />
+    <ClCompile Include="..\..\arb\gamma.c" />
+    <ClCompile Include="..\..\arb\get_abs_lbound_arf.c" />
+    <ClCompile Include="..\..\arb\get_abs_ubound_arf.c" />
+    <ClCompile Include="..\..\arb\get_fmpz_mid_rad_10exp.c" />
+    <ClCompile Include="..\..\arb\get_interval_arf.c" />
+    <ClCompile Include="..\..\arb\get_interval_fmpz_2exp.c" />
+    <ClCompile Include="..\..\arb\get_interval_mpfr.c" />
+    <ClCompile Include="..\..\arb\get_lbound_arf.c" />
+    <ClCompile Include="..\..\arb\get_mag_lower.c" />
+    <ClCompile Include="..\..\arb\get_mag_lower_nonnegative.c" />
+    <ClCompile Include="..\..\arb\get_mpn_fixed_mod_log2.c" />
+    <ClCompile Include="..\..\arb\get_mpn_fixed_mod_pi4.c" />
+    <ClCompile Include="..\..\arb\get_rand_fmpq.c" />
+    <ClCompile Include="..\..\arb\get_str.c" />
+    <ClCompile Include="..\..\arb\get_ubound_arf.c" />
+    <ClCompile Include="..\..\arb\get_unique_fmpz.c" />
+    <ClCompile Include="..\..\arb\hurwitz_zeta.c" />
+    <ClCompile Include="..\..\arb\hypot.c" />
+    <ClCompile Include="..\..\arb\indeterminate.c" />
+    <ClCompile Include="..\..\arb\inlines.c" />
+    <ClCompile Include="..\..\arb\intersection.c" />
+    <ClCompile Include="..\..\arb\is_finite.c" />
+    <ClCompile Include="..\..\arb\lambertw.c" />
+    <ClCompile Include="..\..\arb\load_file.c" />
+    <ClCompile Include="..\..\arb\load_str.c" />
+    <ClCompile Include="..\..\arb\log.c" />
+    <ClCompile Include="..\..\arb\log1p.c" />
+    <ClCompile Include="..\..\arb\log_arf.c" />
+    <ClCompile Include="..\..\arb\log_base_ui.c" />
+    <ClCompile Include="..\..\arb\log_hypot.c" />
+    <ClCompile Include="..\..\arb\log_tab.c" />
+    <ClCompile Include="..\..\arb\log_ui_from_prev.c" />
+    <ClCompile Include="..\..\arb\max.c" />
+    <ClCompile Include="..\..\arb\min.c" />
+    <ClCompile Include="..\..\arb\mul.c" />
+    <ClCompile Include="..\..\arb\mul_2exp_si.c" />
+    <ClCompile Include="..\..\arb\neg.c" />
+    <ClCompile Include="..\..\arb\neg_round.c" />
+    <ClCompile Include="..\..\arb\nonnegative_part.c" />
+    <ClCompile Include="..\..\arb\one.c" />
+    <ClCompile Include="..\..\arb\overlaps.c" />
+    <ClCompile Include="..\..\arb\partitions_fmpz.c" />
+    <ClCompile Include="..\..\arb\polylog.c" />
+    <ClCompile Include="..\..\arb\pow.c" />
+    <ClCompile Include="..\..\arb\pow_fmpq.c" />
+    <ClCompile Include="..\..\arb\pow_fmpz.c" />
+    <ClCompile Include="..\..\arb\pow_fmpz_binexp.c" />
+    <ClCompile Include="..\..\arb\power_sum_vec.c" />
+    <ClCompile Include="..\..\arb\randtest.c" />
+    <ClCompile Include="..\..\arb\rel_error_bits.c" />
+    <ClCompile Include="..\..\arb\richcmp.c" />
+    <ClCompile Include="..\..\arb\rising2_ui.c" />
+    <ClCompile Include="..\..\arb\rising2_ui_bs.c" />
+    <ClCompile Include="..\..\arb\rising2_ui_rs.c" />
+    <ClCompile Include="..\..\arb\rising_fmpq_ui.c" />
+    <ClCompile Include="..\..\arb\rising_ui.c" />
+    <ClCompile Include="..\..\arb\rising_ui_bs.c" />
+    <ClCompile Include="..\..\arb\rising_ui_rec.c" />
+    <ClCompile Include="..\..\arb\rising_ui_rs.c" />
+    <ClCompile Include="..\..\arb\root_ui.c" />
+    <ClCompile Include="..\..\arb\rsqrt.c" />
+    <ClCompile Include="..\..\arb\sec.c" />
+    <ClCompile Include="..\..\arb\sech.c" />
+    <ClCompile Include="..\..\arb\set.c" />
+    <ClCompile Include="..\..\arb\set_d.c" />
+    <ClCompile Include="..\..\arb\set_fmpz.c" />
+    <ClCompile Include="..\..\arb\set_interval_arf.c" />
+    <ClCompile Include="..\..\arb\set_interval_mag.c" />
+    <ClCompile Include="..\..\arb\set_interval_mpfr.c" />
+    <ClCompile Include="..\..\arb\set_interval_neg_pos_mag.c" />
+    <ClCompile Include="..\..\arb\set_round.c" />
+    <ClCompile Include="..\..\arb\set_round_fmpz.c" />
+    <ClCompile Include="..\..\arb\set_round_fmpz_2exp.c" />
+    <ClCompile Include="..\..\arb\set_si.c" />
+    <ClCompile Include="..\..\arb\set_str.c" />
+    <ClCompile Include="..\..\arb\set_ui.c" />
+    <ClCompile Include="..\..\arb\sgn.c" />
+    <ClCompile Include="..\..\arb\sgn_nonzero.c" />
+    <ClCompile Include="..\..\arb\sin_cos.c" />
+    <ClCompile Include="..\..\arb\sin_cos_arf_bb.c" />
+    <ClCompile Include="..\..\arb\sin_cos_arf_generic.c" />
+    <ClCompile Include="..\..\arb\sin_cos_generic.c" />
+    <ClCompile Include="..\..\arb\sin_cos_pi.c" />
+    <ClCompile Include="..\..\arb\sin_cos_pi_fmpq.c" />
+    <ClCompile Include="..\..\arb\sin_cos_pi_fmpq_algebraic.c" />
+    <ClCompile Include="..\..\arb\sin_cos_tab.c" />
+    <ClCompile Include="..\..\arb\sin_cos_taylor_naive.c" />
+    <ClCompile Include="..\..\arb\sin_cos_taylor_rs.c" />
+    <ClCompile Include="..\..\arb\sin_cos_wide.c" />
+    <ClCompile Include="..\..\arb\sinc.c" />
+    <ClCompile Include="..\..\arb\sinc_pi.c" />
+    <ClCompile Include="..\..\arb\sinh_cosh.c" />
+    <ClCompile Include="..\..\arb\sqrt.c" />
+    <ClCompile Include="..\..\arb\sqrt1pm1.c" />
+    <ClCompile Include="..\..\arb\sqrtpos.c" />
+    <ClCompile Include="..\..\arb\sub.c" />
+    <ClCompile Include="..\..\arb\submul.c" />
+    <ClCompile Include="..\..\arb\tan.c" />
+    <ClCompile Include="..\..\arb\tan_pi.c" />
+    <ClCompile Include="..\..\arb\tanh.c" />
+    <ClCompile Include="..\..\arb\test_multiplier.c" />
+    <ClCompile Include="..\..\arb\trim.c" />
+    <ClCompile Include="..\..\arb\union.c" />
+    <ClCompile Include="..\..\arb\vec_clear.c" />
+    <ClCompile Include="..\..\arb\vec_get_mag.c" />
+    <ClCompile Include="..\..\arb\vec_init.c" />
+    <ClCompile Include="..\..\arb\vec_set_powers.c" />
+    <ClCompile Include="..\..\arb\version.c" />
+    <ClCompile Include="..\..\arb\zero.c" />
+    <ClCompile Include="..\..\arb\zeta.c" />
+    <ClCompile Include="..\..\arb\zeta_ui.c" />
+    <ClCompile Include="..\..\arb\zeta_ui_bernoulli.c" />
+    <ClCompile Include="..\..\arb\zeta_ui_borwein_bsplit.c" />
+    <ClCompile Include="..\..\arb\zeta_ui_euler_product.c" />
+    <ClCompile Include="..\..\arb\zeta_ui_vec.c" />
+    <ClCompile Include="..\..\arb\zeta_ui_vec_borwein.c" />
+    <ClCompile Include="..\..\arb\zeta_ui_vec_even.c" />
+    <ClCompile Include="..\..\arb\zeta_ui_vec_odd.c" />
+    <ClCompile Include="..\..\arb_calc\isolate_roots.c" />
+    <ClCompile Include="..\..\arb_calc\newton_conv_factor.c" />
+    <ClCompile Include="..\..\arb_calc\newton_step.c" />
+    <ClCompile Include="..\..\arb_calc\refine_root_bisect.c" />
+    <ClCompile Include="..\..\arb_calc\refine_root_newton.c" />
+    <ClCompile Include="..\..\arb_calc\verbose.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\complex_roots.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\deflate.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\deflation.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_acb.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_acb_horner.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_acb_rectangular.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_arb.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_arb_horner.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_arb_rectangular.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\gauss_period_minpoly.c" />
+    <ClCompile Include="..\..\arb_fmpz_poly\inlines.c" />
+    <ClCompile Include="..\..\arb_hypgeom\airy.c" />
+    <ClCompile Include="..\..\arb_hypgeom\airy_jet.c" />
+    <ClCompile Include="..\..\arb_hypgeom\airy_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\airy_zero.c" />
+    <ClCompile Include="..\..\arb_hypgeom\beta_lower_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\central_bin_ui.c" />
+    <ClCompile Include="..\..\arb_hypgeom\chi_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\ci_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\coulomb.c" />
+    <ClCompile Include="..\..\arb_hypgeom\coulomb_jet.c" />
+    <ClCompile Include="..\..\arb_hypgeom\coulomb_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\ei_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\erf_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\erfc_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\erfi_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\fresnel_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\gamma_lower_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\gamma_upper_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p.c" />
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui.c" />
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_asymp.c" />
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_one.c" />
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_rec.c" />
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_root.c" />
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_zero.c" />
+    <ClCompile Include="..\..\arb_hypgeom\li_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\shi_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\si_series.c" />
+    <ClCompile Include="..\..\arb_hypgeom\wrappers.c" />
+    <ClCompile Include="..\..\arb_mat\add.c" />
+    <ClCompile Include="..\..\arb_mat\addmul_rad_mag_fast.c" />
+    <ClCompile Include="..\..\arb_mat\approx_inv.c" />
+    <ClCompile Include="..\..\arb_mat\approx_lu.c" />
+    <ClCompile Include="..\..\arb_mat\approx_mul.c" />
+    <ClCompile Include="..\..\arb_mat\approx_solve.c" />
+    <ClCompile Include="..\..\arb_mat\approx_solve_lu_precomp.c" />
+    <ClCompile Include="..\..\arb_mat\approx_solve_tril.c" />
+    <ClCompile Include="..\..\arb_mat\approx_solve_triu.c" />
+    <ClCompile Include="..\..\arb_mat\bound_frobenius_norm.c" />
+    <ClCompile Include="..\..\arb_mat\bound_inf_norm.c" />
+    <ClCompile Include="..\..\arb_mat\charpoly.c" />
+    <ClCompile Include="..\..\arb_mat\cho.c" />
+    <ClCompile Include="..\..\arb_mat\clear.c" />
+    <ClCompile Include="..\..\arb_mat\companion.c" />
+    <ClCompile Include="..\..\arb_mat\contains.c" />
+    <ClCompile Include="..\..\arb_mat\contains_fmpq_mat.c" />
+    <ClCompile Include="..\..\arb_mat\contains_fmpz_mat.c" />
+    <ClCompile Include="..\..\arb_mat\count_is_zero.c" />
+    <ClCompile Include="..\..\arb_mat\dct.c" />
+    <ClCompile Include="..\..\arb_mat\det.c" />
+    <ClCompile Include="..\..\arb_mat\det_lu.c" />
+    <ClCompile Include="..\..\arb_mat\det_precond.c" />
+    <ClCompile Include="..\..\arb_mat\diag_prod.c" />
+    <ClCompile Include="..\..\arb_mat\entrywise_is_zero.c" />
+    <ClCompile Include="..\..\arb_mat\entrywise_not_is_zero.c" />
+    <ClCompile Include="..\..\arb_mat\eq.c" />
+    <ClCompile Include="..\..\arb_mat\equal.c" />
+    <ClCompile Include="..\..\arb_mat\exp.c" />
+    <ClCompile Include="..\..\arb_mat\exp_taylor_sum.c" />
+    <ClCompile Include="..\..\arb_mat\find_pivot_partial.c" />
+    <ClCompile Include="..\..\arb_mat\fprintd.c" />
+    <ClCompile Include="..\..\arb_mat\frobenius_norm.c" />
+    <ClCompile Include="..\..\arb_mat\hilbert.c" />
+    <ClCompile Include="..\..\arb_mat\indeterminate.c" />
+    <ClCompile Include="..\..\arb_mat\init.c" />
+    <ClCompile Include="..\..\arb_mat\inlines.c" />
+    <ClCompile Include="..\..\arb_mat\inv.c" />
+    <ClCompile Include="..\..\arb_mat\inv_cho_precomp.c" />
+    <ClCompile Include="..\..\arb_mat\inv_ldl_precomp.c" />
+    <ClCompile Include="..\..\arb_mat\is_exact.c" />
+    <ClCompile Include="..\..\arb_mat\is_finite.c" />
+    <ClCompile Include="..\..\arb_mat\is_tril.c" />
+    <ClCompile Include="..\..\arb_mat\is_triu.c" />
+    <ClCompile Include="..\..\arb_mat\is_zero.c" />
+    <ClCompile Include="..\..\arb_mat\ldl.c" />
+    <ClCompile Include="..\..\arb_mat\lu.c" />
+    <ClCompile Include="..\..\arb_mat\lu_classical.c" />
+    <ClCompile Include="..\..\arb_mat\lu_recursive.c" />
+    <ClCompile Include="..\..\arb_mat\mul.c" />
+    <ClCompile Include="..\..\arb_mat\mul_block.c" />
+    <ClCompile Include="..\..\arb_mat\mul_classical.c" />
+    <ClCompile Include="..\..\arb_mat\mul_entrywise.c" />
+    <ClCompile Include="..\..\arb_mat\mul_threaded.c" />
+    <ClCompile Include="..\..\arb_mat\ne.c" />
+    <ClCompile Include="..\..\arb_mat\neg.c" />
+    <ClCompile Include="..\..\arb_mat\one.c" />
+    <ClCompile Include="..\..\arb_mat\ones.c" />
+    <ClCompile Include="..\..\arb_mat\overlaps.c" />
+    <ClCompile Include="..\..\arb_mat\pascal.c" />
+    <ClCompile Include="..\..\arb_mat\pow_ui.c" />
+    <ClCompile Include="..\..\arb_mat\randtest.c" />
+    <ClCompile Include="..\..\arb_mat\set.c" />
+    <ClCompile Include="..\..\arb_mat\set_fmpq_mat.c" />
+    <ClCompile Include="..\..\arb_mat\set_fmpz_mat.c" />
+    <ClCompile Include="..\..\arb_mat\set_round_fmpz_mat.c" />
+    <ClCompile Include="..\..\arb_mat\solve.c" />
+    <ClCompile Include="..\..\arb_mat\solve_cho_precomp.c" />
+    <ClCompile Include="..\..\arb_mat\solve_ldl_precomp.c" />
+    <ClCompile Include="..\..\arb_mat\solve_lu.c" />
+    <ClCompile Include="..\..\arb_mat\solve_lu_precomp.c" />
+    <ClCompile Include="..\..\arb_mat\solve_preapprox.c" />
+    <ClCompile Include="..\..\arb_mat\solve_precond.c" />
+    <ClCompile Include="..\..\arb_mat\solve_tril.c" />
+    <ClCompile Include="..\..\arb_mat\solve_triu.c" />
+    <ClCompile Include="..\..\arb_mat\spd_inv.c" />
+    <ClCompile Include="..\..\arb_mat\spd_solve.c" />
+    <ClCompile Include="..\..\arb_mat\sqr.c" />
+    <ClCompile Include="..\..\arb_mat\sqr_classical.c" />
+    <ClCompile Include="..\..\arb_mat\stirling.c" />
+    <ClCompile Include="..\..\arb_mat\sub.c" />
+    <ClCompile Include="..\..\arb_mat\trace.c" />
+    <ClCompile Include="..\..\arb_mat\transpose.c" />
+    <ClCompile Include="..\..\arb_mat\window_init.c" />
+    <ClCompile Include="..\..\arb_mat\zero.c" />
+    <ClCompile Include="..\..\arb_poly\acos_series.c" />
+    <ClCompile Include="..\..\arb_poly\add.c" />
+    <ClCompile Include="..\..\arb_poly\add_series.c" />
+    <ClCompile Include="..\..\arb_poly\add_si.c" />
+    <ClCompile Include="..\..\arb_poly\asin_series.c" />
+    <ClCompile Include="..\..\arb_poly\atan_series.c" />
+    <ClCompile Include="..\..\arb_poly\binomial_transform.c" />
+    <ClCompile Include="..\..\arb_poly\binomial_transform_basecase.c" />
+    <ClCompile Include="..\..\arb_poly\binomial_transform_convolution.c" />
+    <ClCompile Include="..\..\arb_poly\borel_transform.c" />
+    <ClCompile Include="..\..\arb_poly\clear.c" />
+    <ClCompile Include="..\..\arb_poly\compose.c" />
+    <ClCompile Include="..\..\arb_poly\compose_divconquer.c" />
+    <ClCompile Include="..\..\arb_poly\compose_horner.c" />
+    <ClCompile Include="..\..\arb_poly\compose_series.c" />
+    <ClCompile Include="..\..\arb_poly\compose_series_brent_kung.c" />
+    <ClCompile Include="..\..\arb_poly\compose_series_horner.c" />
+    <ClCompile Include="..\..\arb_poly\contains.c" />
+    <ClCompile Include="..\..\arb_poly\contains_fmpq_poly.c" />
+    <ClCompile Include="..\..\arb_poly\contains_fmpz_poly.c" />
+    <ClCompile Include="..\..\arb_poly\cos_pi_series.c" />
+    <ClCompile Include="..\..\arb_poly\cos_series.c" />
+    <ClCompile Include="..\..\arb_poly\cosh_series.c" />
+    <ClCompile Include="..\..\arb_poly\cot_pi_series.c" />
+    <ClCompile Include="..\..\arb_poly\derivative.c" />
+    <ClCompile Include="..\..\arb_poly\digamma_series.c" />
+    <ClCompile Include="..\..\arb_poly\div_root.c" />
+    <ClCompile Include="..\..\arb_poly\div_series.c" />
+    <ClCompile Include="..\..\arb_poly\divrem.c" />
+    <ClCompile Include="..\..\arb_poly\equal.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate2.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate2_acb.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate2_acb_horner.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate2_acb_rectangular.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate2_horner.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate2_rectangular.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate_acb.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate_acb_horner.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate_acb_rectangular.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate_horner.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate_rectangular.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate_vec_fast.c" />
+    <ClCompile Include="..\..\arb_poly\evaluate_vec_iter.c" />
+    <ClCompile Include="..\..\arb_poly\exp_series.c" />
+    <ClCompile Include="..\..\arb_poly\exp_series_basecase.c" />
+    <ClCompile Include="..\..\arb_poly\fit_length.c" />
+    <ClCompile Include="..\..\arb_poly\fprintd.c" />
+    <ClCompile Include="..\..\arb_poly\gamma_series.c" />
+    <ClCompile Include="..\..\arb_poly\get_coeff_arb.c" />
+    <ClCompile Include="..\..\arb_poly\get_unique_fmpz_poly.c" />
+    <ClCompile Include="..\..\arb_poly\init.c" />
+    <ClCompile Include="..\..\arb_poly\inlines.c" />
+    <ClCompile Include="..\..\arb_poly\integral.c" />
+    <ClCompile Include="..\..\arb_poly\interpolate_barycentric.c" />
+    <ClCompile Include="..\..\arb_poly\interpolate_fast.c" />
+    <ClCompile Include="..\..\arb_poly\interpolate_newton.c" />
+    <ClCompile Include="..\..\arb_poly\inv_borel_transform.c" />
+    <ClCompile Include="..\..\arb_poly\inv_series.c" />
+    <ClCompile Include="..\..\arb_poly\lambertw_series.c" />
+    <ClCompile Include="..\..\arb_poly\lgamma_series.c" />
+    <ClCompile Include="..\..\arb_poly\log1p_series.c" />
+    <ClCompile Include="..\..\arb_poly\log_series.c" />
+    <ClCompile Include="..\..\arb_poly\majorant.c" />
+    <ClCompile Include="..\..\arb_poly\mul.c" />
+    <ClCompile Include="..\..\arb_poly\mullow.c" />
+    <ClCompile Include="..\..\arb_poly\mullow_block.c" />
+    <ClCompile Include="..\..\arb_poly\mullow_classical.c" />
+    <ClCompile Include="..\..\arb_poly\newton_convergence_factor.c" />
+    <ClCompile Include="..\..\arb_poly\newton_refine_root.c" />
+    <ClCompile Include="..\..\arb_poly\newton_step.c" />
+    <ClCompile Include="..\..\arb_poly\normalise.c" />
+    <ClCompile Include="..\..\arb_poly\overlaps.c" />
+    <ClCompile Include="..\..\arb_poly\pow_arb_series.c" />
+    <ClCompile Include="..\..\arb_poly\pow_series.c" />
+    <ClCompile Include="..\..\arb_poly\pow_ui.c" />
+    <ClCompile Include="..\..\arb_poly\pow_ui_trunc_binexp.c" />
+    <ClCompile Include="..\..\arb_poly\product_roots.c" />
+    <ClCompile Include="..\..\arb_poly\product_roots_complex.c" />
+    <ClCompile Include="..\..\arb_poly\randtest.c" />
+    <ClCompile Include="..\..\arb_poly\reverse.c" />
+    <ClCompile Include="..\..\arb_poly\revert_series.c" />
+    <ClCompile Include="..\..\arb_poly\revert_series_lagrange.c" />
+    <ClCompile Include="..\..\arb_poly\revert_series_lagrange_fast.c" />
+    <ClCompile Include="..\..\arb_poly\revert_series_newton.c" />
+    <ClCompile Include="..\..\arb_poly\rgamma_series.c" />
+    <ClCompile Include="..\..\arb_poly\riemann_siegel_theta_series.c" />
+    <ClCompile Include="..\..\arb_poly\riemann_siegel_z_series.c" />
+    <ClCompile Include="..\..\arb_poly\rising_ui_series.c" />
+    <ClCompile Include="..\..\arb_poly\root_bound_fujiwara.c" />
+    <ClCompile Include="..\..\arb_poly\rsqrt_series.c" />
+    <ClCompile Include="..\..\arb_poly\set.c" />
+    <ClCompile Include="..\..\arb_poly\set_coeff_arb.c" />
+    <ClCompile Include="..\..\arb_poly\set_coeff_si.c" />
+    <ClCompile Include="..\..\arb_poly\set_fmpq_poly.c" />
+    <ClCompile Include="..\..\arb_poly\set_fmpz_poly.c" />
+    <ClCompile Include="..\..\arb_poly\set_length.c" />
+    <ClCompile Include="..\..\arb_poly\set_round.c" />
+    <ClCompile Include="..\..\arb_poly\set_si.c" />
+    <ClCompile Include="..\..\arb_poly\set_trunc.c" />
+    <ClCompile Include="..\..\arb_poly\set_trunc_round.c" />
+    <ClCompile Include="..\..\arb_poly\shift_left.c" />
+    <ClCompile Include="..\..\arb_poly\shift_right.c" />
+    <ClCompile Include="..\..\arb_poly\sin_cos_pi_series.c" />
+    <ClCompile Include="..\..\arb_poly\sin_cos_series.c" />
+    <ClCompile Include="..\..\arb_poly\sin_cos_series_basecase.c" />
+    <ClCompile Include="..\..\arb_poly\sin_cos_series_tangent.c" />
+    <ClCompile Include="..\..\arb_poly\sin_pi_series.c" />
+    <ClCompile Include="..\..\arb_poly\sin_series.c" />
+    <ClCompile Include="..\..\arb_poly\sinc_pi_series.c" />
+    <ClCompile Include="..\..\arb_poly\sinc_series.c" />
+    <ClCompile Include="..\..\arb_poly\sinh_cosh_series.c" />
+    <ClCompile Include="..\..\arb_poly\sinh_cosh_series_basecase.c" />
+    <ClCompile Include="..\..\arb_poly\sinh_cosh_series_exponential.c" />
+    <ClCompile Include="..\..\arb_poly\sinh_series.c" />
+    <ClCompile Include="..\..\arb_poly\sqrt_series.c" />
+    <ClCompile Include="..\..\arb_poly\sub.c" />
+    <ClCompile Include="..\..\arb_poly\sub_series.c" />
+    <ClCompile Include="..\..\arb_poly\swinnerton_dyer_ui.c" />
+    <ClCompile Include="..\..\arb_poly\tan_series.c" />
+    <ClCompile Include="..\..\arb_poly\taylor_shift.c" />
+    <ClCompile Include="..\..\arb_poly\taylor_shift_convolution.c" />
+    <ClCompile Include="..\..\arb_poly\taylor_shift_divconquer.c" />
+    <ClCompile Include="..\..\arb_poly\taylor_shift_horner.c" />
+    <ClCompile Include="..\..\arb_poly\tree.c" />
+    <ClCompile Include="..\..\arb_poly\valuation.c" />
+    <ClCompile Include="..\..\arb_poly\zeta_series.c" />
+    <ClCompile Include="..\..\arf\abs_bound_lt_2exp_si.c" />
+    <ClCompile Include="..\..\arf\add.c" />
+    <ClCompile Include="..\..\arf\add_mpn.c" />
+    <ClCompile Include="..\..\arf\addmul.c" />
+    <ClCompile Include="..\..\arf\ceil.c" />
+    <ClCompile Include="..\..\arf\clear.c" />
+    <ClCompile Include="..\..\arf\cmp.c" />
+    <ClCompile Include="..\..\arf\cmp_2exp_si.c" />
+    <ClCompile Include="..\..\arf\cmpabs.c" />
+    <ClCompile Include="..\..\arf\cmpabs_2exp_si.c" />
+    <ClCompile Include="..\..\arf\complex_mul.c" />
+    <ClCompile Include="..\..\arf\debug.c" />
+    <ClCompile Include="..\..\arf\div.c" />
+    <ClCompile Include="..\..\arf\dump_file.c" />
+    <ClCompile Include="..\..\arf\dump_str.c" />
+    <ClCompile Include="..\..\arf\equal.c" />
+    <ClCompile Include="..\..\arf\floor.c" />
+    <ClCompile Include="..\..\arf\fprint.c" />
+    <ClCompile Include="..\..\arf\frexp.c" />
+    <ClCompile Include="..\..\arf\get_d.c" />
+    <ClCompile Include="..\..\arf\get_fmpq.c" />
+    <ClCompile Include="..\..\arf\get_fmpr.c" />
+    <ClCompile Include="..\..\arf\get_fmpz.c" />
+    <ClCompile Include="..\..\arf\get_fmpz_2exp.c" />
+    <ClCompile Include="..\..\arf\get_integer_mpn.c" />
+    <ClCompile Include="..\..\arf\get_mag.c" />
+    <ClCompile Include="..\..\arf\get_mpfr.c" />
+    <ClCompile Include="..\..\arf\get_si.c" />
+    <ClCompile Include="..\..\arf\inlines.c" />
+    <ClCompile Include="..\..\arf\is_int.c" />
+    <ClCompile Include="..\..\arf\is_int_2exp_si.c" />
+    <ClCompile Include="..\..\arf\load.c" />
+    <ClCompile Include="..\..\arf\memory_manager.c" />
+    <ClCompile Include="..\..\arf\mul_rnd_any.c" />
+    <ClCompile Include="..\..\arf\mul_rnd_down.c" />
+    <ClCompile Include="..\..\arf\mul_special.c" />
+    <ClCompile Include="..\..\arf\mul_tmp_cleanup.c" />
+    <ClCompile Include="..\..\arf\mul_via_mpfr.c" />
+    <ClCompile Include="..\..\arf\neg_round.c" />
+    <ClCompile Include="..\..\arf\randtest.c" />
+    <ClCompile Include="..\..\arf\root.c" />
+    <ClCompile Include="..\..\arf\rsqrt.c" />
+    <ClCompile Include="..\..\arf\set_d.c" />
+    <ClCompile Include="..\..\arf\set_fmpr.c" />
+    <ClCompile Include="..\..\arf\set_mpfr.c" />
+    <ClCompile Include="..\..\arf\set_mpn.c" />
+    <ClCompile Include="..\..\arf\set_mpn_fixed.c" />
+    <ClCompile Include="..\..\arf\set_round.c" />
+    <ClCompile Include="..\..\arf\set_round_mpn.c" />
+    <ClCompile Include="..\..\arf\set_round_ui.c" />
+    <ClCompile Include="..\..\arf\set_round_uiui.c" />
+    <ClCompile Include="..\..\arf\sosq.c" />
+    <ClCompile Include="..\..\arf\sqrt.c" />
+    <ClCompile Include="..\..\arf\sub.c" />
+    <ClCompile Include="..\..\arf\submul.c" />
+    <ClCompile Include="..\..\arf\sum.c" />
+    <ClCompile Include="..\..\bernoulli\bound_2exp_si.c" />
+    <ClCompile Include="..\..\bernoulli\cache_compute.c" />
+    <ClCompile Include="..\..\bernoulli\fmpq_ui.c" />
+    <ClCompile Include="..\..\bernoulli\fmpq_ui_zeta.c" />
+    <ClCompile Include="..\..\bernoulli\rev_clear.c" />
+    <ClCompile Include="..\..\bernoulli\rev_init.c" />
+    <ClCompile Include="..\..\bernoulli\rev_next.c" />
+    <ClCompile Include="..\..\bool_mat\add.c" />
+    <ClCompile Include="..\..\bool_mat\all.c" />
+    <ClCompile Include="..\..\bool_mat\all_pairs_longest_walk.c" />
+    <ClCompile Include="..\..\bool_mat\any.c" />
+    <ClCompile Include="..\..\bool_mat\clear.c" />
+    <ClCompile Include="..\..\bool_mat\complement.c" />
+    <ClCompile Include="..\..\bool_mat\directed_cycle.c" />
+    <ClCompile Include="..\..\bool_mat\directed_path.c" />
+    <ClCompile Include="..\..\bool_mat\equal.c" />
+    <ClCompile Include="..\..\bool_mat\fprint.c" />
+    <ClCompile Include="..\..\bool_mat\get_strongly_connected_components.c" />
+    <ClCompile Include="..\..\bool_mat\init.c" />
+    <ClCompile Include="..\..\bool_mat\is_diagonal.c" />
+    <ClCompile Include="..\..\bool_mat\is_lower_triangular.c" />
+    <ClCompile Include="..\..\bool_mat\is_nilpotent.c" />
+    <ClCompile Include="..\..\bool_mat\is_transitive.c" />
+    <ClCompile Include="..\..\bool_mat\mul.c" />
+    <ClCompile Include="..\..\bool_mat\mul_entrywise.c" />
+    <ClCompile Include="..\..\bool_mat\nilpotency_degree.c" />
+    <ClCompile Include="..\..\bool_mat\one.c" />
+    <ClCompile Include="..\..\bool_mat\pow_ui.c" />
+    <ClCompile Include="..\..\bool_mat\randtest.c" />
+    <ClCompile Include="..\..\bool_mat\set.c" />
+    <ClCompile Include="..\..\bool_mat\trace.c" />
+    <ClCompile Include="..\..\bool_mat\transitive_closure.c" />
+    <ClCompile Include="..\..\bool_mat\transpose.c" />
+    <ClCompile Include="..\..\bool_mat\zero.c" />
+    <ClCompile Include="..\..\build.vc\getopt.c" />
+    <ClCompile Include="..\..\build.vc\gettimeofday.c" />
+    <ClCompile Include="..\..\dirichlet\char.c" />
+    <ClCompile Include="..\..\dirichlet\char_conductor.c" />
+    <ClCompile Include="..\..\dirichlet\char_eq_deep.c" />
+    <ClCompile Include="..\..\dirichlet\char_exp.c" />
+    <ClCompile Include="..\..\dirichlet\char_first_primitive.c" />
+    <ClCompile Include="..\..\dirichlet\char_index.c" />
+    <ClCompile Include="..\..\dirichlet\char_lift.c" />
+    <ClCompile Include="..\..\dirichlet\char_log.c" />
+    <ClCompile Include="..\..\dirichlet\char_lower.c" />
+    <ClCompile Include="..\..\dirichlet\char_mul.c" />
+    <ClCompile Include="..\..\dirichlet\char_next.c" />
+    <ClCompile Include="..\..\dirichlet\char_next_primitive.c" />
+    <ClCompile Include="..\..\dirichlet\char_one.c" />
+    <ClCompile Include="..\..\dirichlet\char_order.c" />
+    <ClCompile Include="..\..\dirichlet\char_parity.c" />
+    <ClCompile Include="..\..\dirichlet\char_pow.c" />
+    <ClCompile Include="..\..\dirichlet\char_print.c" />
+    <ClCompile Include="..\..\dirichlet\chi.c" />
+    <ClCompile Include="..\..\dirichlet\chi_vec.c" />
+    <ClCompile Include="..\..\dirichlet\chi_vec_loop.c" />
+    <ClCompile Include="..\..\dirichlet\chi_vec_primeloop.c" />
+    <ClCompile Include="..\..\dirichlet\group_clear.c" />
+    <ClCompile Include="..\..\dirichlet\group_dlog_precompute.c" />
+    <ClCompile Include="..\..\dirichlet\group_init.c" />
+    <ClCompile Include="..\..\dirichlet\group_num_primitive.c" />
+    <ClCompile Include="..\..\dirichlet\index_char.c" />
+    <ClCompile Include="..\..\dirichlet\pairing.c" />
+    <ClCompile Include="..\..\dirichlet\pairing_char.c" />
+    <ClCompile Include="..\..\dirichlet\ui_conductor.c" />
+    <ClCompile Include="..\..\dirichlet\ui_order.c" />
+    <ClCompile Include="..\..\dirichlet\ui_parity.c" />
+    <ClCompile Include="..\..\dirichlet\ui_vec_set_null.c" />
+    <ClCompile Include="..\..\dlog\1modpe.c" />
+    <ClCompile Include="..\..\dlog\1modpe_init.c" />
+    <ClCompile Include="..\..\dlog\1modpe_mod1p.c" />
+    <ClCompile Include="..\..\dlog\bsgs.c" />
+    <ClCompile Include="..\..\dlog\bsgs_init.c" />
+    <ClCompile Include="..\..\dlog\crt.c" />
+    <ClCompile Include="..\..\dlog\crt_clear.c" />
+    <ClCompile Include="..\..\dlog\crt_init.c" />
+    <ClCompile Include="..\..\dlog\factor_group.c" />
+    <ClCompile Include="..\..\dlog\mod2e.c" />
+    <ClCompile Include="..\..\dlog\modpe.c" />
+    <ClCompile Include="..\..\dlog\modpe_init.c" />
+    <ClCompile Include="..\..\dlog\once.c" />
+    <ClCompile Include="..\..\dlog\order23.c" />
+    <ClCompile Include="..\..\dlog\order23_init.c" />
+    <ClCompile Include="..\..\dlog\power.c" />
+    <ClCompile Include="..\..\dlog\power_init.c" />
+    <ClCompile Include="..\..\dlog\precomp.c" />
+    <ClCompile Include="..\..\dlog\precomp_clear.c" />
+    <ClCompile Include="..\..\dlog\precomp_modpe_init.c" />
+    <ClCompile Include="..\..\dlog\precomp_n_init.c" />
+    <ClCompile Include="..\..\dlog\precomp_p_init.c" />
+    <ClCompile Include="..\..\dlog\precomp_pe_init.c" />
+    <ClCompile Include="..\..\dlog\precomp_small_init.c" />
+    <ClCompile Include="..\..\dlog\rho.c" />
+    <ClCompile Include="..\..\dlog\rho_init.c" />
+    <ClCompile Include="..\..\dlog\table.c" />
+    <ClCompile Include="..\..\dlog\table_init.c" />
+    <ClCompile Include="..\..\dlog\vec.c" />
+    <ClCompile Include="..\..\dlog\vec_add.c" />
+    <ClCompile Include="..\..\dlog\vec_add_precomp.c" />
+    <ClCompile Include="..\..\dlog\vec_eratos.c" />
+    <ClCompile Include="..\..\dlog\vec_eratos_add.c" />
+    <ClCompile Include="..\..\dlog\vec_fill.c" />
+    <ClCompile Include="..\..\dlog\vec_loop.c" />
+    <ClCompile Include="..\..\dlog\vec_loop_add.c" />
+    <ClCompile Include="..\..\dlog\vec_pindex_factorgcd.c" />
+    <ClCompile Include="..\..\dlog\vec_set_not_found.c" />
+    <ClCompile Include="..\..\dlog\vec_sieve.c" />
+    <ClCompile Include="..\..\dlog\vec_sieve_add.c" />
+    <ClCompile Include="..\..\dlog\vec_sieve_add_precomp.c" />
+    <ClCompile Include="..\..\dlog\vec_sieve_precomp.c" />
+    <ClCompile Include="..\..\fmpr\add.c" />
+    <ClCompile Include="..\..\fmpr\add_eps.c" />
+    <ClCompile Include="..\..\fmpr\add_fmpz.c" />
+    <ClCompile Include="..\..\fmpr\add_mpn.c" />
+    <ClCompile Include="..\..\fmpr\add_naive.c" />
+    <ClCompile Include="..\..\fmpr\add_si.c" />
+    <ClCompile Include="..\..\fmpr\add_ui.c" />
+    <ClCompile Include="..\..\fmpr\addmul.c" />
+    <ClCompile Include="..\..\fmpr\check_ulp.c" />
+    <ClCompile Include="..\..\fmpr\cmp.c" />
+    <ClCompile Include="..\..\fmpr\cmp_2exp_si.c" />
+    <ClCompile Include="..\..\fmpr\cmpabs.c" />
+    <ClCompile Include="..\..\fmpr\cmpabs_2exp_si.c" />
+    <ClCompile Include="..\..\fmpr\cmpabs_ui.c" />
+    <ClCompile Include="..\..\fmpr\div.c" />
+    <ClCompile Include="..\..\fmpr\exp.c" />
+    <ClCompile Include="..\..\fmpr\get_d.c" />
+    <ClCompile Include="..\..\fmpr\get_fmpq.c" />
+    <ClCompile Include="..\..\fmpr\get_fmpz.c" />
+    <ClCompile Include="..\..\fmpr\get_fmpz_2exp.c" />
+    <ClCompile Include="..\..\fmpr\get_fmpz_fixed.c" />
+    <ClCompile Include="..\..\fmpr\get_mpfr.c" />
+    <ClCompile Include="..\..\fmpr\get_si.c" />
+    <ClCompile Include="..\..\fmpr\log.c" />
+    <ClCompile Include="..\..\fmpr\mul.c" />
+    <ClCompile Include="..\..\fmpr\mul_1x1.c" />
+    <ClCompile Include="..\..\fmpr\mul_fmpz.c" />
+    <ClCompile Include="..\..\fmpr\mul_mpn.c" />
+    <ClCompile Include="..\..\fmpr\mul_naive.c" />
+    <ClCompile Include="..\..\fmpr\normalise.c" />
+    <ClCompile Include="..\..\fmpr\pow_sloppy.c" />
+    <ClCompile Include="..\..\fmpr\print.c" />
+    <ClCompile Include="..\..\fmpr\printd.c" />
+    <ClCompile Include="..\..\fmpr\randtest.c" />
+    <ClCompile Include="..\..\fmpr\root.c" />
+    <ClCompile Include="..\..\fmpr\rsqrt.c" />
+    <ClCompile Include="..\..\fmpr\set_d.c" />
+    <ClCompile Include="..\..\fmpr\set_fmpq.c" />
+    <ClCompile Include="..\..\fmpr\set_fmpz_2exp.c" />
+    <ClCompile Include="..\..\fmpr\set_mpfr.c" />
+    <ClCompile Include="..\..\fmpr\set_round.c" />
+    <ClCompile Include="..\..\fmpr\set_round_mpn.c" />
+    <ClCompile Include="..\..\fmpr\set_round_ui_2exp_fmpz.c" />
+    <ClCompile Include="..\..\fmpr\set_round_uiui_2exp_fmpz.c" />
+    <ClCompile Include="..\..\fmpr\sqrt.c" />
+    <ClCompile Include="..\..\fmpr\sub.c" />
+    <ClCompile Include="..\..\fmpr\submul.c" />
+    <ClCompile Include="..\..\fmpr\ulp.c" />
+    <ClCompile Include="..\..\fmpz_extras\lshift_mpn.c" />
+    <ClCompile Include="..\..\fmpz_extras\sub_small_large.c" />
+    <ClCompile Include="..\..\hypgeom\bound.c" />
+    <ClCompile Include="..\..\hypgeom\estimate_terms_d.c" />
+    <ClCompile Include="..\..\hypgeom\init.c" />
+    <ClCompile Include="..\..\hypgeom\precompute.c" />
+    <ClCompile Include="..\..\hypgeom\sum.c" />
+    <ClCompile Include="..\..\mag\add.c" />
+    <ClCompile Include="..\..\mag\add_2exp_fmpz.c" />
+    <ClCompile Include="..\..\mag\add_ui.c" />
+    <ClCompile Include="..\..\mag\add_ui_2exp_si.c" />
+    <ClCompile Include="..\..\mag\addmul.c" />
+    <ClCompile Include="..\..\mag\atan.c" />
+    <ClCompile Include="..\..\mag\bernoulli_div_fac_ui.c" />
+    <ClCompile Include="..\..\mag\bin_uiui.c" />
+    <ClCompile Include="..\..\mag\binpow_uiui.c" />
+    <ClCompile Include="..\..\mag\clear.c" />
+    <ClCompile Include="..\..\mag\cmp.c" />
+    <ClCompile Include="..\..\mag\cmp_2exp_si.c" />
+    <ClCompile Include="..\..\mag\const_pi.c" />
+    <ClCompile Include="..\..\mag\cosh.c" />
+    <ClCompile Include="..\..\mag\d_log.c" />
+    <ClCompile Include="..\..\mag\div.c" />
+    <ClCompile Include="..\..\mag\div_lower.c" />
+    <ClCompile Include="..\..\mag\dump_file.c" />
+    <ClCompile Include="..\..\mag\dump_str.c" />
+    <ClCompile Include="..\..\mag\exp.c" />
+    <ClCompile Include="..\..\mag\exp_tail.c" />
+    <ClCompile Include="..\..\mag\expinv.c" />
+    <ClCompile Include="..\..\mag\expm1.c" />
+    <ClCompile Include="..\..\mag\fac_ui.c" />
+    <ClCompile Include="..\..\mag\fprint.c" />
+    <ClCompile Include="..\..\mag\geom_series.c" />
+    <ClCompile Include="..\..\mag\get_d.c" />
+    <ClCompile Include="..\..\mag\get_d_log2_approx.c" />
+    <ClCompile Include="..\..\mag\get_fmpq.c" />
+    <ClCompile Include="..\..\mag\get_fmpr.c" />
+    <ClCompile Include="..\..\mag\get_fmpz.c" />
+    <ClCompile Include="..\..\mag\hurwitz_zeta_uiui.c" />
+    <ClCompile Include="..\..\mag\hypot.c" />
+    <ClCompile Include="..\..\mag\inlines.c" />
+    <ClCompile Include="..\..\mag\load.c" />
+    <ClCompile Include="..\..\mag\log.c" />
+    <ClCompile Include="..\..\mag\log1p.c" />
+    <ClCompile Include="..\..\mag\log_ui.c" />
+    <ClCompile Include="..\..\mag\mul.c" />
+    <ClCompile Include="..\..\mag\mul_2exp_fmpz.c" />
+    <ClCompile Include="..\..\mag\mul_2exp_si.c" />
+    <ClCompile Include="..\..\mag\polylog_tail.c" />
+    <ClCompile Include="..\..\mag\pow_fmpz.c" />
+    <ClCompile Include="..\..\mag\pow_ui.c" />
+    <ClCompile Include="..\..\mag\randtest.c" />
+    <ClCompile Include="..\..\mag\root.c" />
+    <ClCompile Include="..\..\mag\rsqrt.c" />
+    <ClCompile Include="..\..\mag\set_d.c" />
+    <ClCompile Include="..\..\mag\set_d_2exp_fmpz.c" />
+    <ClCompile Include="..\..\mag\set_fmpr.c" />
+    <ClCompile Include="..\..\mag\set_fmpz_2exp_fmpz.c" />
+    <ClCompile Include="..\..\mag\set_ui.c" />
+    <ClCompile Include="..\..\mag\set_ui_2exp_si.c" />
+    <ClCompile Include="..\..\mag\sinh.c" />
+    <ClCompile Include="..\..\mag\sqrt.c" />
+    <ClCompile Include="..\..\mag\sub.c" />
+    <ClCompile Include="..\..\mag\sub_lower.c" />
+    <ClCompile Include="..\..\partitions\fmpz_fmpz.c" />
+    <ClCompile Include="..\..\partitions\hrr_sum_arb.c" />
+    <ClCompile Include="..\..\partitions\leading_fmpz.c" />
+    <ClCompile Include="..\..\partitions\rademacher_bound.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

@@ -1,0 +1,3985 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files" />
+    <Filter Include="Source Files" />
+    <Filter Include="Source Files\acb" />
+    <Filter Include="Source Files\acb_calc" />
+    <Filter Include="Source Files\acb_dft" />
+    <Filter Include="Source Files\acb_dirichlet" />
+    <Filter Include="Source Files\acb_elliptic" />
+    <Filter Include="Source Files\acb_hypgeom" />
+    <Filter Include="Source Files\acb_mat" />
+    <Filter Include="Source Files\acb_modular" />
+    <Filter Include="Source Files\acb_poly" />
+    <Filter Include="Source Files\arb" />
+    <Filter Include="Source Files\arb_calc" />
+    <Filter Include="Source Files\arb_fmpz_poly" />
+    <Filter Include="Source Files\arb_hypgeom" />
+    <Filter Include="Source Files\arb_mat" />
+    <Filter Include="Source Files\arb_poly" />
+    <Filter Include="Source Files\arf" />
+    <Filter Include="Source Files\bernoulli" />
+    <Filter Include="Source Files\bool_mat" />
+    <Filter Include="Source Files\build.vc" />
+    <Filter Include="Source Files\dirichlet" />
+    <Filter Include="Source Files\dlog" />
+    <Filter Include="Source Files\fmpr" />
+    <Filter Include="Source Files\fmpz_extras" />
+    <Filter Include="Source Files\hypgeom" />
+    <Filter Include="Source Files\mag" />
+    <Filter Include="Source Files\partitions" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\acb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_calc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_dft.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_dirichlet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_elliptic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_hypgeom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_mat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_modular.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\acb_poly.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\arb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\arb_calc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\arb_fmpz_poly.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\arb_hypgeom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\arb_mat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\arb_poly.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\arf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bernoulli.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\bool_mat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\build.vc\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\build.vc\getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\build.vc\gettimeofday.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\build.vc\unistd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dirichlet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\dlog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\fmpr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\fmpz_extras.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\hypgeom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\mag.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\partitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\acb\acos.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\acosh.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\addmul.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\agm.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\agm1.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\approx_dot.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\arg.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\asin.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\asinh.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\atan.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\atanh.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\barnes_g.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\bernoulli_poly_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\chebyshev_t2_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\chebyshev_t_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\chebyshev_u2_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\chebyshev_u_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\clear.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\contains_int.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\cos.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\cos_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\cot.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\cot_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\csch.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\csgn.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\cube.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\digamma.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\div.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\dot.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\dot_precise.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\dot_simple.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\exp.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\exp_invexp.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\exp_pi_i.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\expm1.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\fprintd.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\fprintn.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\gamma.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\get_abs_lbound_arf.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\get_abs_ubound_arf.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\get_mag.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\get_mag_lower.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\get_rad_ubound_arf.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\get_unique_fmpz.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\inlines.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\inv.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\lambertw.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\lambertw_asymp.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\lambertw_bound_deriv.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\lambertw_check_branch.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\log.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\log1p.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\log_sin_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\mul.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\mul_naive.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\polygamma.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\polylog.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\pow.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\quadratic_roots_fmpz.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\randtest.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_abs.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_ceil.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_floor.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_heaviside.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_max.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_min.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_sgn.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\real_sqrtpos.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rel_error_bits.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising2_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising2_ui_bs.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising2_ui_rs.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising_ui_bs.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising_ui_get_mag.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising_ui_rec.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rising_ui_rs.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\root_ui.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\rsqrt.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sech.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sgn.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sin.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sin_cos.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sin_cos_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sin_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sinc.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sinc_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\sqrt.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\submul.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\tan.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\tan_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\unit_root.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\vec_clear.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\vec_init.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\vec_set_powers.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\vec_sort_pretty.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\vec_unit_roots.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb\zeta.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_calc\cauchy_bound.c">
+      <Filter>Source Files\acb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_calc\integrate.c">
+      <Filter>Source Files\acb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_calc\integrate_gl_auto_deg.c">
+      <Filter>Source Files\acb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_calc\integrate_opt_init.c">
+      <Filter>Source Files\acb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_calc\integrate_taylor.c">
+      <Filter>Source Files\acb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\bluestein.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\convol.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\convol_dft.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\convol_mullow.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\convol_naive.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\convol_rad2.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\crt.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\cyc.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\naive.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\precomp.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\prod.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\rad2.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dft\step.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\arb_quadratic_powers.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\backlund_s.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\backlund_s_bound.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\backlund_s_gram.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\chi.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\chi_vec.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\dft.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\eta.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\euler_product_real_ui.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_factor.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_naive.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_order2.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\gauss_sum_theta.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\gram_point.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hardy_theta.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hardy_theta_series.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hardy_z.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hardy_z_series.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hardy_z_zero.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_bound.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_choose_param.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_clear.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_eval.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\hurwitz_precomp_init.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\isolate_hardy_z_zero.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum_factor.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum_gauss.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\jacobi_sum_naive.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\l.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\l_euler_product.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\l_hurwitz.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\l_jet.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\l_series.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\l_vec_hurwitz.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\pairing.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\pairing_conrey.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_beta.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_c_bound.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_i_bound.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_32.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A11.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A5.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A7.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A9.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_B1.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_lemma_B2.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_local_hardy_z_zeros.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_multieval.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_ws_interpolation.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\powsum_sieved.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\powsum_smooth.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\powsum_term.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\qseries_arb.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\qseries_arb_powers.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\root.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\root_number.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\roots_clear.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\roots_init.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\si_poly_evaluate.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\stieltjes.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\theta_arb.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\theta_length.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\turing_method_bound.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\ui_theta_arb.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\vec_mellin_arb.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\xi.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_bound.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_jet.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_jet_rs.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_bound.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_d_coeffs.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_f_coeffs.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_rs_r.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\zeta_zeros.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\e.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\e_inc.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\f.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\inv_p.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\invariants.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\k.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\k_jet.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\k_series.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\p.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\p_jet.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\p_series.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\pi.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\rc1.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\rf.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\rg.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\rj.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\roots.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_elliptic\zeta.c">
+      <Filter>Source Files\acb_elliptic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\0f1.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\2f1.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\2f1_choose.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\2f1_continuation.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\2f1_corner.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\2f1_direct.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\2f1_series_direct.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\2f1_transform.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\airy.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\airy_asymp.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\airy_bound.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\airy_direct.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\airy_jet.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\airy_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\bessel_i.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\bessel_j.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\bessel_k.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\bessel_y.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\beta_lower.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\beta_lower_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\chebyshev_t.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\chebyshev_u.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\chi.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\chi_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\ci.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\ci_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\coulomb.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\coulomb_jet.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\coulomb_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\dilog.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\dilog_bernoulli.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\dilog_bitburst.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\dilog_continuation.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\dilog_transform.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\dilog_zero.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\dilog_zero_taylor.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\ei.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\ei_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\erf.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\erf_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\erfc.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\erfc_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\erfi.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\erfi_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\expint.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\fresnel.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\fresnel_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\gamma_lower.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\gamma_lower_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\gamma_upper.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\gamma_upper_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\gegenbauer_c.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\hermite_h.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\jacobi_p.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\laguerre_l.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\legendre_p.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\legendre_p_uiui_rec.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\legendre_q.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\li.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\li_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\m.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_bound_factor.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_choose_n.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_direct.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_direct.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum_bs.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum_forward.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_series_sum_rs.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_bs.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_fme.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_forward.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\pfq_sum_rs.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\shi.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\shi_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\si.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\si_series.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\spherical_y.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\u.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\u_asymp.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_hypgeom\u_use_asymp.c">
+      <Filter>Source Files\acb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\add.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_eig_qr.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_inv.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_lu.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_mul.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_solve.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_solve_lu_precomp.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_solve_tril.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\approx_solve_triu.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\bound_frobenius_norm.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\bound_inf_norm.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\charpoly.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\clear.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\companion.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\conjugate.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\contains.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\contains_fmpq_mat.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\contains_fmpz_mat.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\det.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\det_lu.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\det_precond.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\dft.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\diag_prod.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eig_enclosure_rump.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eig_global_enclosure.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eig_multiple.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eig_multiple_rump.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eig_simple.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eig_simple_rump.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eig_simple_vdhoeven_mourrain.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\eq.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\equal.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\exp.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\exp_taylor_sum.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\find_pivot_partial.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\fprintd.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\frobenius_norm.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\indeterminate.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\init.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\inlines.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\inv.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\is_exact.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\is_finite.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\is_real.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\is_tril.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\is_triu.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\is_zero.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\lu.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\lu_classical.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\lu_recursive.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\mul.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\mul_classical.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\mul_entrywise.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\mul_reorder.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\mul_threaded.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\ne.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\neg.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\one.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\ones.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\overlaps.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\pow_ui.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\randtest.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\randtest_eig.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\set.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\set_arb_mat.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\set_fmpq_mat.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\set_fmpz_mat.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\set_round_arb_mat.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\set_round_fmpz_mat.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\solve.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\solve_lu.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\solve_lu_precomp.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\solve_precond.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\solve_tril.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\solve_triu.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\sqr.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\sqr_classical.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\sub.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\trace.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\transpose.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\window_init.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_mat\zero.c">
+      <Filter>Source Files\acb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\addseq.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\delta.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\eisenstein.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\elliptic_e.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\elliptic_k.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\elliptic_k_cpx.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\elliptic_p.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\elliptic_p_zpx.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\epsilon_arg.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\eta.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\eta_sum.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\fill_addseq.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\fundamental_domain_approx.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\fundamental_domain_approx_arf.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\fundamental_domain_approx_d.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\hilbert_class_poly.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\is_in_fundamental_domain.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\j.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\lambda.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\psl2z_inv.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\psl2z_is_correct.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\psl2z_is_one.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\psl2z_mul.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\psl2z_randtest.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_const_sum.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_const_sum_basecase.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_const_sum_rs.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_jet.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_jet_notransform.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_series.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_sum.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\theta_transform.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_modular\transform.c">
+      <Filter>Source Files\acb_modular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\add.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\add_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\add_si.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\agm1_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\atan_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\binomial_transform.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\binomial_transform_basecase.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\binomial_transform_convolution.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\borel_transform.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\clear.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\compose.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\compose_divconquer.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\compose_horner.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\compose_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\compose_series_brent_kung.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\compose_series_horner.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\contains.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\contains_fmpq_poly.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\contains_fmpz_poly.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\cos_pi_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\cos_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\cosh_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\cot_pi_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\derivative.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\digamma_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\div_root.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\div_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\divrem.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\elliptic_k_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\elliptic_p_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\equal.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\erf_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate2.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate2_horner.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate2_rectangular.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate_horner.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate_rectangular.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate_vec_fast.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\evaluate_vec_iter.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\exp_pi_i_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\exp_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\exp_series_basecase.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\find_roots.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\fit_length.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\fprintd.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\gamma_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\get_coeff_acb.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\get_unique_fmpz_poly.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\init.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\inlines.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\integral.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\interpolate_barycentric.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\interpolate_fast.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\interpolate_newton.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\inv_borel_transform.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\inv_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\lambertw_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\lgamma_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\log1p_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\log_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\majorant.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\mul.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\mullow.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\mullow_classical.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\mullow_transpose.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\mullow_transpose_gauss.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\normalise.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\overlaps.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\polylog_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\pow_acb_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\pow_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\pow_ui.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\pow_ui_trunc_binexp.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\powsum_one_series_sieved.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\powsum_series_naive.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\powsum_series_naive_threaded.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\product_roots.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\randtest.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\refine_roots_durand_kerner.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\reverse.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\revert_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\revert_series_lagrange.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\revert_series_lagrange_fast.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\revert_series_newton.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\rgamma_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\rising_ui_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\root_bound_fujiwara.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\root_inclusion.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\rsqrt_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set2_arb_poly.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set2_fmpq_poly.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set2_fmpz_poly.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_coeff_acb.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_coeff_si.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_fmpz_poly.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_length.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_round.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_si.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_trunc.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\set_trunc_round.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\shift_left.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\shift_right.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sin_cos_pi_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sin_cos_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sin_cos_series_basecase.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sin_cos_series_tangent.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sin_pi_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sin_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sinc_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sinh_cosh_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sinh_cosh_series_basecase.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sinh_cosh_series_exponential.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sinh_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sqrt_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sub.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\sub_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\tan_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\taylor_shift.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\taylor_shift_convolution.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\taylor_shift_divconquer.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\taylor_shift_horner.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\tree.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\validate_real_roots.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\validate_roots.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\valuation.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\zeta_em_bound.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\zeta_em_choose_param.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\zeta_em_sum.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\zeta_em_tail_bsplit.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\zeta_em_tail_naive.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_poly\zeta_series.c">
+      <Filter>Source Files\acb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\abs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\acos.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\acosh.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\add.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\add_error.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\addmul.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\agm.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\approx_dot.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\asin.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\asinh.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan2.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan_arf_bb.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan_sum_bs_powtab.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan_sum_bs_simple.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan_tab.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan_taylor_naive.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atan_taylor_rs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\atanh.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bell_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bell_sum_bsplit.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bell_sum_taylor.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bernoulli_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bernoulli_poly_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bernoulli_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bernoulli_ui_zeta.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\bin.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\can_round_mpfr.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\ceil.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\chebyshev_t2_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\chebyshev_t_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\chebyshev_u2_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\chebyshev_u_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\clear.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_apery.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_catalan.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_e.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_euler.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_glaisher.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_khinchin.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_log10.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_log2.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_log_sqrt2pi.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_pi.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\const_sqrt_pi.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains_fmpq.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains_int.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains_interior.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains_mpfr.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\contains_si.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\cot.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\cot_pi.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\coth.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\csc.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\csch.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\digamma.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\div.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\div_2expm1_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\dot.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\dot_precise.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\dot_simple.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\doublefac_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\dump_file.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\dump_str.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\euler_number_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\euler_number_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_arf_bb.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_arf_rs_generic.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_sum_bs_powtab.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_sum_bs_simple.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_tab.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_taylor_bound.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_taylor_naive.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\exp_taylor_rs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\fac.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\fib.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\floor.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\fprint.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\gamma.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_abs_lbound_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_abs_ubound_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_fmpz_mid_rad_10exp.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_interval_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_interval_fmpz_2exp.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_interval_mpfr.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_lbound_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_mag_lower.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_mag_lower_nonnegative.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_mpn_fixed_mod_log2.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_mpn_fixed_mod_pi4.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_rand_fmpq.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_str.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_ubound_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\get_unique_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\hurwitz_zeta.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\hypot.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\indeterminate.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\inlines.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\intersection.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\is_finite.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\lambertw.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\load_file.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\load_str.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\log.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\log1p.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\log_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\log_base_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\log_hypot.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\log_tab.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\log_ui_from_prev.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\max.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\min.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\mul.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\mul_2exp_si.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\neg.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\neg_round.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\nonnegative_part.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\one.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\overlaps.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\partitions_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\polylog.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\pow.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\pow_fmpq.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\pow_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\pow_fmpz_binexp.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\power_sum_vec.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\randtest.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rel_error_bits.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\richcmp.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising2_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising2_ui_bs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising2_ui_rs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising_fmpq_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising_ui_bs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising_ui_rec.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rising_ui_rs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\root_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\rsqrt.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sec.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sech.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_d.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_interval_arf.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_interval_mag.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_interval_mpfr.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_interval_neg_pos_mag.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_round.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_round_fmpz.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_round_fmpz_2exp.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_si.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_str.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\set_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sgn.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sgn_nonzero.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_arf_bb.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_arf_generic.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_generic.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_pi.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_pi_fmpq.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_pi_fmpq_algebraic.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_tab.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_taylor_naive.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_taylor_rs.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sin_cos_wide.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sinc.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sinc_pi.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sinh_cosh.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sqrt.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sqrt1pm1.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sqrtpos.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\sub.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\submul.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\tan.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\tan_pi.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\tanh.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\test_multiplier.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\trim.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\union.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\vec_clear.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\vec_get_mag.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\vec_init.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\vec_set_powers.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\version.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zero.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui_bernoulli.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui_borwein_bsplit.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui_euler_product.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui_vec.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui_vec_borwein.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui_vec_even.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\zeta_ui_vec_odd.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_calc\isolate_roots.c">
+      <Filter>Source Files\arb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_calc\newton_conv_factor.c">
+      <Filter>Source Files\arb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_calc\newton_step.c">
+      <Filter>Source Files\arb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_calc\refine_root_bisect.c">
+      <Filter>Source Files\arb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_calc\refine_root_newton.c">
+      <Filter>Source Files\arb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_calc\verbose.c">
+      <Filter>Source Files\arb_calc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\complex_roots.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\deflate.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\deflation.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_acb.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_acb_horner.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_acb_rectangular.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_arb.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_arb_horner.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\evaluate_arb_rectangular.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\gauss_period_minpoly.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_fmpz_poly\inlines.c">
+      <Filter>Source Files\arb_fmpz_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\airy.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\airy_jet.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\airy_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\airy_zero.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\beta_lower_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\central_bin_ui.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\chi_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\ci_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\coulomb.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\coulomb_jet.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\coulomb_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\ei_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\erf_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\erfc_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\erfi_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\fresnel_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\gamma_lower_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\gamma_upper_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_asymp.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_one.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_rec.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_root.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\legendre_p_ui_zero.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\li_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\shi_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\si_series.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_hypgeom\wrappers.c">
+      <Filter>Source Files\arb_hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\add.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\addmul_rad_mag_fast.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\approx_inv.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\approx_lu.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\approx_mul.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\approx_solve.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\approx_solve_lu_precomp.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\approx_solve_tril.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\approx_solve_triu.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\bound_frobenius_norm.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\bound_inf_norm.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\charpoly.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\cho.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\clear.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\companion.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\contains.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\contains_fmpq_mat.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\contains_fmpz_mat.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\count_is_zero.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\dct.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\det.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\det_lu.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\det_precond.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\diag_prod.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\entrywise_is_zero.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\entrywise_not_is_zero.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\eq.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\equal.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\exp.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\exp_taylor_sum.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\find_pivot_partial.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\fprintd.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\frobenius_norm.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\hilbert.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\indeterminate.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\init.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\inlines.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\inv.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\inv_cho_precomp.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\inv_ldl_precomp.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\is_exact.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\is_finite.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\is_tril.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\is_triu.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\is_zero.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\ldl.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\lu.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\lu_classical.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\lu_recursive.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\mul.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\mul_block.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\mul_classical.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\mul_entrywise.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\mul_threaded.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\ne.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\neg.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\one.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\ones.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\overlaps.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\pascal.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\pow_ui.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\randtest.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\set.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\set_fmpq_mat.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\set_fmpz_mat.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\set_round_fmpz_mat.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_cho_precomp.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_ldl_precomp.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_lu.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_lu_precomp.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_preapprox.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_precond.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_tril.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\solve_triu.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\spd_inv.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\spd_solve.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\sqr.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\sqr_classical.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\stirling.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\sub.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\trace.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\transpose.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\window_init.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_mat\zero.c">
+      <Filter>Source Files\arb_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\acos_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\add.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\add_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\add_si.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\asin_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\atan_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\binomial_transform.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\binomial_transform_basecase.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\binomial_transform_convolution.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\borel_transform.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\clear.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\compose.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\compose_divconquer.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\compose_horner.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\compose_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\compose_series_brent_kung.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\compose_series_horner.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\contains.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\contains_fmpq_poly.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\contains_fmpz_poly.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\cos_pi_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\cos_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\cosh_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\cot_pi_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\derivative.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\digamma_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\div_root.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\div_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\divrem.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\equal.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate2.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate2_acb.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate2_acb_horner.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate2_acb_rectangular.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate2_horner.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate2_rectangular.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate_acb.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate_acb_horner.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate_acb_rectangular.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate_horner.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate_rectangular.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate_vec_fast.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\evaluate_vec_iter.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\exp_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\exp_series_basecase.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\fit_length.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\fprintd.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\gamma_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\get_coeff_arb.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\get_unique_fmpz_poly.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\init.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\inlines.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\integral.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\interpolate_barycentric.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\interpolate_fast.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\interpolate_newton.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\inv_borel_transform.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\inv_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\lambertw_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\lgamma_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\log1p_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\log_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\majorant.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\mul.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\mullow.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\mullow_block.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\mullow_classical.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\newton_convergence_factor.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\newton_refine_root.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\newton_step.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\normalise.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\overlaps.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\pow_arb_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\pow_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\pow_ui.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\pow_ui_trunc_binexp.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\product_roots.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\product_roots_complex.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\randtest.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\reverse.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\revert_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\revert_series_lagrange.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\revert_series_lagrange_fast.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\revert_series_newton.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\rgamma_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\riemann_siegel_theta_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\riemann_siegel_z_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\rising_ui_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\root_bound_fujiwara.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\rsqrt_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_coeff_arb.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_coeff_si.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_fmpq_poly.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_fmpz_poly.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_length.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_round.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_si.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_trunc.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\set_trunc_round.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\shift_left.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\shift_right.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sin_cos_pi_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sin_cos_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sin_cos_series_basecase.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sin_cos_series_tangent.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sin_pi_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sin_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sinc_pi_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sinc_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sinh_cosh_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sinh_cosh_series_basecase.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sinh_cosh_series_exponential.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sinh_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sqrt_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sub.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\sub_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\swinnerton_dyer_ui.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\tan_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\taylor_shift.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\taylor_shift_convolution.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\taylor_shift_divconquer.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\taylor_shift_horner.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\tree.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\valuation.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb_poly\zeta_series.c">
+      <Filter>Source Files\arb_poly</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\abs_bound_lt_2exp_si.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\add.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\add_mpn.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\addmul.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\ceil.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\clear.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\cmp.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\cmp_2exp_si.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\cmpabs.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\cmpabs_2exp_si.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\complex_mul.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\debug.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\div.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\dump_file.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\dump_str.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\equal.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\floor.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\fprint.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\frexp.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_d.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_fmpq.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_fmpr.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_fmpz.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_fmpz_2exp.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_integer_mpn.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_mag.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_mpfr.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\get_si.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\inlines.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\is_int.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\is_int_2exp_si.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\load.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\memory_manager.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\mul_rnd_any.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\mul_rnd_down.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\mul_special.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\mul_tmp_cleanup.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\mul_via_mpfr.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\neg_round.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\randtest.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\root.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\rsqrt.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_d.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_fmpr.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_mpfr.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_mpn.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_mpn_fixed.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_round.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_round_mpn.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_round_ui.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\set_round_uiui.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\sosq.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\sqrt.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\sub.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\submul.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arf\sum.c">
+      <Filter>Source Files\arf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bernoulli\bound_2exp_si.c">
+      <Filter>Source Files\bernoulli</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bernoulli\cache_compute.c">
+      <Filter>Source Files\bernoulli</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bernoulli\fmpq_ui.c">
+      <Filter>Source Files\bernoulli</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bernoulli\fmpq_ui_zeta.c">
+      <Filter>Source Files\bernoulli</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bernoulli\rev_clear.c">
+      <Filter>Source Files\bernoulli</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bernoulli\rev_init.c">
+      <Filter>Source Files\bernoulli</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bernoulli\rev_next.c">
+      <Filter>Source Files\bernoulli</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\add.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\all.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\all_pairs_longest_walk.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\any.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\clear.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\complement.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\directed_cycle.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\directed_path.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\equal.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\fprint.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\get_strongly_connected_components.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\init.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\is_diagonal.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\is_lower_triangular.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\is_nilpotent.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\is_transitive.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\mul.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\mul_entrywise.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\nilpotency_degree.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\one.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\pow_ui.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\randtest.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\set.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\trace.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\transitive_closure.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\transpose.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\bool_mat\zero.c">
+      <Filter>Source Files\bool_mat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\build.vc\getopt.c">
+      <Filter>Source Files\build.vc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\build.vc\gettimeofday.c">
+      <Filter>Source Files\build.vc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_conductor.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_eq_deep.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_exp.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_first_primitive.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_index.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_lift.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_log.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_lower.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_mul.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_next.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_next_primitive.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_one.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_order.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_parity.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_pow.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\char_print.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\chi.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\chi_vec.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\chi_vec_loop.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\chi_vec_primeloop.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\group_clear.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\group_dlog_precompute.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\group_init.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\group_num_primitive.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\index_char.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\pairing.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\pairing_char.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\ui_conductor.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\ui_order.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\ui_parity.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dirichlet\ui_vec_set_null.c">
+      <Filter>Source Files\dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\1modpe.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\1modpe_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\1modpe_mod1p.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\bsgs.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\bsgs_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\crt.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\crt_clear.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\crt_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\factor_group.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\mod2e.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\modpe.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\modpe_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\once.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\order23.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\order23_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\power.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\power_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\precomp.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\precomp_clear.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\precomp_modpe_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\precomp_n_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\precomp_p_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\precomp_pe_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\precomp_small_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\rho.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\rho_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\table.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\table_init.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_add.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_add_precomp.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_eratos.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_eratos_add.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_fill.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_loop.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_loop_add.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_pindex_factorgcd.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_set_not_found.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_sieve.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_sieve_add.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_sieve_add_precomp.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\dlog\vec_sieve_precomp.c">
+      <Filter>Source Files\dlog</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\add.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\add_eps.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\add_fmpz.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\add_mpn.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\add_naive.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\add_si.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\add_ui.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\addmul.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\check_ulp.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\cmp.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\cmp_2exp_si.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\cmpabs.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\cmpabs_2exp_si.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\cmpabs_ui.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\div.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\exp.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\get_d.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\get_fmpq.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\get_fmpz.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\get_fmpz_2exp.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\get_fmpz_fixed.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\get_mpfr.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\get_si.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\log.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\mul.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\mul_1x1.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\mul_fmpz.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\mul_mpn.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\mul_naive.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\normalise.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\pow_sloppy.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\print.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\printd.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\randtest.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\root.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\rsqrt.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_d.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_fmpq.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_fmpz_2exp.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_mpfr.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_round.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_round_mpn.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_round_ui_2exp_fmpz.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\set_round_uiui_2exp_fmpz.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\sqrt.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\sub.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\submul.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpr\ulp.c">
+      <Filter>Source Files\fmpr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpz_extras\lshift_mpn.c">
+      <Filter>Source Files\fmpz_extras</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\fmpz_extras\sub_small_large.c">
+      <Filter>Source Files\fmpz_extras</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hypgeom\bound.c">
+      <Filter>Source Files\hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hypgeom\estimate_terms_d.c">
+      <Filter>Source Files\hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hypgeom\init.c">
+      <Filter>Source Files\hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hypgeom\precompute.c">
+      <Filter>Source Files\hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\hypgeom\sum.c">
+      <Filter>Source Files\hypgeom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\add.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\add_2exp_fmpz.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\add_ui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\add_ui_2exp_si.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\addmul.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\atan.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\bernoulli_div_fac_ui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\bin_uiui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\binpow_uiui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\clear.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\cmp.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\cmp_2exp_si.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\const_pi.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\cosh.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\d_log.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\div.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\div_lower.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\dump_file.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\dump_str.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\exp.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\exp_tail.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\expinv.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\expm1.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\fac_ui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\fprint.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\geom_series.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\get_d.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\get_d_log2_approx.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\get_fmpq.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\get_fmpr.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\get_fmpz.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\hurwitz_zeta_uiui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\hypot.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\inlines.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\load.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\log.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\log1p.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\log_ui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\mul.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\mul_2exp_fmpz.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\mul_2exp_si.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\polylog_tail.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\pow_fmpz.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\pow_ui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\randtest.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\root.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\rsqrt.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\set_d.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\set_d_2exp_fmpz.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\set_fmpr.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\set_fmpz_2exp_fmpz.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\set_ui.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\set_ui_2exp_si.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\sinh.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\sqrt.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\sub.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\mag\sub_lower.c">
+      <Filter>Source Files\mag</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\partitions\fmpz_fmpz.c">
+      <Filter>Source Files\partitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\partitions\hrr_sum_arb.c">
+      <Filter>Source Files\partitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\partitions\leading_fmpz.c">
+      <Filter>Source Files\partitions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\partitions\rademacher_bound.c">
+      <Filter>Source Files\partitions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\gmp-h.in" />
+  </ItemGroup>
+</Project>
