@@ -51,7 +51,7 @@ extern "C" {
 #endif
 
 /* currently defined in the arb module, but global to the library */
-double arb_test_multiplier(void);
+ARB_DLL double arb_test_multiplier(void);
 
 static __inline__ int
 rounds_up(fmpr_rnd_t rnd, int negative)

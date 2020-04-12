@@ -209,7 +209,7 @@ mag_init_set(mag_t x, const mag_t y)
     MAG_MAN(x) = MAG_MAN(y);
 }
 
-void mag_clear(mag_t x);
+ARB_DLL void mag_clear(mag_t x);
 
 MAG_INLINE void
 mag_swap(mag_t x, mag_t y)
@@ -281,25 +281,25 @@ mag_equal(const mag_t x, const mag_t y)
 
 /* general versions */
 
-void mag_mul(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_mul(mag_t z, const mag_t x, const mag_t y);
 
-void mag_mul_lower(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_mul_lower(mag_t z, const mag_t x, const mag_t y);
 
-void mag_addmul(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_addmul(mag_t z, const mag_t x, const mag_t y);
 
-void mag_add_2exp_fmpz(mag_t z, const mag_t x, const fmpz_t e);
+ARB_DLL void mag_add_2exp_fmpz(mag_t z, const mag_t x, const fmpz_t e);
 
-void mag_add(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_add(mag_t z, const mag_t x, const mag_t y);
 
-void mag_add_lower(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_add_lower(mag_t z, const mag_t x, const mag_t y);
 
-void mag_add_ui(mag_t z, const mag_t x, ulong y);
-void mag_add_ui_lower(mag_t res, const mag_t x, ulong y);
+ARB_DLL void mag_add_ui(mag_t z, const mag_t x, ulong y);
+ARB_DLL void mag_add_ui_lower(mag_t res, const mag_t x, ulong y);
 
-void mag_add_ui_2exp_si(mag_t z, const mag_t x, ulong y, slong e);
+ARB_DLL void mag_add_ui_2exp_si(mag_t z, const mag_t x, ulong y, slong e);
 
-void mag_div(mag_t z, const mag_t x, const mag_t y);
-void mag_div_lower(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_div(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_div_lower(mag_t z, const mag_t x, const mag_t y);
 
 MAG_INLINE void
 mag_inv(mag_t res, const mag_t x)
@@ -319,13 +319,13 @@ mag_inv_lower(mag_t res, const mag_t x)
     mag_div_lower(res, t, x);
 }
 
-void mag_mul_2exp_si(mag_t z, const mag_t x, slong y);
+ARB_DLL void mag_mul_2exp_si(mag_t z, const mag_t x, slong y);
 
-void mag_mul_2exp_fmpz(mag_t z, const mag_t x, const fmpz_t y);
+ARB_DLL void mag_mul_2exp_fmpz(mag_t z, const mag_t x, const fmpz_t y);
 
-void mag_sub(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_sub(mag_t z, const mag_t x, const mag_t y);
 
-void mag_sub_lower(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_sub_lower(mag_t z, const mag_t x, const mag_t y);
 
 /* Fast versions (no infs/nans, small exponents). Note that this
    applies to outputs too! */
@@ -491,26 +491,26 @@ mag_fast_add_2exp_si(mag_t z, const mag_t x, slong e)
         (exp) = (xexp) + __cexp - __fix; \
     } while (0);
 
-void mag_set_d(mag_t z, double x);
-void mag_set_d_lower(mag_t z, double x);
-void mag_set_d_2exp_fmpz(mag_t z, double c, const fmpz_t exp);
-void mag_set_d_2exp_fmpz_lower(mag_t z, double c, const fmpz_t exp);
+ARB_DLL void mag_set_d(mag_t z, double x);
+ARB_DLL void mag_set_d_lower(mag_t z, double x);
+ARB_DLL void mag_set_d_2exp_fmpz(mag_t z, double c, const fmpz_t exp);
+ARB_DLL void mag_set_d_2exp_fmpz_lower(mag_t z, double c, const fmpz_t exp);
 
-void mag_set_fmpz_2exp_fmpz(mag_t z, const fmpz_t man, const fmpz_t exp);
+ARB_DLL void mag_set_fmpz_2exp_fmpz(mag_t z, const fmpz_t man, const fmpz_t exp);
 
 #include "fmpr.h"
 
-void mag_set_fmpr(mag_t x, const fmpr_t y);
+ARB_DLL void mag_set_fmpr(mag_t x, const fmpr_t y);
 
-void mag_get_fmpr(fmpr_t x, const mag_t r);
+ARB_DLL void mag_get_fmpr(fmpr_t x, const mag_t r);
 
-void mag_randtest_special(mag_t x, flint_rand_t state, slong expbits);
+ARB_DLL void mag_randtest_special(mag_t x, flint_rand_t state, slong expbits);
 
-void mag_randtest(mag_t x, flint_rand_t state, slong expbits);
+ARB_DLL void mag_randtest(mag_t x, flint_rand_t state, slong expbits);
 
-void mag_fprint(FILE * file, const mag_t x);
+ARB_DLL void mag_fprint(FILE * file, const mag_t x);
 
-void mag_fprintd(FILE * file, const mag_t x, slong d);
+ARB_DLL void mag_fprintd(FILE * file, const mag_t x, slong d);
 
 MAG_INLINE void
 mag_print(const mag_t x)
@@ -524,14 +524,14 @@ mag_printd(const mag_t x, slong d)
     mag_fprintd(stdout, x, d);
 }
 
-void mag_get_fmpq(fmpq_t y, const mag_t x);
+ARB_DLL void mag_get_fmpq(fmpq_t y, const mag_t x);
 
-void mag_get_fmpz(fmpz_t res, const mag_t x);
-void mag_get_fmpz_lower(fmpz_t res, const mag_t x);
+ARB_DLL void mag_get_fmpz(fmpz_t res, const mag_t x);
+ARB_DLL void mag_get_fmpz_lower(fmpz_t res, const mag_t x);
 
-int mag_cmp(const mag_t x, const mag_t y);
+ARB_DLL int mag_cmp(const mag_t x, const mag_t y);
 
-int mag_cmp_2exp_si(const mag_t x, slong e);
+ARB_DLL int mag_cmp_2exp_si(const mag_t x, slong e);
 
 MAG_INLINE void
 mag_min(mag_t z, const mag_t x, const mag_t y)
@@ -580,73 +580,73 @@ double mag_get_d_log2_approx(const mag_t x);
 double mag_d_log_upper_bound(double x);
 double mag_d_log_lower_bound(double x);
 
-void mag_log1p(mag_t z, const mag_t x);
+ARB_DLL void mag_log1p(mag_t z, const mag_t x);
 
-void mag_log_ui(mag_t t, ulong n);
+ARB_DLL void mag_log_ui(mag_t t, ulong n);
 
-void mag_log(mag_t z, const mag_t x);
-void mag_log_lower(mag_t z, const mag_t x);
-void mag_neg_log(mag_t z, const mag_t x);
-void mag_neg_log_lower(mag_t z, const mag_t x);
+ARB_DLL void mag_log(mag_t z, const mag_t x);
+ARB_DLL void mag_log_lower(mag_t z, const mag_t x);
+ARB_DLL void mag_neg_log(mag_t z, const mag_t x);
+ARB_DLL void mag_neg_log_lower(mag_t z, const mag_t x);
 
-void mag_exp(mag_t y, const mag_t x);
-void mag_exp_lower(mag_t y, const mag_t x);
+ARB_DLL void mag_exp(mag_t y, const mag_t x);
+ARB_DLL void mag_exp_lower(mag_t y, const mag_t x);
 
-void mag_expinv(mag_t res, const mag_t x);
-void mag_expinv_lower(mag_t y, const mag_t x);
+ARB_DLL void mag_expinv(mag_t res, const mag_t x);
+ARB_DLL void mag_expinv_lower(mag_t y, const mag_t x);
 
-void mag_expm1(mag_t y, const mag_t x);
-void mag_exp_tail(mag_t z, const mag_t x, ulong N);
+ARB_DLL void mag_expm1(mag_t y, const mag_t x);
+ARB_DLL void mag_exp_tail(mag_t z, const mag_t x, ulong N);
 
-void mag_sinh(mag_t y, const mag_t x);
-void mag_sinh_lower(mag_t y, const mag_t x);
+ARB_DLL void mag_sinh(mag_t y, const mag_t x);
+ARB_DLL void mag_sinh_lower(mag_t y, const mag_t x);
 
-void mag_cosh(mag_t y, const mag_t x);
-void mag_cosh_lower(mag_t y, const mag_t x);
+ARB_DLL void mag_cosh(mag_t y, const mag_t x);
+ARB_DLL void mag_cosh_lower(mag_t y, const mag_t x);
 
-void mag_pow_ui(mag_t z, const mag_t x, ulong e);
-void mag_pow_ui_lower(mag_t z, const mag_t x, ulong e);
-void mag_pow_fmpz(mag_t z, const mag_t x, const fmpz_t e);
-void mag_pow_fmpz_lower(mag_t z, const mag_t x, const fmpz_t e);
+ARB_DLL void mag_pow_ui(mag_t z, const mag_t x, ulong e);
+ARB_DLL void mag_pow_ui_lower(mag_t z, const mag_t x, ulong e);
+ARB_DLL void mag_pow_fmpz(mag_t z, const mag_t x, const fmpz_t e);
+ARB_DLL void mag_pow_fmpz_lower(mag_t z, const mag_t x, const fmpz_t e);
 
-void mag_const_pi(mag_t res);
-void mag_const_pi_lower(mag_t res);
+ARB_DLL void mag_const_pi(mag_t res);
+ARB_DLL void mag_const_pi_lower(mag_t res);
 
-void mag_atan(mag_t res, const mag_t x);
-void mag_atan_lower(mag_t res, const mag_t x);
+ARB_DLL void mag_atan(mag_t res, const mag_t x);
+ARB_DLL void mag_atan_lower(mag_t res, const mag_t x);
 
-void mag_fac_ui(mag_t z, ulong n);
-void mag_rfac_ui(mag_t z, ulong n);
-void mag_bin_uiui(mag_t res, ulong n, ulong k);
-
-/* TODO: test */
-void mag_bernoulli_div_fac_ui(mag_t z, ulong n);
+ARB_DLL void mag_fac_ui(mag_t z, ulong n);
+ARB_DLL void mag_rfac_ui(mag_t z, ulong n);
+ARB_DLL void mag_bin_uiui(mag_t res, ulong n, ulong k);
 
 /* TODO: test */
-void mag_set_fmpz_2exp_fmpz_lower(mag_t z, const fmpz_t man, const fmpz_t exp);
+ARB_DLL void mag_bernoulli_div_fac_ui(mag_t z, ulong n);
 
-void mag_sqrt(mag_t y, const mag_t x);
-void mag_sqrt_lower(mag_t y, const mag_t x);
-void mag_rsqrt(mag_t y, const mag_t x);
-void mag_rsqrt_lower(mag_t y, const mag_t x);
+/* TODO: test */
+ARB_DLL void mag_set_fmpz_2exp_fmpz_lower(mag_t z, const fmpz_t man, const fmpz_t exp);
 
-void mag_root(mag_t y, const mag_t x, ulong n);
+ARB_DLL void mag_sqrt(mag_t y, const mag_t x);
+ARB_DLL void mag_sqrt_lower(mag_t y, const mag_t x);
+ARB_DLL void mag_rsqrt(mag_t y, const mag_t x);
+ARB_DLL void mag_rsqrt_lower(mag_t y, const mag_t x);
 
-void mag_hypot(mag_t z, const mag_t x, const mag_t y);
+ARB_DLL void mag_root(mag_t y, const mag_t x, ulong n);
 
-void mag_binpow_uiui(mag_t b, ulong m, ulong n);
+ARB_DLL void mag_hypot(mag_t z, const mag_t x, const mag_t y);
 
-void mag_polylog_tail(mag_t u, const mag_t z, slong sigma, ulong d, ulong N);
+ARB_DLL void mag_binpow_uiui(mag_t b, ulong m, ulong n);
 
-void mag_geom_series(mag_t res, const mag_t x, ulong n);
+ARB_DLL void mag_polylog_tail(mag_t u, const mag_t z, slong sigma, ulong d, ulong N);
 
-void mag_hurwitz_zeta_uiui(mag_t res, ulong s, ulong a);
+ARB_DLL void mag_geom_series(mag_t res, const mag_t x, ulong n);
 
-void mag_set_ui(mag_t z, ulong x);
-void mag_set_ui_lower(mag_t z, ulong x);
+ARB_DLL void mag_hurwitz_zeta_uiui(mag_t res, ulong s, ulong a);
+
+ARB_DLL void mag_set_ui(mag_t z, ulong x);
+ARB_DLL void mag_set_ui_lower(mag_t z, ulong x);
 
 /* TODO: test functions below */
-void mag_set_ui_2exp_si(mag_t z, ulong v, slong e);
+ARB_DLL void mag_set_ui_2exp_si(mag_t z, ulong v, slong e);
 
 MAG_INLINE void
 mag_set_fmpz(mag_t z, const fmpz_t x)
@@ -726,13 +726,13 @@ MAG_INLINE slong mag_allocated_bytes(const mag_t x)
     return fmpz_allocated_bytes(MAG_EXPREF(x));
 }
 
-int mag_load_str(mag_t res, const char * data);
+ARB_DLL int mag_load_str(mag_t res, const char * data);
 
 char * mag_dump_str(const mag_t x);
 
-int mag_load_file(mag_t res, FILE *stream);
+ARB_DLL int mag_load_file(mag_t res, FILE *stream);
 
-int mag_dump_file(FILE* stream, const mag_t x);
+ARB_DLL int mag_dump_file(FILE* stream, const mag_t x);
 
 #ifdef __cplusplus
 }

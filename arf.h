@@ -169,9 +169,9 @@ typedef arf_struct arf_t[1];
 typedef arf_struct * arf_ptr;
 typedef const arf_struct * arf_srcptr;
 
-void _arf_promote(arf_t x, mp_size_t n);
+ARB_DLL void _arf_promote(arf_t x, mp_size_t n);
 
-void _arf_demote(arf_t x);
+ARB_DLL void _arf_demote(arf_t x);
 
 
 /* Warning: does not set size! -- also doesn't demote exponent. */
@@ -234,7 +234,7 @@ arf_init(arf_t x)
     ARF_XSIZE(x) = 0;
 }
 
-void arf_clear(arf_t x);
+ARB_DLL void arf_clear(arf_t x);
 
 ARF_INLINE void
 arf_zero(arf_t x)
@@ -345,19 +345,19 @@ arf_sgn(const arf_t x)
     }
 }
 
-int arf_cmp(const arf_t x, const arf_t y);
+ARB_DLL int arf_cmp(const arf_t x, const arf_t y);
 
-int arf_cmpabs(const arf_t x, const arf_t y);
+ARB_DLL int arf_cmpabs(const arf_t x, const arf_t y);
 
-int arf_cmpabs_ui(const arf_t x, ulong y);
+ARB_DLL int arf_cmpabs_ui(const arf_t x, ulong y);
 
-int arf_cmpabs_d(const arf_t x, double y);
+ARB_DLL int arf_cmpabs_d(const arf_t x, double y);
 
-int arf_cmp_si(const arf_t x, slong y);
+ARB_DLL int arf_cmp_si(const arf_t x, slong y);
 
-int arf_cmp_ui(const arf_t x, ulong y);
+ARB_DLL int arf_cmp_ui(const arf_t x, ulong y);
 
-int arf_cmp_d(const arf_t x, double y);
+ARB_DLL int arf_cmp_d(const arf_t x, double y);
 
 ARF_INLINE void
 arf_swap(arf_t y, arf_t x)
@@ -526,7 +526,7 @@ arf_mag_cmpabs(const mag_t x, const arf_t y)
 
 /* Assumes xn > 0, x[xn-1] != 0. */
 /* TBD: 1, 2 limb versions */
-void arf_set_mpn(arf_t y, mp_srcptr x, mp_size_t xn, int sgnbit);
+ARB_DLL void arf_set_mpn(arf_t y, mp_srcptr x, mp_size_t xn, int sgnbit);
 
 ARF_INLINE void
 arf_set_mpz(arf_t y, const mpz_t x)
@@ -548,11 +548,11 @@ arf_set_fmpz(arf_t y, const fmpz_t x)
         arf_set_mpz(y, COEFF_TO_PTR(*x));
 }
 
-int _arf_set_round_ui(arf_t x, ulong v, int sgnbit, slong prec, arf_rnd_t rnd);
+ARB_DLL int _arf_set_round_ui(arf_t x, ulong v, int sgnbit, slong prec, arf_rnd_t rnd);
 
-int _arf_set_round_uiui(arf_t z, slong * fix, mp_limb_t hi, mp_limb_t lo, int sgnbit, slong prec, arf_rnd_t rnd);
+ARB_DLL int _arf_set_round_uiui(arf_t z, slong * fix, mp_limb_t hi, mp_limb_t lo, int sgnbit, slong prec, arf_rnd_t rnd);
 
-int
+ARB_DLL int
 _arf_set_round_mpn(arf_t y, slong * exp_shift, mp_srcptr x, mp_size_t xn,
     int sgnbit, slong prec, arf_rnd_t rnd);
 
@@ -597,21 +597,21 @@ arf_set_round_fmpz(arf_t y, const fmpz_t x, slong prec, arf_rnd_t rnd)
         return arf_set_round_mpz(y, COEFF_TO_PTR(*x), prec, rnd);
 }
 
-int arf_set_round(arf_t y, const arf_t x, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_set_round(arf_t y, const arf_t x, slong prec, arf_rnd_t rnd);
 
-int arf_neg_round(arf_t y, const arf_t x, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_neg_round(arf_t y, const arf_t x, slong prec, arf_rnd_t rnd);
 
-void arf_get_fmpr(fmpr_t y, const arf_t x);
+ARB_DLL void arf_get_fmpr(fmpr_t y, const arf_t x);
 
-void arf_set_fmpr(arf_t y, const fmpr_t x);
+ARB_DLL void arf_set_fmpr(arf_t y, const fmpr_t x);
 
-int arf_get_mpfr(mpfr_t x, const arf_t y, mpfr_rnd_t rnd);
+ARB_DLL int arf_get_mpfr(mpfr_t x, const arf_t y, mpfr_rnd_t rnd);
 
-void arf_set_mpfr(arf_t x, const mpfr_t y);
+ARB_DLL void arf_set_mpfr(arf_t x, const mpfr_t y);
 
-int arf_equal(const arf_t x, const arf_t y);
+ARB_DLL int arf_equal(const arf_t x, const arf_t y);
 
-int arf_equal_si(const arf_t x, slong y);
+ARB_DLL int arf_equal_si(const arf_t x, slong y);
 
 ARF_INLINE void
 arf_min(arf_t z, const arf_t a, const arf_t b)
@@ -666,13 +666,13 @@ arf_bot(fmpz_t e, const arf_t x)
         fmpz_sub_si(e, ARF_EXPREF(x), arf_bits(x));
 }
 
-int arf_is_int(const arf_t x);
+ARB_DLL int arf_is_int(const arf_t x);
 
-int arf_is_int_2exp_si(const arf_t x, slong e);
+ARB_DLL int arf_is_int_2exp_si(const arf_t x, slong e);
 
-int arf_cmp_2exp_si(const arf_t x, slong e);
+ARB_DLL int arf_cmp_2exp_si(const arf_t x, slong e);
 
-int arf_cmpabs_2exp_si(const arf_t x, slong e);
+ARB_DLL int arf_cmpabs_2exp_si(const arf_t x, slong e);
 
 ARF_INLINE void
 arf_set_si_2exp_si(arf_t x, slong man, slong exp)
@@ -744,22 +744,22 @@ arf_abs_bound_le_2exp_fmpz(fmpz_t b, const arf_t x)
 
 slong arf_abs_bound_lt_2exp_si(const arf_t x);
 
-void arf_frexp(arf_t man, fmpz_t exp, const arf_t x);
+ARB_DLL void arf_frexp(arf_t man, fmpz_t exp, const arf_t x);
 
-void arf_get_fmpz_2exp(fmpz_t man, fmpz_t exp, const arf_t x);
+ARB_DLL void arf_get_fmpz_2exp(fmpz_t man, fmpz_t exp, const arf_t x);
 
-int _arf_get_integer_mpn(mp_ptr y, mp_srcptr x, mp_size_t xn, slong exp);
+ARB_DLL int _arf_get_integer_mpn(mp_ptr y, mp_srcptr x, mp_size_t xn, slong exp);
 
-int _arf_set_mpn_fixed(arf_t z, mp_srcptr xp, mp_size_t xn,
+ARB_DLL int _arf_set_mpn_fixed(arf_t z, mp_srcptr xp, mp_size_t xn,
         mp_size_t fixn, int negative, slong prec, arf_rnd_t rnd);
 
-int arf_get_fmpz(fmpz_t z, const arf_t x, arf_rnd_t rnd);
+ARB_DLL int arf_get_fmpz(fmpz_t z, const arf_t x, arf_rnd_t rnd);
 
 slong arf_get_si(const arf_t x, arf_rnd_t rnd);
 
-int arf_get_fmpz_fixed_fmpz(fmpz_t y, const arf_t x, const fmpz_t e);
+ARB_DLL int arf_get_fmpz_fixed_fmpz(fmpz_t y, const arf_t x, const fmpz_t e);
 
-int arf_get_fmpz_fixed_si(fmpz_t y, const arf_t x, slong e);
+ARB_DLL int arf_get_fmpz_fixed_si(fmpz_t y, const arf_t x, slong e);
 
 ARF_INLINE void
 arf_set_fmpz_2exp(arf_t x, const fmpz_t man, const fmpz_t exp)
@@ -769,15 +769,15 @@ arf_set_fmpz_2exp(arf_t x, const fmpz_t man, const fmpz_t exp)
         fmpz_add_inline(ARF_EXPREF(x), ARF_EXPREF(x), exp);
 }
 
-void arf_floor(arf_t z, const arf_t x);
+ARB_DLL void arf_floor(arf_t z, const arf_t x);
 
-void arf_ceil(arf_t z, const arf_t x);
+ARB_DLL void arf_ceil(arf_t z, const arf_t x);
 
-void arf_debug(const arf_t x);
+ARB_DLL void arf_debug(const arf_t x);
 
-void arf_fprint(FILE * file, const arf_t x);
+ARB_DLL void arf_fprint(FILE * file, const arf_t x);
 
-void arf_fprintd(FILE * file, const arf_t y, slong d);
+ARB_DLL void arf_fprintd(FILE * file, const arf_t y, slong d);
 
 ARF_INLINE void
 arf_print(const arf_t x)
@@ -791,11 +791,11 @@ arf_printd(const arf_t y, slong d)
     arf_fprintd(stdout, y, d);
 }
 
-void arf_randtest(arf_t x, flint_rand_t state, slong bits, slong mag_bits);
+ARB_DLL void arf_randtest(arf_t x, flint_rand_t state, slong bits, slong mag_bits);
 
-void arf_randtest_not_zero(arf_t x, flint_rand_t state, slong bits, slong mag_bits);
+ARB_DLL void arf_randtest_not_zero(arf_t x, flint_rand_t state, slong bits, slong mag_bits);
 
-void arf_randtest_special(arf_t x, flint_rand_t state, slong bits, slong mag_bits);
+ARB_DLL void arf_randtest_special(arf_t x, flint_rand_t state, slong bits, slong mag_bits);
 
 #define MUL_MPFR_MIN_LIMBS 25
 #define MUL_MPFR_MAX_LIMBS 10000
@@ -899,13 +899,13 @@ ARB_DLL extern void _arf_mul_tmp_cleanup(void);
     if (alloc > ARF_MUL_TLS_ALLOC) \
         flint_free(tmp);
 
-void arf_mul_special(arf_t z, const arf_t x, const arf_t y);
+ARB_DLL void arf_mul_special(arf_t z, const arf_t x, const arf_t y);
 
-int arf_mul_via_mpfr(arf_t z, const arf_t x, const arf_t y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_mul_via_mpfr(arf_t z, const arf_t x, const arf_t y, slong prec, arf_rnd_t rnd);
 
-int arf_mul_rnd_any(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_mul_rnd_any(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
 
-int arf_mul_rnd_down(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec);
+ARB_DLL int arf_mul_rnd_down(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec);
 
 #define arf_mul(z, x, y, prec, rnd)              \
     ((rnd == FMPR_RND_DOWN)                      \
@@ -946,7 +946,7 @@ arf_mul_si(arf_ptr z, arf_srcptr x, slong y, slong prec, arf_rnd_t rnd)
     return arf_mul(z, x, t, prec, rnd);
 }
 
-int arf_mul_mpz(arf_ptr z, arf_srcptr x, const mpz_t y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_mul_mpz(arf_ptr z, arf_srcptr x, const mpz_t y, slong prec, arf_rnd_t rnd);
 
 ARF_INLINE int
 arf_mul_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t rnd)
@@ -995,23 +995,23 @@ ARB_DLL extern void _arf_add_tmp_cleanup(void);
     if (alloc > ARF_ADD_TLS_ALLOC) \
         flint_free(tmp);
 
-int _arf_add_mpn(arf_t z, mp_srcptr xp, mp_size_t xn, int xsgnbit,
+ARB_DLL int _arf_add_mpn(arf_t z, mp_srcptr xp, mp_size_t xn, int xsgnbit,
     const fmpz_t xexp, mp_srcptr yp, mp_size_t yn, int ysgnbit,
     mp_bitcnt_t shift, slong prec, arf_rnd_t rnd);
 
-int arf_add(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
-int arf_add_si(arf_ptr z, arf_srcptr x, slong y, slong prec, arf_rnd_t rnd);
-int arf_add_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd);
-int arf_add_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_add(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_add_si(arf_ptr z, arf_srcptr x, slong y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_add_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_add_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t rnd);
 
-int arf_add_fmpz_2exp(arf_ptr z, arf_srcptr x, const fmpz_t y, const fmpz_t exp, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_add_fmpz_2exp(arf_ptr z, arf_srcptr x, const fmpz_t y, const fmpz_t exp, slong prec, arf_rnd_t rnd);
 
-int arf_sub(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
-int arf_sub_si(arf_ptr z, arf_srcptr x, slong y, slong prec, arf_rnd_t rnd);
-int arf_sub_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd);
-int arf_sub_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sub(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sub_si(arf_ptr z, arf_srcptr x, slong y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sub_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sub_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t rnd);
 
-int arf_addmul(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_addmul(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
 
 ARF_INLINE int
 arf_addmul_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd)
@@ -1029,7 +1029,7 @@ arf_addmul_si(arf_ptr z, arf_srcptr x, slong y, slong prec, arf_rnd_t rnd)
     return arf_addmul(z, x, t, prec, rnd);
 }
 
-int arf_addmul_mpz(arf_ptr z, arf_srcptr x, const mpz_t y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_addmul_mpz(arf_ptr z, arf_srcptr x, const mpz_t y, slong prec, arf_rnd_t rnd);
 
 ARF_INLINE int
 arf_addmul_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t rnd)
@@ -1040,7 +1040,7 @@ arf_addmul_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t r
         return arf_addmul_mpz(z, x, COEFF_TO_PTR(*y), prec, rnd);
 }
 
-int arf_submul(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_submul(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
 
 ARF_INLINE int
 arf_submul_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd)
@@ -1058,7 +1058,7 @@ arf_submul_si(arf_ptr z, arf_srcptr x, slong y, slong prec, arf_rnd_t rnd)
     return arf_submul(z, x, t, prec, rnd);
 }
 
-int arf_submul_mpz(arf_ptr z, arf_srcptr x, const mpz_t y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_submul_mpz(arf_ptr z, arf_srcptr x, const mpz_t y, slong prec, arf_rnd_t rnd);
 
 ARF_INLINE int
 arf_submul_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t rnd)
@@ -1069,9 +1069,9 @@ arf_submul_fmpz(arf_ptr z, arf_srcptr x, const fmpz_t y, slong prec, arf_rnd_t r
         return arf_submul_mpz(z, x, COEFF_TO_PTR(*y), prec, rnd);
 }
 
-int arf_sosq(arf_t z, const arf_t x, const arf_t y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sosq(arf_t z, const arf_t x, const arf_t y, slong prec, arf_rnd_t rnd);
 
-int arf_div(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_div(arf_ptr z, arf_srcptr x, arf_srcptr y, slong prec, arf_rnd_t rnd);
 
 ARF_INLINE int
 arf_div_ui(arf_ptr z, arf_srcptr x, ulong y, slong prec, arf_rnd_t rnd)
@@ -1144,21 +1144,21 @@ arf_fmpz_div_fmpz(arf_ptr z, const fmpz_t x, const fmpz_t y, slong prec, arf_rnd
     return r;
 }
 
-int arf_sqrt(arf_ptr z, arf_srcptr x, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sqrt(arf_ptr z, arf_srcptr x, slong prec, arf_rnd_t rnd);
 
-int arf_sqrt_ui(arf_t z, ulong x, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sqrt_ui(arf_t z, ulong x, slong prec, arf_rnd_t rnd);
 
-int arf_sqrt_fmpz(arf_t z, const fmpz_t x, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sqrt_fmpz(arf_t z, const fmpz_t x, slong prec, arf_rnd_t rnd);
 
-int arf_rsqrt(arf_ptr z, arf_srcptr x, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_rsqrt(arf_ptr z, arf_srcptr x, slong prec, arf_rnd_t rnd);
 
-int arf_root(arf_t z, const arf_t x, ulong k, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_root(arf_t z, const arf_t x, ulong k, slong prec, arf_rnd_t rnd);
 
 /* Magnitude bounds */
 
-void arf_get_mag(mag_t y, const arf_t x);
+ARB_DLL void arf_get_mag(mag_t y, const arf_t x);
 
-void arf_get_mag_lower(mag_t y, const arf_t x);
+ARB_DLL void arf_get_mag_lower(mag_t y, const arf_t x);
 
 ARF_INLINE void
 arf_set_mag(arf_t y, const mag_t x)
@@ -1251,7 +1251,7 @@ arf_mag_set_ulp(mag_t z, const arf_t y, slong prec)
     }
 }
 
-void arf_get_fmpq(fmpq_t y, const arf_t x);
+ARB_DLL void arf_get_fmpq(fmpq_t y, const arf_t x);
 
 ARF_INLINE int
 arf_set_fmpq(arf_t y, const fmpq_t x, slong prec, arf_rnd_t rnd)
@@ -1259,22 +1259,22 @@ arf_set_fmpq(arf_t y, const fmpq_t x, slong prec, arf_rnd_t rnd)
     return arf_fmpz_div_fmpz(y, fmpq_numref(x), fmpq_denref(x), prec, rnd);
 }
 
-int arf_complex_mul(arf_t e, arf_t f, const arf_t a, const arf_t b,
+ARB_DLL int arf_complex_mul(arf_t e, arf_t f, const arf_t a, const arf_t b,
                                       const arf_t c, const arf_t d,
                                       slong prec, arf_rnd_t rnd);
 
-int arf_complex_mul_fallback(arf_t e, arf_t f,
+ARB_DLL int arf_complex_mul_fallback(arf_t e, arf_t f,
         const arf_t a, const arf_t b,
         const arf_t c, const arf_t d,
         slong prec, arf_rnd_t rnd);
 
-int arf_complex_sqr(arf_t e, arf_t f, const arf_t a, const arf_t b,
+ARB_DLL int arf_complex_sqr(arf_t e, arf_t f, const arf_t a, const arf_t b,
                                       slong prec, arf_rnd_t rnd);
 
-int arf_sum(arf_t s, arf_srcptr terms, slong len, slong prec, arf_rnd_t rnd);
+ARB_DLL int arf_sum(arf_t s, arf_srcptr terms, slong len, slong prec, arf_rnd_t rnd);
 
 double arf_get_d(const arf_t x, arf_rnd_t rnd);
-void arf_set_d(arf_t x, double v);
+ARB_DLL void arf_set_d(arf_t x, double v);
 
 ARF_INLINE slong
 arf_allocated_bytes(const arf_t x)
@@ -1287,13 +1287,13 @@ arf_allocated_bytes(const arf_t x)
     return size;
 }
 
-int arf_load_str(arf_t res, const char * data);
+ARB_DLL int arf_load_str(arf_t res, const char * data);
 
 char * arf_dump_str(const arf_t x);
 
-int arf_load_file(arf_t res, FILE *stream);
+ARB_DLL int arf_load_file(arf_t res, FILE *stream);
 
-int arf_dump_file(FILE* stream, const arf_t x);
+ARB_DLL int arf_dump_file(FILE* stream, const arf_t x);
 
 #ifdef __cplusplus
 }

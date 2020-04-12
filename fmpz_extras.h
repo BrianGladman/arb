@@ -12,6 +12,12 @@
 #ifndef FMPZ_EXTRAS_H
 #define FMPZ_EXTRAS_H
 
+#if defined(_MSC_VER) && defined(ARB_BUILD_DLL)
+#define ARB_DLL __declspec(dllexport)
+#else
+#define ARB_DLL FLINT_DLL
+#endif
+
 #include <limits.h>
 #include "flint/flint.h"
 #include "flint/fmpz.h"
@@ -27,7 +33,7 @@ extern "C" {
 #endif
 
 /* currently defined in the arb module, but global to the library */
-double arb_test_multiplier(void);
+ARB_DLL double arb_test_multiplier(void);
 
 static __inline__ void
 fmpz_add_inline(fmpz_t z, const fmpz_t x, const fmpz_t y)
