@@ -60,7 +60,7 @@ def write_f(ipath, opath):
         return
     copy(ipath, opath)
 
-ignore_dirs = ( '.git', '.vs', 'doc', 'examples', 'lib', 'exe', 'dll', 'build', 'out', 'profile')
+ignore_dirs = ( '.git', '.vs', 'doc', 'examples', 'lib', 'exe', 'dll', 'build', 'build.vc', 'out', 'profile')
 req_extns = ( '.h', '.c', '.cc', '.cpp' )
 
 def find_src(path):

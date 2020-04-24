@@ -21,7 +21,6 @@
     <Filter Include="Source Files\arf" />
     <Filter Include="Source Files\bernoulli" />
     <Filter Include="Source Files\bool_mat" />
-    <Filter Include="Source Files\build.vc" />
     <Filter Include="Source Files\dirichlet" />
     <Filter Include="Source Files\dlog" />
     <Filter Include="Source Files\fmpr" />
@@ -83,18 +82,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\bool_mat.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\build.vc\config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\build.vc\getopt.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\build.vc\gettimeofday.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\build.vc\unistd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\dirichlet.h">
@@ -3402,12 +3389,6 @@
     <ClCompile Include="..\..\bool_mat\zero.c">
       <Filter>Source Files\bool_mat</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\build.vc\getopt.c">
-      <Filter>Source Files\build.vc</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\build.vc\gettimeofday.c">
-      <Filter>Source Files\build.vc</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\dirichlet\char.c">
       <Filter>Source Files\dirichlet</Filter>
     </ClCompile>
@@ -3978,5 +3959,8 @@
     <ClCompile Include="..\..\partitions\rademacher_bound.c">
       <Filter>Source Files\partitions</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\gmp-h.in" />
   </ItemGroup>
 </Project>
