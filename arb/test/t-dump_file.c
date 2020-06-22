@@ -22,6 +22,9 @@ int main()
     fflush(stdout);
     flint_randinit(state);
 
+/* assume tmpfile() is broken on windows */
+#if !defined(_MSC_VER)
+
     /* just test no crashing... */
     for (iter = 0; iter < 10000 * arb_test_multiplier(); iter++)
     {
@@ -33,6 +36,10 @@ int main()
         arb_randtest_special(x, state, 1 + n_randint(state, 1000), 1 + n_randint(state, 100));
 
         tmp = tmpfile();
+        if (tmp == NULL) {
+            flint_printf("FAIL (creating temporary file)  iter = %wd\n\n", iter);
+            flint_abort();
+        }
         arb_dump_file(tmp, x);
         fflush(tmp);
         rewind(tmp);
@@ -86,6 +93,8 @@ int main()
         arb_clear(y);
         arb_clear(z);
     }
+
+#endif
 
     flint_randclear(state);
     flint_cleanup();

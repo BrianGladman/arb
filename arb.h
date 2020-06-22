@@ -298,6 +298,7 @@ arb_get_rad_arb(arb_t z, const arb_t x)
     mag_zero(arb_radref(z));
 }
 
+
 ARB_DLL void arb_get_abs_ubound_arf(arf_t u, const arb_t x, slong prec);
 ARB_DLL void arb_get_abs_lbound_arf(arf_t u, const arb_t x, slong prec);
 ARB_DLL void arb_get_ubound_arf(arf_t u, const arb_t x, long prec);
