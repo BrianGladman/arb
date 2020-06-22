@@ -27,10 +27,10 @@ flib_type = 'single' # ('gc', 'reentrant', 'single')
 
 # The path to flint, solution and project directories
 script_dir = dirname(__file__)
-project_name = 'flint'
+project_name = 'arb'
 build_vc = 'build.vs19'
-flint_dir = normpath(join(script_dir, '../../'))
-solution_dir = normpath(join(flint_dir, build_vc))
+arb_dir = normpath(join(script_dir, '../../'))
+solution_dir = normpath(join(arb_dir, build_vc))
 
 app_type, lib_type, dll_type = 0, 1, 2
 app_str = ('Application', 'StaticLibrary', 'DynamicLibrary')
@@ -47,64 +47,44 @@ def write_f(ipath, opath):
         return
     copy(ipath, opath)
 
-ignore_dirs = ( '.git', 'doc', 'examples', 'lib', 'exe', 'dll', 'win_hdrs')
+ignore_dirs = ( '.git', '.vs', 'doc', 'examples', 'lib', 'exe', 'dll', 'build', 'build.vc', 'out', 'profile')
 req_extns = ( '.h', '.c', '.cc', '.cpp' )
 
 def find_src(path):
 
-  c, h, cx, hx, t, tx, p = [], [], [], [], [], [], []
+  c, h, t, = [], [], []
   for root, dirs, files in walk(path):
     if 'template' in root:
       continue
     _, _t = split(root)
     if _t in ignore_dirs:
       continue
-    if 'build.vc' in root:
-      for di in list(dirs):
-        dirs.remove(di)
     for di in list(dirs):
-      if di in ignore_dirs:
+      if di in ignore_dirs or search(r'\.v(c|s)\d+', di):
         dirs.remove(di)
-      if 'template' in di:
-        dirs.remove(di)
-    relp = relpath(root, flint_dir)
+    relp = relpath(root, arb_dir)
     if relp == '.':
       relp = ''
     for f in files:
-      if 'template' in f:
-        continue
       n, x = splitext(f)
       if x not in req_extns:
         continue
       pth, leaf = split(root)
       fp = join(relp, f)
-      if leaf == 'tune':
-        continue
       if leaf == 'test':
         p2, l2 = split(pth)
-        l2 = '' if l2 == 'flint2' else l2
-        if 'flintxx' in pth:
-          tx += [(l2, fp)]
-        else:
-          t += [(l2, fp)]
-      elif leaf == 'profile':
-        p2, l2 = split(pth)
-        l2 = '' if l2 == 'flint2' else l2
-        p += [(l2, fp)]
-      elif leaf == 'flintxx':
-        cx += [fp]
+        l2 = '' if l2 == 'arb' else l2
+        t += [(l2, fp)]
       elif x == '.c':
         c += [(leaf, fp)]
       elif x == '.h':
-        if n.endswith('xx'):
-          hx += [fp]
-        else:
-          h += [fp]
-  for x in (c, h, cx, hx, t, tx, p):
-    x.sort()
-  return (c, h, cx, hx, t, tx, p)
+        h += [fp]
 
-c, h, cx, hx, t, tx, p = find_src(flint_dir)
+  for x in (c, h, t):
+    x.sort()
+  return (c, h, t)
+
+c, h, t = find_src(arb_dir)
 
 # def compile(self, sources,
 #       output_dir=None, macros=None, include_dirs=None, debug=0,
@@ -115,7 +95,8 @@ c, h, cx, hx, t, tx, p = find_src(flint_dir)
 #       export_symbols=None, debug=0, extra_preargs=None,
 #       extra_postargs=None, build_temp=None, target_lang=None):
 
-intd = '\\x64\\Release\\'
+lib_dir = 'lib\\'
+int_dir = 'x64\\Release\\'
 
 cc = MSVCCompiler()
 error_list = []
@@ -126,20 +107,22 @@ for l2, fp in t:
   inc_dirs = [
     '..\\',
     '..\\..\\',
-    '..\\..\\..\\mpir\\lib' + intd,
-    '..\\..\\..\\mpfr\\lib' + intd,
-    '..\\..\\..\\pthreads\\lib' + intd
+    '..\\..\\..\\',
+    '..\\..\\..\\mpir\\' + lib_dir + int_dir,
+    '..\\..\\..\\mpfr\\' + lib_dir + int_dir,
+    '..\\..\\..\\pthreads\\' + lib_dir + int_dir
     ]
   libs = [
-    '..\\..\\lib' + intd + 'lib_flint',
-    '..\\..\\..\\mpir\\lib' + intd + 'mpir',
-    '..\\..\\..\\mpfr\\lib' + intd + 'mpfr',
-    '..\\..\\..\\pthreads\\lib' + intd + 'pthreads'
+    '..\\..\\..\\mpir\\' + lib_dir + int_dir + 'mpir',
+    '..\\..\\..\\mpfr\\' + lib_dir + int_dir + 'mpfr',
+    '..\\..\\..\\flint\\' + lib_dir + int_dir + 'lib_flint',
+    '..\\..\\..\\arb\\' + lib_dir + int_dir + 'lib_arb',
+    '..\\..\\..\\pthreads\\' + lib_dir + int_dir + 'pthreads'
     ]
   p = fd.rfind('test')
   assert p >= 0
   tmp_dir = 'test\\test'
-  outd = '..\\tests\\' + fd[:p] + intd
+  outd = '..\\tests\\' + fd[:p] + int_dir
   try:
     obj = cc.compile(source, output_dir=tmp_dir, include_dirs=inc_dirs, macros=[('PTW32_STATIC_LIB',1)])
     cc.link("executable", obj, fn + '.exe', output_dir=outd, libraries=libs)

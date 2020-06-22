@@ -11,17 +11,17 @@ import code
 import sys
 import re
 
-vs_version = 14
+vs_version = 19
 if len(sys.argv) > 1:
   vs_version = int(sys.argv[1])
 
-build_dir_name = 'build.vc{0:d}'.format(vs_version)
+build_dir_name = 'build.vc'
 
 script_dir = dirname(__file__)
 chdir(script_dir)
 t = join(script_dir, '..\\..\\' + build_dir_name)
 exe_dir = normpath(join(t, 'tests'))
-vcx_dir = normpath(join(t, 'flint-tests'))
+vcx_dir = normpath(join(t, 'arb-tests'))
 
 def split_pnx(p):
   h, t = split(p)

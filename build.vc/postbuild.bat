@@ -1,5 +1,5 @@
 @echo off
-rem %1 = $IntDir)
+rem %1 = $(IntDir)
 rem %2 = <LIB|DLL>
 rem %3 = MSVC version number (e.g. 14)
 
@@ -14,42 +14,39 @@ call :copy_bin_files %inp_dir% ..\..\%two%\%1 %two%
 exit /b 0
 
 :copy_hdr_files
-call :copy_rename ..\..\flint.h %2 > nul 2>&1
+call :copy_rename ..\..\arb.h %2 > nul 2>&1
 call :copy_rename ..\config.h %2 > nul 2>&1
 
 rem copy C/C++ header files
 for %%i in ("..\..\*.h") do (call :copy_rename %%i %2 %%~nxi > nul 2>&1)
 
-rem copy C++ headers in flintxx
-for %%i in ("..\..\flintxx\*.h") do (call :copy_rename %%i %2 %%~nxi > nul 2>&1)
-
 exit /b 0
 
 :copy_bin_files
 
-rem copy the FLINT static library and related files
+rem copy the ARB static library and related files
 if /i %3 EQU LIB (
-    if exist ..\%1\lib_flint.lib (
-        echo ..\%1\lib_flint.lib
-        call :copy_rename ..\%1\lib_flint.lib %2 > nul 2>&1  	
-        if exist ..\%1\lib_flint.pdb (
-            call :copy_rename ..\%1\lib_flint.pdb %2 > nul 2>&1
+    if exist ..\%1\lib_arb.lib (
+        echo ..\%1\lib_arb.lib
+        call :copy_rename ..\%1\lib_arb.lib %2 > nul 2>&1  	
+        if exist ..\%1\lib_arb.pdb (
+            call :copy_rename ..\%1\lib_arb.pdb %2 > nul 2>&1
             )
         )
 )
 
-rem copy the FLINT dynamic library and related files
+rem copy the ARB dynamic library and related files
 if /i %3 EQU DLL (
-    if exist ..\%1\dll_flint.dll (
-        call :copy_rename ..\%1\dll_flint.dll %2 > nul 2>&1
-        if exist ..\%1\dll_flint.pdb (
-            call :copy_rename ..\%1\dll_flint.pdb %2 > nul 2>&1
+    if exist ..\%1\dll_arb.dll (
+        call :copy_rename ..\%1\dll_arb.dll %2 > nul 2>&1
+        if exist ..\%1\dll_arb.pdb (
+            call :copy_rename ..\%1\dll_arb.pdb %2 > nul 2>&1
             )
-        if exist ..\%1\dll_flint.lib (
-            call :copy_rename ..\%1\dll_flint.lib %2 > nul 2>&1
+        if exist ..\%1\dll_arb.lib (
+            call :copy_rename ..\%1\dll_arb.lib %2 > nul 2>&1
             )
-        if exist ..\%1\dll_flint.exp (
-            call :copy_rename ..\%1\dll_flint.exp %2 > nul 2>&1
+        if exist ..\%1\dll_arb.exp (
+            call :copy_rename ..\%1\dll_arb.exp %2 > nul 2>&1
             )
         )
 )

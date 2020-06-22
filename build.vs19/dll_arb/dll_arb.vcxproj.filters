@@ -3960,7 +3960,4 @@
       <Filter>Source Files\partitions</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\gmp-h.in" />
-  </ItemGroup>
 </Project>

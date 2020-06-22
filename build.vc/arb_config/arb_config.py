@@ -71,7 +71,6 @@ def find_src(path):
       continue
     _, _t = split(root)
     if _t in ignore_dirs:
-      print('removed : ', _t)
       continue
     if build_dir_name in root:
       for di in list(dirs):

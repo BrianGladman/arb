@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------------
 Copyright © 2001-2020 Python Software Foundation; All Rights Reserved
 
-This file is distributed under the terms of this license: 
+This file is distributed under the terms of this license:
 
     https://docs.python.org/3/license.html
 
@@ -75,7 +75,6 @@ def _find_vc2017():
     If vswhere.exe is not available, by definition, VS 2017 is not
     installed.
     """
-    import json
 
     root = os.environ.get("ProgramFiles(x86)") or os.environ.get("ProgramFiles")
     if not root:
@@ -290,7 +289,7 @@ class MSVCCompiler(CCompiler) :
         self.compile_options = [
             '/nologo', '/Ox', '/W3', '/GL', '/DNDEBUG'
         ]
-        self.compile_options.append('/MD' if self._vcruntime_redist else '/MT')
+        self.compile_options.append('/MT' if self._vcruntime_redist else '/MT')
 
         self.compile_options_debug = [
             '/nologo', '/Od', '/MDd', '/Zi', '/W3', '/D_DEBUG'
@@ -300,7 +299,7 @@ class MSVCCompiler(CCompiler) :
             '/nologo', '/INCREMENTAL:NO', '/LTCG'
         ]
         if not self._vcruntime_redist:
-            ldflags.extend(('/nodefaultlib:libucrt.lib', 'ucrt.lib'))
+            ldflags.extend(('/nodefaultlib:libucrt.lib', '/nodefaultlib:msvcrt.lib', '/nodefaultlib:libcmtd.lib', '/nodefaultlib:msvcrtd.lib', 'ucrt.lib'))
 
         ldflags_debug = [
             '/nologo', '/INCREMENTAL:NO', '/LTCG', '/DEBUG:FULL'
