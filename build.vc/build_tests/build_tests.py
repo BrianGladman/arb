@@ -113,10 +113,10 @@ for l2, fp in t:
     '..\\..\\..\\pthreads\\' + lib_dir + int_dir
     ]
   libs = [
+    '..\\..\\' + lib_dir + int_dir + 'lib_arb',
     '..\\..\\..\\mpir\\' + lib_dir + int_dir + 'mpir',
     '..\\..\\..\\mpfr\\' + lib_dir + int_dir + 'mpfr',
     '..\\..\\..\\flint\\' + lib_dir + int_dir + 'lib_flint',
-    '..\\..\\..\\arb\\' + lib_dir + int_dir + 'lib_arb',
     '..\\..\\..\\pthreads\\' + lib_dir + int_dir + 'pthreads'
     ]
   p = fd.rfind('test')
@@ -129,6 +129,7 @@ for l2, fp in t:
   except:
     error_list += [(l2, fp)]
 
-print('Build Errors:')
-for l2, fp in error_list:
-  print('    ', l2, fp)
+if error_list:
+  print('Build Errors:')
+  for l2, fp in error_list:
+    print('    ', l2, fp)
