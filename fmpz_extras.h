@@ -32,6 +32,10 @@ extern "C" {
 #endif
 #endif
 
+#if __FLINT_RELEASE < 20600
+#define flint_bitcnt_t ulong
+#endif
+
 /* currently defined in the arb module, but global to the library */
 ARB_DLL double arb_test_multiplier(void);
 
@@ -146,7 +150,7 @@ fmpz_set_mpn_large(fmpz_t z, mp_srcptr src, mp_size_t n, int negative)
 }
 
 static __inline__ void
-fmpz_adiv_q_2exp(fmpz_t z, const fmpz_t x, mp_bitcnt_t exp)
+fmpz_adiv_q_2exp(fmpz_t z, const fmpz_t x, flint_bitcnt_t exp)
 {
     int sign = fmpz_sgn(x);
 
@@ -252,7 +256,7 @@ fmpz_min(fmpz_t z, const fmpz_t x, const fmpz_t y)
         (zn) = FLINT_ABS(zn); \
     }
 
-void fmpz_lshift_mpn(fmpz_t z, mp_srcptr d, mp_size_t dn, int sgnbit, mp_bitcnt_t shift);
+void fmpz_lshift_mpn(fmpz_t z, mp_srcptr d, mp_size_t dn, int sgnbit, flint_bitcnt_t shift);
 
 static __inline__ slong
 fmpz_allocated_bytes(const fmpz_t x)
