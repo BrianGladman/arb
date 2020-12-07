@@ -1,5 +1,5 @@
 ﻿'''
-Set up Visual Sudio to build a specified MPIR configuration
+Set up Visual Sudio to build a specified configuration
 
 Copyright (C) 2011, 2012, 2013, 2014, 2015 Brian Gladman
 '''
@@ -97,6 +97,13 @@ c, h, t = find_src(arb_dir)
 
 lib_dir = 'lib\\'
 int_dir = 'x64\\Release\\'
+
+# delete old test executables
+for root, dirs, files in walk('..\\tests\\'):
+  for f in files:
+    n, x = splitext(f)
+    if x == '.exe':
+      unlink(join(root, f))
 
 cc = MSVCCompiler()
 error_list = []

@@ -208,6 +208,7 @@
     <ClCompile Include="..\..\acb\cos_pi.c" />
     <ClCompile Include="..\..\acb\cot.c" />
     <ClCompile Include="..\..\acb\cot_pi.c" />
+    <ClCompile Include="..\..\acb\csc_pi.c" />
     <ClCompile Include="..\..\acb\csch.c" />
     <ClCompile Include="..\..\acb\csgn.c" />
     <ClCompile Include="..\..\acb\cube.c" />
@@ -300,6 +301,7 @@
     <ClCompile Include="..\..\acb_dft\precomp.c" />
     <ClCompile Include="..\..\acb_dft\prod.c" />
     <ClCompile Include="..\..\acb_dft\rad2.c" />
+    <ClCompile Include="..\..\acb_dft\rad2_threaded.c" />
     <ClCompile Include="..\..\acb_dft\step.c" />
     <ClCompile Include="..\..\acb_dirichlet\arb_quadratic_powers.c" />
     <ClCompile Include="..\..\acb_dirichlet\backlund_s.c" />
@@ -342,6 +344,7 @@
     <ClCompile Include="..\..\acb_dirichlet\pairing_conrey.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_beta.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_c_bound.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_hardy_z_zeros.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_i_bound.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_lemma_32.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_lemma_A11.c" />
@@ -352,7 +355,9 @@
     <ClCompile Include="..\..\acb_dirichlet\platt_lemma_B2.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_local_hardy_z_zeros.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_multieval.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_multieval_threaded.c" />
     <ClCompile Include="..\..\acb_dirichlet\platt_ws_interpolation.c" />
+    <ClCompile Include="..\..\acb_dirichlet\platt_zeta_zeros.c" />
     <ClCompile Include="..\..\acb_dirichlet\powsum_sieved.c" />
     <ClCompile Include="..\..\acb_dirichlet\powsum_smooth.c" />
     <ClCompile Include="..\..\acb_dirichlet\powsum_term.c" />
@@ -788,6 +793,7 @@
     <ClCompile Include="..\..\arb\cot_pi.c" />
     <ClCompile Include="..\..\arb\coth.c" />
     <ClCompile Include="..\..\arb\csc.c" />
+    <ClCompile Include="..\..\arb\csc_pi.c" />
     <ClCompile Include="..\..\arb\csch.c" />
     <ClCompile Include="..\..\arb\digamma.c" />
     <ClCompile Include="..\..\arb\div.c" />

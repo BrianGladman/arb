@@ -176,6 +176,9 @@
     <ClCompile Include="..\..\acb\cot_pi.c">
       <Filter>Source Files\acb</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\acb\csc_pi.c">
+      <Filter>Source Files\acb</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\acb\csch.c">
       <Filter>Source Files\acb</Filter>
     </ClCompile>
@@ -452,6 +455,9 @@
     <ClCompile Include="..\..\acb_dft\rad2.c">
       <Filter>Source Files\acb_dft</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\acb_dft\rad2_threaded.c">
+      <Filter>Source Files\acb_dft</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\acb_dft\step.c">
       <Filter>Source Files\acb_dft</Filter>
     </ClCompile>
@@ -578,6 +584,9 @@
     <ClCompile Include="..\..\acb_dirichlet\platt_c_bound.c">
       <Filter>Source Files\acb_dirichlet</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_hardy_z_zeros.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\acb_dirichlet\platt_i_bound.c">
       <Filter>Source Files\acb_dirichlet</Filter>
     </ClCompile>
@@ -608,7 +617,13 @@
     <ClCompile Include="..\..\acb_dirichlet\platt_multieval.c">
       <Filter>Source Files\acb_dirichlet</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_multieval_threaded.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\acb_dirichlet\platt_ws_interpolation.c">
+      <Filter>Source Files\acb_dirichlet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\acb_dirichlet\platt_zeta_zeros.c">
       <Filter>Source Files\acb_dirichlet</Filter>
     </ClCompile>
     <ClCompile Include="..\..\acb_dirichlet\powsum_sieved.c">
@@ -1914,6 +1929,9 @@
       <Filter>Source Files\arb</Filter>
     </ClCompile>
     <ClCompile Include="..\..\arb\csc.c">
+      <Filter>Source Files\arb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\arb\csc_pi.c">
       <Filter>Source Files\arb</Filter>
     </ClCompile>
     <ClCompile Include="..\..\arb\csch.c">
