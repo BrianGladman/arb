@@ -176,6 +176,7 @@ void acb_dirichlet_isolate_hardy_z_zero(arf_t a, arf_t b, const fmpz_t n);
 void _acb_dirichlet_refine_hardy_z_zero(arb_t res, const arf_t a, const arf_t b, slong prec);
 void acb_dirichlet_hardy_z_zeros(arb_ptr res, const fmpz_t n, slong len, slong prec);
 void acb_dirichlet_zeta_zeros(acb_ptr res, const fmpz_t n, slong len, slong prec);
+slong acb_dirichlet_platt_zeta_zeros(acb_ptr res, const fmpz_t n, slong len, slong prec);
 void _acb_dirichlet_exact_zeta_nzeros(fmpz_t res, const arf_t t);
 void acb_dirichlet_zeta_nzeros(arb_t res, const arb_t t, slong prec);
 void acb_dirichlet_backlund_s(arb_t res, const arb_t t, slong prec);
@@ -285,8 +286,10 @@ void acb_dirichlet_platt_lemma_B2(arb_t out, slong K, const arb_t h,
 
 /* Platt DFT grid evaluation of scaled Lambda */
 
-void acb_dirichlet_platt_multieval(arb_ptr out, const fmpz_t T, slong A,
-    slong B, const arb_t h, slong J, slong K, slong sigma, slong prec);
+void acb_dirichlet_platt_multieval(arb_ptr out, const fmpz_t T,
+    slong A, slong B, const arb_t h, slong J, slong K, slong sigma, slong prec);
+void acb_dirichlet_platt_multieval_threaded(arb_ptr out, const fmpz_t T,
+    slong A, slong B, const arb_t h, slong J, slong K, slong sigma, slong prec);
 
 /* Platt Hardy Z zeros */
 
@@ -296,6 +299,8 @@ slong _acb_dirichlet_platt_local_hardy_z_zeros(
     const arb_t h, slong J, slong K, slong sigma_grid,
     slong Ns_max, const arb_t H, slong sigma_interp, slong prec);
 slong acb_dirichlet_platt_local_hardy_z_zeros(
+    arb_ptr res, const fmpz_t n, slong len, slong prec);
+slong acb_dirichlet_platt_hardy_z_zeros(
     arb_ptr res, const fmpz_t n, slong len, slong prec);
 
 /* Discrete Fourier Transform */

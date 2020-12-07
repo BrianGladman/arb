@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2019 D.H.J. Polymath
+    Copyright (C) 2020 D.H.J. Polymath
 
     This file is part of Arb.
 

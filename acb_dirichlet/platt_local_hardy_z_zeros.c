@@ -909,25 +909,23 @@ create_initial_double_superblock(zz_node_ptr *pu, zz_node_ptr *pv,
      * Add blocks in the backwards direction until the number
      * of consecutive good Gram blocks is twice the computed bound.
      */
-    u = p;
-    v = p;
     while (good_block_count < 2*bound)
     {
-        if (!extend_to_prev_good_gram_node(&u, u, ctx, prec))
+        if (!extend_to_prev_good_gram_node(&p, v, ctx, prec))
         {
             result = 0;
             goto finish;
         }
-        zn = count_gram_intervals(u, v);
-        for (i = 0; i < LOOPCOUNT && count_sign_changes(u, v) < zn; i++)
+        zn = count_gram_intervals(p, v);
+        for (i = 0; i < LOOPCOUNT && count_sign_changes(p, v) < zn; i++)
         {
-            if (!intercalate(ctx, u, v, prec))
+            if (!intercalate(ctx, p, v, prec))
             {
                 result = 0;
                 goto finish;
             }
         }
-        if (count_sign_changes(u, v) >= zn)
+        if (count_sign_changes(p, v) >= zn)
         {
             good_block_count++;
         }
@@ -935,8 +933,8 @@ create_initial_double_superblock(zz_node_ptr *pu, zz_node_ptr *pv,
         {
             good_block_count = 0;
         }
+        v = p;
     }
-    p = u;
 
 finish:
 
@@ -1327,15 +1325,8 @@ _arb_get_lbound_fmpz(fmpz_t z, const arb_t x, slong prec)
     arf_clear(u);
 }
 
-static void
-_arb_div_si_si(arb_t res, slong a, slong b, slong prec)
-{
-    arb_set_si(res, a);
-    arb_div_si(res, res, b, prec);
-}
-
 /* Compares f to g=a*10^b.
- * Returns a negative vlaue if f < g, positive value if g < f, otherwise 0. */
+ * Returns a negative value if f < g, positive value if g < f, otherwise 0. */
 static int
 _fmpz_cmp_a_10exp_b(const fmpz_t f, slong a, slong b)
 {
@@ -1350,184 +1341,23 @@ _fmpz_cmp_a_10exp_b(const fmpz_t f, slong a, slong b)
     return result;
 }
 
-/* Returns nonzero on success. */
-static int
-_heuristic_A8_J(slong *J, const fmpz_t n, slong prec)
-{
-    if (_fmpz_cmp_a_10exp_b(n, 1, 4) < 0 ||
-        _fmpz_cmp_a_10exp_b(n, 3, 22) > 0)
-    {
-        return 0;
-    }
-    else
-    {
-        arb_t logn;
-        double x;
-        arb_init(logn);
-        arb_log_fmpz(logn, n, prec);
-        x = arf_get_d(arb_midref(logn), ARF_RND_NEAR);
-        *J = (slong) exp(0.002133 + 0.4406*x + 0.0005188*x*x);
-        arb_clear(logn);
-        return 1;
-    }
-}
-
-/* Returns nonzero on success. */
-static int
-_heuristic_A8_K(slong *K, const fmpz_t n, slong prec)
-{
-    if (_fmpz_cmp_a_10exp_b(n, 1, 4) < 0 ||
-        _fmpz_cmp_a_10exp_b(n, 3, 22) > 0)
-    {
-        return 0;
-    }
-    else
-    {
-        arb_t logn;
-        double x;
-        arb_init(logn);
-        arb_log_fmpz(logn, n, prec);
-        x = arf_get_d(arb_midref(logn), ARF_RND_NEAR);
-        *K = (slong) (72.92 + -0.8609*x + -0.004709*x*x);
-        arb_clear(logn);
-        return 1;
-    }
-}
-
-/* Returns nonzero on success. */
-static int
-_heuristic_A8_h(arb_t h, const fmpz_t n, slong prec)
-{
-    if (_fmpz_cmp_a_10exp_b(n, 1, 4) < 0 ||
-        _fmpz_cmp_a_10exp_b(n, 3, 22) > 0)
-    {
-        return 0;
-    }
-    else
-    {
-        arb_t logn;
-        slong hnum;
-        double x;
-        arb_init(logn);
-        arb_log_fmpz(logn, n, prec);
-        x = arf_get_d(arb_midref(logn), ARF_RND_NEAR);
-        hnum = (slong) (157.8 + 26.16*x + -1.008*x*x + 0.01542*x*x*x);
-        _arb_div_si_si(h, hnum, 4, prec);
-        arb_clear(logn);
-        return 1;
-    }
-}
-
-/* Returns nonzero on success. */
-static int
-_heuristic_A8_H(arb_t h, const fmpz_t n, slong prec)
-{
-    if (_fmpz_cmp_a_10exp_b(n, 1, 4) < 0 ||
-        _fmpz_cmp_a_10exp_b(n, 3, 22) > 0)
-    {
-        return 0;
-    }
-    else
-    {
-        arb_t logn;
-        slong Hnum;
-        double x;
-        arb_init(logn);
-        arb_log_fmpz(logn, n, prec);
-        x = arf_get_d(arb_midref(logn), ARF_RND_NEAR);
-        Hnum = (slong) (28.53 + 5.828*x + -0.23386*x*x + 0.0035875*x*x*x);
-        _arb_div_si_si(h, Hnum, 64, prec);
-        arb_clear(logn);
-        return 1;
-    }
-}
-
-/* Returns nonzero on success. */
-static int
-_heuristic_A8_sigma_interp(slong *sigma, const fmpz_t n, slong prec)
-{
-    if (_fmpz_cmp_a_10exp_b(n, 1, 4) < 0 ||
-        _fmpz_cmp_a_10exp_b(n, 3, 22) > 0)
-    {
-        return 0;
-    }
-    else
-    {
-        arb_t logn;
-        double x;
-        arb_init(logn);
-        arb_log_fmpz(logn, n, prec);
-        x = arf_get_d(arb_midref(logn), ARF_RND_NEAR);
-        if (_fmpz_cmp_a_10exp_b(n, 3, 14) < 0)
-        {
-            *sigma = 25;
-        }
-        else
-        {
-            *sigma = (slong) (-30.47 + 2.994*x + -0.04116*x*x);
-        }
-        *sigma += 1 - (*sigma) % 2;
-        arb_clear(logn);
-        return 1;
-    }
-}
-
-/* Returns nonzero on success. */
-static int
-_heuristic_A8_sigma_grid(slong *sigma, const fmpz_t n, slong prec)
-{
-    if (_fmpz_cmp_a_10exp_b(n, 1, 4) < 0 ||
-        _fmpz_cmp_a_10exp_b(n, 3, 22) > 0)
-    {
-        return 0;
-    }
-    else
-    {
-        arb_t logn;
-        double x;
-        arb_init(logn);
-        arb_log_fmpz(logn, n, prec);
-        x = arf_get_d(arb_midref(logn), ARF_RND_NEAR);
-        if (_fmpz_cmp_a_10exp_b(n, 3, 6) < 0)
-        {
-            *sigma = (slong) (-852.5 + 388.4*x + -13.174*x*x);
-        }
-        else if (_fmpz_cmp_a_10exp_b(n, 3, 18) < 0)
-        {
-            *sigma = (slong) (1967.5703 + 4.864*x + -0.1577*x*x);
-        }
-        else
-        {
-            *sigma = (slong) (-4010.8455 + 280.2*x + -3.335*x*x);
-        }
-        *sigma += 1 - (*sigma) % 2;
-        arb_clear(logn);
-        return 1;
-    }
-}
-
-
 static platt_ctx_ptr
 _create_heuristic_context(const fmpz_t n, slong prec)
 {
     platt_ctx_ptr p = NULL;
-    slong A = 8;
-    slong B = 4096;
-    slong Ns_max = 200;
-    slong J, K;
-    slong sigma_grid, sigma_interp;
-    fmpz_t T, k;
+    slong J, K, A, B, Ns_max, sigma_grid, sigma_interp;
     slong kbits;
-    arb_t g, h, H;
-    acb_struct z[2];
+    fmpz_t T, k;
+    arb_t g, h, H, logT;
+    double dlogJ, dK, dgrid, dh, dH, dinterp;
+    double x, x2, x3, x4;
 
     fmpz_init(T);
     fmpz_init(k);
     arb_init(g);
     arb_init(h);
     arb_init(H);
-    acb_init(z+0);
-    acb_init(z+1);
+    arb_init(logT);
 
     /* Estimate the height of the nth zero using gram points --
      * it's predicted to fall between g(n-2) and g(n-1). */
@@ -1535,19 +1365,81 @@ _create_heuristic_context(const fmpz_t n, slong prec)
     kbits = fmpz_sizeinbase(k, 2);
     acb_dirichlet_gram_point(g, k, NULL, NULL, prec + kbits);
 
-    /* Let T be the integer at the center of the evaluation grid.
-     * The reason to add B/4 instead of B/2 is that only at most the
-     * middle half of the grid points are likely to have enough precision
-     * to isolate zeros. */
-    _arb_get_lbound_fmpz(T, g, prec);
-    fmpz_add_ui(T, T, B/4);
+    /* Let T be the integer at the center of the evaluation grid. */
+    _arb_get_lbound_fmpz(T, g, prec + kbits);
+    arb_log_fmpz(logT, T, prec);
+    x = arf_get_d(arb_midref(logT), ARF_RND_NEAR);
+    x2 = x*x;
+    x3 = x2*x;
+    x4 = x2*x2;
 
-    if (!_heuristic_A8_J(&J, n, prec)) goto finish;
-    if (!_heuristic_A8_K(&K, n, prec)) goto finish;
-    if (!_heuristic_A8_sigma_interp(&sigma_interp, n, prec)) goto finish;
-    if (!_heuristic_A8_sigma_grid(&sigma_grid, n, prec)) goto finish;
-    if (!_heuristic_A8_h(h, n, prec)) goto finish;
-    if (!_heuristic_A8_H(H, n, prec)) goto finish;
+    if (_fmpz_cmp_a_10exp_b(n, 1, 4) < 0)
+    {
+        goto finish;
+    }
+    else if (_fmpz_cmp_a_10exp_b(n, 1, 5) < 0)
+    {
+        /* interpolated for n in [1e4, 1e5] */
+        A = 4;
+        B = 64;
+        Ns_max = 100;
+        dinterp = 25;
+        dK = 28;
+        dgrid = 31;
+        dlogJ = 8.4398 + -0.40306*x + 0.029866*x2 + -2.2858e-05*x3;
+        dh = 1.0844 + 0.25524*x + -0.0046997*x2 + -6.3447e-05*x3;
+        dH = -11.882 + 3.9521*x + -0.38654*x2 + 0.012728*x3;
+    }
+    else if (_fmpz_cmp_a_10exp_b(n, 1, 7) < 0)
+    {
+        /* interpolated for n in [1e4, 1e7] */
+        A = 8;
+        B = 4096;
+        Ns_max = 200;
+        dinterp = 25;
+        dlogJ = 0.88323 + 0.21392*x + 0.020846*x2 + -0.00053151*x3;
+        dK = 137.27 + -15.609*x + 1.0778*x2 + -0.025927*x3;
+        dgrid = -1711.1 + 701.03*x + -48.424*x2 + 1.2075*x3;
+        dh = 448.2 + -84.087*x + 6.2089*x2 + -0.14565*x3;
+        dH = 0.94123 + 0.021136*x + -0.00093042*x2 + 3.1007e-05*x3;
+    }
+    else if (_fmpz_cmp_a_10exp_b(n, 2, 17) < 0)
+    {
+        /* interpolated for n in [1e7, 5e22] */
+        A = 8;
+        B = 4096;
+        Ns_max = 200;
+        dlogJ = -0.4035 + 0.49086*x + 0.00016299*x2 + -3.6139e-06*x3 + 2.9323e-08*x4;
+        dK = 79.032 + -1.781*x + 0.039243*x2 + -0.00094859*x3 + 7.3149e-06*x4;
+        dgrid = 1186.9 + 130.17*x + -7.4059*x2 + 0.17895*x3 + -0.001602*x4;
+        dinterp = -24.252 + 7.3231*x + -0.38971*x2 + 0.0088745*x3 + -7.4331e-05*x4;
+        dh = 178.66 + -15.127*x + 0.93132*x2 + -0.02311*x3 + 0.00022146*x4;
+        dH = 2.5499 + -0.24402*x + 0.014953*x2 + -0.00037347*x3 + 3.5596e-06*x4;
+    }
+    else if (_fmpz_cmp_a_10exp_b(n, 1, 37) < 0)
+    {
+        /* interpolated for n in [1e7, 1e37] */
+        A = 16;
+        B = 8192;
+        Ns_max = 300;
+        dlogJ = -0.50566 + 0.49723*x + 1.7964e-05*x2 + -2.3664e-07*x3 + 1.1234e-09*x4;
+        dK = 100.97 + -0.709*x + -0.0020664*x2 + 3.1633e-05*x3 + -2.2912e-07*x4;
+        dgrid = 3998.1 + 6.68*x + -0.3202*x2 + 0.0051782*x3 + -3.3829e-05*x4;
+        dinterp = 21.203 + -0.2797*x + 0.01191*x2 + -0.00019769*x3 + 1.0395e-06*x4;
+        dh = 137.6 + -0.16471*x + 0.039086*x2 + -0.00063299*x3 + 4.9674e-06*x4;
+        dH = 0.64172 + -0.0017413*x + 0.0002195*x2 + -3.5247e-06*x3 + 2.6633e-08*x4;
+    }
+    else
+    {
+        goto finish;
+    }
+
+    arb_set_d(h, dh);
+    arb_set_d(H, dH);
+    J = (slong) exp(dlogJ);
+    K = (slong) dK;
+    sigma_grid = ((slong) (dgrid/2))*2 + 1;
+    sigma_interp = ((slong) (dinterp/2))*2 + 1;
 
     p = malloc(sizeof(platt_ctx_struct));
     platt_ctx_init(p, T, A, B, h, J, K,
@@ -1560,8 +1452,7 @@ finish:
     arb_clear(g);
     arb_clear(h);
     arb_clear(H);
-    acb_clear(z+0);
-    acb_clear(z+1);
+    arb_clear(logT);
 
     return p;
 }
@@ -1572,15 +1463,28 @@ slong
 acb_dirichlet_platt_isolate_local_hardy_z_zeros(
         arf_interval_ptr res, const fmpz_t n, slong len, slong prec)
 {
-    slong zeros_count = 0;
-    platt_ctx_ptr ctx = _create_heuristic_context(n, prec);
-    if (ctx)
+    if (len <= 0 || fmpz_sizeinbase(n, 10) < 5)
     {
-        zeros_count = _isolate_zeros(res, ctx, n, len, prec);
-        platt_ctx_clear(ctx);
-        free(ctx);
+        return 0;
     }
-    return zeros_count;
+    else if (fmpz_sgn(n) < 1)
+    {
+        flint_printf("Nonpositive indices of Hardy Z zeros are not supported.\n");
+        flint_abort();
+    }
+    else
+    {
+        slong zeros_count = 0;
+        platt_ctx_ptr ctx = _create_heuristic_context(n, prec);
+        if (ctx)
+        {
+            zeros_count = _isolate_zeros(res, ctx, n, len, prec);
+            platt_ctx_clear(ctx);
+            free(ctx);
+        }
+        return zeros_count;
+    }
+    return 0;
 }
 
 
@@ -1589,23 +1493,36 @@ slong
 acb_dirichlet_platt_local_hardy_z_zeros(
         arb_ptr res, const fmpz_t n, slong len, slong prec)
 {
-    slong zeros_count = 0;
-    platt_ctx_ptr ctx;
-
-    ctx = _create_heuristic_context(n, prec);
-    if (ctx)
+    if (len <= 0 || fmpz_sizeinbase(n, 10) < 5)
     {
-        slong i;
-        arf_interval_ptr p = _arf_interval_vec_init(len);
-        zeros_count = _isolate_zeros(p, ctx, n, len, prec);
-        for (i = 0; i < zeros_count; i++)
-        {
-            _refine_local_hardy_z_zero_illinois(
-                res+i, ctx, &p[i].a, &p[i].b, prec);
-        }
-        _arf_interval_vec_clear(p, len);
-        platt_ctx_clear(ctx);
-        free(ctx);
+        return 0;
     }
-    return zeros_count;
+    else if (fmpz_sgn(n) < 1)
+    {
+        flint_printf("Nonpositive indices of Hardy Z zeros are not supported.\n");
+        flint_abort();
+    }
+    else
+    {
+        slong zeros_count = 0;
+        platt_ctx_ptr ctx;
+
+        ctx = _create_heuristic_context(n, prec);
+        if (ctx)
+        {
+            slong i;
+            arf_interval_ptr p = _arf_interval_vec_init(len);
+            zeros_count = _isolate_zeros(p, ctx, n, len, prec);
+            for (i = 0; i < zeros_count; i++)
+            {
+                _refine_local_hardy_z_zero_illinois(
+                    res+i, ctx, &p[i].a, &p[i].b, prec);
+            }
+            _arf_interval_vec_clear(p, len);
+            platt_ctx_clear(ctx);
+            free(ctx);
+        }
+        return zeros_count;
+    }
+    return 0;
 }

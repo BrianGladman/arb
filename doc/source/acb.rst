@@ -103,7 +103,7 @@ Basic manipulation
 
 .. function:: void acb_set(acb_t z, const acb_t x)
 
-.. function:: void acb_set_ui(acb_t z, slong x)
+.. function:: void acb_set_ui(acb_t z, ulong x)
 
 .. function:: void acb_set_si(acb_t z, slong x)
 
@@ -725,6 +725,11 @@ Trigonometric functions
 .. function:: void acb_csc(acb_t res, const acb_t z, slong prec)
 
     Computes `\csc(x) = 1 / \sin(z)`.
+
+.. function:: void acb_csc_pi(acb_t res, const acb_t z, slong prec)
+
+    Computes `\csc(\pi x) = 1 / \sin(\pi z)`. Evaluates the sine accurately
+    via :func:`acb_sin_pi`.
 
 .. function:: void acb_sinc(acb_t s, const acb_t z, slong prec)
 

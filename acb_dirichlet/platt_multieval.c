@@ -11,9 +11,38 @@
 
 #include "acb_dirichlet.h"
 #include "arb_hypgeom.h"
-#include "acb_calc.h"
 #include "acb_dft.h"
 
+static void
+_acb_dot_arb(acb_t res, const acb_t initial, int subtract,
+             acb_srcptr x, slong xstep, arb_srcptr y, slong ystep,
+             slong len, slong prec)
+{
+    arb_ptr a;
+    arb_srcptr b, c;
+    if (sizeof(acb_struct) != 2*sizeof(arb_struct))
+    {
+        flint_printf("expected sizeof(acb_struct)=%zu "
+                "to be twice sizeof(arb_struct)=%zu\n",
+                sizeof(acb_struct), sizeof(arb_struct));
+        flint_abort();
+    }
+    if (initial == NULL)
+    {
+        flint_printf("not implemented for NULL initial value\n");
+        flint_abort();
+    }
+
+    a = acb_realref(res);
+    b = acb_realref(initial);
+    c = acb_realref(x);
+    arb_dot(a, b, subtract, c, xstep*2, y, ystep, len, prec);
+
+    a = acb_imagref(res);
+    b = acb_imagref(initial);
+    c = acb_imagref(x);
+    arb_dot(a, b, subtract, c, xstep*2, y, ystep, len, prec);
+}
 
 static void
 _arb_add_d(arb_t z, const arb_t x, double d, slong prec)
@@ -23,6 +52,13 @@ _arb_add_d(arb_t z, const arb_t x, double d, slong prec)
     arb_set_d(u, d);
     arb_add(z, x, u, prec);
     arb_clear(u);
+}
+
+static void
+_arb_div_si_si(arb_t z, slong a, slong b, slong prec)
+{
+    arb_set_si(z, a);
+    arb_div_si(z, z, b, prec);
 }
 
 static void
@@ -168,16 +204,66 @@ _acb_vec_scalar_add_error_arb_mag(acb_ptr res, slong len, const arb_t x)
     mag_clear(err);
 }
 
-
-static void
-get_smk_index(slong *out, slong B, slong j, slong prec)
+/*
+ * For each integer m in [0, A*B) find the smallest integer j such that
+ * log(j*sqrt(pi))/(2*pi) >= m/B - 1/(2*B)
+ */
+void
+get_smk_points(slong * res, slong A, slong B)
 {
+    slong m, N, prec;
+    arb_t x, u, v;
+    fmpz_t z;
+    arb_init(x);
+    arb_init(u); /* pi / B */
+    arb_init(v); /* 1 / sqrt(pi) */
+    fmpz_init(z);
+    N = A*B;
+    prec = 4;
+    arb_indeterminate(u);
+    arb_indeterminate(v);
+    for (m = 0; m < N; m++)
+    {
+        while (1)
+        {
+            arb_set_si(x, 2*m - 1);
+            arb_mul(x, x, u, prec);
+            arb_exp(x, x, prec);
+            arb_mul(x, x, v, prec);
+            arb_ceil(x, x, prec);
+            if (arb_get_unique_fmpz(z, x))
+            {
+                res[m] = fmpz_get_si(z);
+                break;
+            }
+            else
+            {
+                prec *= 2;
+                arb_const_pi(u, prec);
+                arb_div_si(u, u, B, prec);
+                arb_const_sqrt_pi(v, prec);
+                arb_inv(v, v, prec);
+            }
+        }
+    }
+    arb_clear(x);
+    arb_clear(u);
+    arb_clear(v);
+    fmpz_clear(z);
+}
+
+slong
+platt_get_smk_index(slong B, slong j, slong prec)
+{
+    slong m;
     arb_t pi, x;
     fmpz_t z;
 
     arb_init(pi);
     arb_init(x);
     fmpz_init(z);
+
+    m = -1;
 
     while (1)
     {
@@ -191,7 +277,7 @@ get_smk_index(slong *out, slong B, slong j, slong prec)
 
         if (arb_get_unique_fmpz(z, x))
         {
-            *out = fmpz_get_si(z);
+            m = fmpz_get_si(z);
             break;
         }
         else
@@ -203,34 +289,108 @@ get_smk_index(slong *out, slong B, slong j, slong prec)
     arb_clear(pi);
     arb_clear(x);
     fmpz_clear(z);
+
+    return m;
 }
 
+typedef struct
+{
+    slong bmax;
+    slong b;
+    slong K;
+    arb_ptr M; /* (b, K) */
+    acb_ptr v; /* (b, ) */
+}
+smk_block_struct;
+typedef smk_block_struct smk_block_t[1];
 
 static void
-platt_smk(acb_ptr table,
-        const arb_t t0, slong A, slong B, slong J, slong K, slong prec)
+smk_block_init(smk_block_t p, slong K, slong bmax)
+{
+    p->bmax = bmax;
+    p->b = 0;
+    p->K = K;
+    p->M = _arb_vec_init(K*bmax);
+    p->v = _acb_vec_init(bmax);
+}
+
+static void
+smk_block_clear(smk_block_t p)
+{
+    _arb_vec_clear(p->M, p->K * p->bmax);
+    _acb_vec_clear(p->v, p->bmax);
+}
+
+static int
+smk_block_is_full(smk_block_t p)
+{
+    return p->b == p->bmax;
+}
+
+static void
+smk_block_reset(smk_block_t p)
+{
+    p->b = 0;
+}
+
+static void
+smk_block_increment(smk_block_t p, const acb_t z, arb_srcptr v)
+{
+    if (smk_block_is_full(p))
+    {
+        flint_printf("trying to increment a full block\n");
+        flint_abort();
+    }
+    acb_set(p->v + p->b, z);
+    _arb_vec_set(p->M + p->K * p->b, v, p->K);
+    p->b += 1;
+}
+
+static void
+smk_block_accumulate(smk_block_t p, acb_ptr res, slong prec)
+{
+    slong i;
+    for (i = 0; i < p->K; i++)
+        _acb_dot_arb(res + i, res + i, 0, p->v, 1, p->M + i, p->K, p->b, prec);
+}
+
+void
+_platt_smk(acb_ptr table, acb_ptr startvec, acb_ptr stopvec,
+        const slong * smk_points, const arb_t t0, slong A, slong B,
+        slong jstart, slong jstop, slong mstart, slong mstop,
+        slong K, slong prec)
 {
     slong j, k, m;
     slong N = A * B;
-    acb_ptr row;
+    smk_block_t block;
+    acb_ptr accum;
     arb_ptr diff_powers;
-    arb_t rpi, rsqrtj, um, a, base;
+    arb_t rpi, logsqrtpi, rsqrtj, um, a, base;
     acb_t z;
 
     arb_init(rpi);
+    arb_init(logsqrtpi);
     arb_init(rsqrtj);
     arb_init(um);
     arb_init(a);
     arb_init(base);
     acb_init(z);
+    smk_block_init(block, K, 32);
     diff_powers = _arb_vec_init(K);
+    accum = _acb_vec_init(K);
 
     arb_const_pi(rpi, prec);
     arb_inv(rpi, rpi, prec);
+    arb_const_sqrt_pi(logsqrtpi, prec);
+    arb_log(logsqrtpi, logsqrtpi, prec);
 
-    for (j = 1; j <= J; j++)
+    m = platt_get_smk_index(B, jstart, prec);
+    _arb_div_si_si(um, m, B, prec);
+
+    for (j = jstart; j <= jstop; j++)
     {
-        logjsqrtpi(a, j, prec);
+        arb_log_ui(a, (ulong) j, prec);
+        arb_add(a, a, logsqrtpi, prec);
         arb_mul(a, a, rpi, prec);
 
         arb_rsqrt_ui(rsqrtj, (ulong) j, prec);
@@ -241,36 +401,69 @@ platt_smk(acb_ptr table,
         acb_exp_pi_i(z, z, prec);
         acb_mul_arb(z, z, rsqrtj, prec);
 
-        get_smk_index(&m, B, j, prec);
+        while (m < N - 1 && smk_points[m + 1] <= j)
+        {
+            m += 1;
+            _arb_div_si_si(um, m, B, prec);
+        }
 
-        arb_set_si(um, m);
-        arb_div_si(um, um, B, prec);
+        if (m < mstart || m > mstop)
+        {
+            flint_printf("out of bounds error: m = %ld not in [%ld, %ld]\n",
+                          m, mstart, mstop);
+            flint_abort();
+        }
 
         arb_mul_2exp_si(base, a, -1);
         arb_sub(base, base, um, prec);
 
         _arb_vec_set_powers(diff_powers, base, K, prec);
+        smk_block_increment(block, z, diff_powers);
 
-        for (k = 0; k < K; k++)
         {
-            row = table + N*k;
-            acb_addmul_arb(row + m, z, diff_powers + k, prec);
+            int j_stops = j == jstop;
+            int m_increases = m < N - 1 && smk_points[m + 1] <= j + 1;
+            if (j_stops || m_increases || smk_block_is_full(block))
+            {
+                smk_block_accumulate(block, accum, prec);
+                smk_block_reset(block);
+            }
+            if (j_stops || m_increases)
+            {
+                if (startvec && m == mstart)
+                {
+                    _acb_vec_set(startvec, accum, K);
+                }
+                else if (stopvec && m == mstop)
+                {
+                    _acb_vec_set(stopvec, accum, K);
+                }
+                else
+                {
+                    for (k = 0; k < K; k++)
+                        acb_set(table + N*k + m, accum + k);
+                }
+                _acb_vec_zero(accum, K);
+            }
         }
     }
 
     arb_clear(rpi);
+    arb_clear(logsqrtpi);
     arb_clear(rsqrtj);
     arb_clear(um);
     arb_clear(a);
     arb_clear(base);
     acb_clear(z);
+    smk_block_clear(block);
     _arb_vec_clear(diff_powers, K);
+    _acb_vec_clear(accum, K);
 }
 
 
 static void
 do_convolutions(acb_ptr out_table,
-        const acb_ptr table, const acb_ptr S_table,
+        acb_srcptr table, acb_srcptr S_table,
         slong N, slong K, slong prec)
 {
     slong i, k;
@@ -345,18 +538,18 @@ remove_gaussian_window(arb_ptr out, slong A, slong B, const arb_t h, slong prec)
 }
 
 void
-acb_dirichlet_platt_multieval(arb_ptr out, const fmpz_t T, slong A, slong B,
-        const arb_t h, slong J, slong K, slong sigma, slong prec)
+_acb_dirichlet_platt_multieval(arb_ptr out, acb_srcptr S_table,
+        const arb_t t0, slong A, slong B, const arb_t h, slong J,
+        slong K, slong sigma, slong prec)
 {
     slong N = A*B;
     slong i, k;
-    acb_ptr table, S_table, out_a, out_b;
+    acb_ptr table, out_a, out_b;
     acb_ptr row;
-    arb_t t0, t, x, k_factorial, err, ratio, c, xi;
+    arb_t t, x, k_factorial, err, ratio, c, xi;
     acb_t z;
     acb_dft_pre_t pre_N;
 
-    arb_init(t0);
     arb_init(t);
     arb_init(x);
     arb_init(k_factorial);
@@ -366,16 +559,12 @@ acb_dirichlet_platt_multieval(arb_ptr out, const fmpz_t T, slong A, slong B,
     arb_init(xi);
     acb_init(z);
     table = _acb_vec_init(K*N);
-    S_table = _acb_vec_init(K*N);
     out_a = _acb_vec_init(N);
     out_b = _acb_vec_init(N);
     acb_dft_precomp_init(pre_N, N, prec);
 
-    arb_set_fmpz(t0, T);
     _arb_inv_si(xi, B, prec);
     arb_mul_2exp_si(xi, xi, -1);
-
-    platt_smk(S_table, t0, A, B, J, K, prec);
 
     platt_g_table(table, A, B, t0, h, K, prec);
 
@@ -455,7 +644,6 @@ acb_dirichlet_platt_multieval(arb_ptr out, const fmpz_t T, slong A, slong B,
 
     remove_gaussian_window(out, A, B, h, prec);
 
-    arb_clear(t0);
     arb_clear(t);
     arb_clear(x);
     arb_clear(k_factorial);
@@ -465,8 +653,42 @@ acb_dirichlet_platt_multieval(arb_ptr out, const fmpz_t T, slong A, slong B,
     arb_clear(xi);
     acb_clear(z);
     _acb_vec_clear(table, K*N);
-    _acb_vec_clear(S_table, K*N);
     _acb_vec_clear(out_a, N);
     _acb_vec_clear(out_b, N);
     acb_dft_precomp_clear(pre_N);
 }
+
+void
+acb_dirichlet_platt_multieval(arb_ptr out, const fmpz_t T, slong A, slong B,
+        const arb_t h, slong J, slong K, slong sigma, slong prec)
+{
+    if (flint_get_num_threads() > 1)
+    {
+        acb_dirichlet_platt_multieval_threaded(
+                out, T, A, B, h, J, K, sigma, prec);
+    }
+    else
+    {
+        slong N = A*B;
+        acb_ptr S;
+        arb_t t0;
+        slong * smk_points;
+
+        smk_points = flint_malloc(N * sizeof(slong));
+        get_smk_points(smk_points, A, B);
+
+        arb_init(t0);
+        S =  _acb_vec_init(K*N);
+
+        arb_set_fmpz(t0, T);
+
+        _platt_smk(S, NULL, NULL, smk_points, t0, A, B, 1, J, 0, N-1, K, prec);
+
+        _acb_dirichlet_platt_multieval(out, S, t0, A, B, h, J, K, sigma, prec);
+
+        arb_clear(t0);
+        _acb_vec_clear(S, K*N);
+        flint_free(smk_points);
+    }
+}
+

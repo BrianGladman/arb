@@ -170,7 +170,7 @@ Special values
     0, `+\infty`, `-\infty`, NaN, i.e. not a finite, nonzero
     floating-point value.
 
-.. function:: int arf_is_finite(arf_t x)
+.. function:: int arf_is_finite(const arf_t x)
 
     Returns nonzero iff *x* is a finite floating-point value,
     i.e. not one of the values `+\infty`, `-\infty`, NaN.
@@ -313,6 +313,12 @@ Assignment, rounding and conversions
     store than the input. To round the result to a floating-point number
     with a lower precision, call :func:`arf_set_round` afterwards.
 
+.. function:: void arf_get_fmpq(fmpq_t res, const arf_t x)
+
+    Set *res* to the exact rational value of *x*.
+    This method aborts if *x* is infinite or NaN, or if the exponent of *x*
+    is so large that allocating memory for the result fails.
+
 Comparisons and bounds
 -------------------------------------------------------------------------------
 
@@ -339,7 +345,7 @@ Comparisons and bounds
 
 .. function:: int arf_cmpabs_ui(const arf_t x, ulong y)
 
-.. function:: int arf_cmpabs_d(const arf_t x, ulong y)
+.. function:: int arf_cmpabs_d(const arf_t x, double y)
 
 .. function:: int arf_cmpabs_mag(const arf_t x, const mag_t y)
 

@@ -23,8 +23,8 @@ check_vec_eq_prec(acb_srcptr w1, acb_srcptr w2, slong len, slong prec, slong dig
         if (!acb_overlaps(w1 + i, w2 + i))
         {
             flint_printf("FAIL\n\n");
-            flint_printf("q = %wu, size = %wu\n", q, len);
-            flint_printf("\nDFT %s differ from index %ld / %ld \n", d, i, len);
+            flint_printf("q = %wu, size = %wd\n", q, len);
+            flint_printf("\nDFT %s differ from index %wd / %wd \n", d, i, len);
             flint_printf("\n%s =\n", f1);
             acb_vec_printd_index(w1, len, digits);
             flint_printf("\n%s =\n", f2);
@@ -37,12 +37,12 @@ check_vec_eq_prec(acb_srcptr w1, acb_srcptr w2, slong len, slong prec, slong dig
         {
             flint_printf("FAIL\n\n");
             flint_printf("q = %wu\n", q);
-            flint_printf("\nDFT inaccurate from index %ld / %ld \n", i, len);
+            flint_printf("\nDFT inaccurate from index %wd / %wd \n", i, len);
             flint_printf("\n%s =\n", f1);
             acb_printd(w1 + i, digits);
             flint_printf("\n%s =\n", f2);
             acb_printd(w2 + i, digits);
-            flint_printf("\nerrors %ld & %ld [prec = %wu]\n",
+            flint_printf("\nerrors %wd & %wd [prec = %wd]\n",
                     acb_rel_accuracy_bits(w1 + i),
                     acb_rel_accuracy_bits(w2 + i), prec);
             abort();
@@ -142,6 +142,29 @@ int main()
 
         acb_dft_cyc(w1, v, n, prec);
         acb_dft_rad2_inplace(w2, k, prec);
+
+        check_vec_eq_prec(w1, w2, n, prec, digits, n, "rad2", "cyc", "rad2");
+
+        _acb_vec_clear(v, n);
+        _acb_vec_clear(w1, n);
+
+    }
+
+    /* multi-threaded radix2 dft */
+    for (k = 0; k < 11; k++)
+    {
+        slong n = 1 << k, j;
+        acb_ptr v, w1, w2;
+        v = w2 = _acb_vec_init(n);
+        w1 = _acb_vec_init(n);
+
+        flint_set_num_threads(k % 5 + 1);
+
+        for (j = 0; j < n; j++)
+            acb_set_si_si(v + j, j, j + 2);
+
+        acb_dft_cyc(w1, v, n, prec);
+        acb_dft_rad2_inplace_threaded(w2, k, prec);
 
         check_vec_eq_prec(w1, w2, n, prec, digits, n, "rad2", "cyc", "rad2");
 
